@@ -182,7 +182,7 @@ defmodule AlgorithmsWeb.SortingLive do
         <div class="bg-gray-800 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
           <form phx-change="change_settings" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4">
             <div>
-              <label class="block text-sm mb-2">Quantity</label>
+              <label class="block text-sm">Quantity</label>
               <input
                 type="range"
                 name="count"
@@ -196,7 +196,7 @@ defmodule AlgorithmsWeb.SortingLive do
             </div>
 
             <div>
-              <label class="block text-sm mb-2">Max Value</label>
+              <label class="block text-sm">Max Value</label>
               <input
                 type="range"
                 name="max_value"
@@ -210,7 +210,7 @@ defmodule AlgorithmsWeb.SortingLive do
             </div>
 
             <div>
-              <label class="block text-sm mb-2">Delay (ms)</label>
+              <label class="block text-sm">Delay (ms)</label>
               <input
                 type="range"
                 name="delay"
@@ -272,40 +272,40 @@ defmodule AlgorithmsWeb.SortingLive do
           </div>
         </div>
 
-        <div class="bg-gray-800 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
-          <div class="flex items-end justify-center gap-[1px] sm:gap-1 h-48 sm:h-64 overflow-hidden">
+        <div class="bg-gray-800 rounded-lg p-6 mb-6">
+          <div class="flex items-end justify-center gap-1 h-64">
             <%= for {num, idx} <- Enum.with_index(@numbers) do %>
               <div
                 class={[
-                  "transition-all duration-75 min-w-[2px]",
+                  "transition-all duration-75",
                   bar_color(idx, @highlight)
                 ]}
-                style={"flex: 1; max-width: #{bar_width(@generated_count)}px; height: #{bar_height(num, @generated_max_value)}%;"}
+                style={"width: #{bar_width(@generated_count)}px; height: #{bar_height(num, @generated_max_value)}px;"}
               >
               </div>
             <% end %>
           </div>
 
           <%= if @numbers == [] do %>
-            <p class="text-center text-gray-400 mt-4 text-sm sm:text-base">Click "Generate" to begin</p>
+            <p class="text-center text-gray-400 mt-4">Click "Generate Numbers" to begin</p>
           <% end %>
         </div>
 
         <%= if @status != :idle do %>
-          <div class="bg-gray-800 rounded-lg p-4 sm:p-6">
-            <h2 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Results</h2>
-            <div class="grid grid-cols-3 gap-2 sm:gap-4 text-center">
+          <div class="bg-gray-800 rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Results</h2>
+            <div class="grid grid-cols-3 gap-4 text-center">
               <div>
-                <p class="text-gray-400 text-xs sm:text-sm">Status</p>
-                <p class="text-sm sm:text-lg font-semibold">{status_text(@status)}</p>
+                <p class="text-gray-400 text-sm">Status</p>
+                <p class="text-lg font-semibold">{status_text(@status)}</p>
               </div>
               <div>
-                <p class="text-gray-400 text-xs sm:text-sm">Operations</p>
-                <p class="text-sm sm:text-lg font-semibold">{@operations}</p>
+                <p class="text-gray-400 text-sm">Operations</p>
+                <p class="text-lg font-semibold">{@operations}</p>
               </div>
               <div>
-                <p class="text-gray-400 text-xs sm:text-sm">Time</p>
-                <p class="text-sm sm:text-lg font-semibold">
+                <p class="text-gray-400 text-sm">Time</p>
+                <p class="text-lg font-semibold">
                   <%= if @elapsed_time do %>
                     {@elapsed_time}ms
                   <% else %>
@@ -318,18 +318,18 @@ defmodule AlgorithmsWeb.SortingLive do
         <% end %>
 
         <%= if @history != [] do %>
-          <div class="bg-gray-800 rounded-lg p-4 sm:p-6 mt-4 sm:mt-6">
-            <h2 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">History</h2>
-            <div class="overflow-x-auto -mx-4 sm:mx-0">
-              <table class="w-full text-xs sm:text-sm min-w-[500px]">
+          <div class="bg-gray-800 rounded-lg p-6 mt-6">
+            <h2 class="text-xl font-semibold mb-4">History</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
                 <thead>
                   <tr class="text-gray-400 border-b border-gray-700">
                     <th class="text-left py-2 px-2">#</th>
-                    <th class="text-left py-2 px-2">Algo</th>
-                    <th class="text-center py-2 px-2">N</th>
+                    <th class="text-left py-2 px-2">Algorithm</th>
+                    <th class="text-center py-2 px-2">Count</th>
                     <th class="text-center py-2 px-2">Max</th>
                     <th class="text-center py-2 px-2">Delay</th>
-                    <th class="text-center py-2 px-2">Ops</th>
+                    <th class="text-center py-2 px-2">Operations</th>
                     <th class="text-center py-2 px-2">Time</th>
                   </tr>
                 </thead>
@@ -340,7 +340,7 @@ defmodule AlgorithmsWeb.SortingLive do
                       <td class="py-2 px-2">{algorithm_name(run.algorithm)}</td>
                       <td class="text-center py-2 px-2">{run.count}</td>
                       <td class="text-center py-2 px-2">{run.max_value}</td>
-                      <td class="text-center py-2 px-2">{run.delay}</td>
+                      <td class="text-center py-2 px-2">{run.delay}ms</td>
                       <td class="text-center py-2 px-2">{run.operations}</td>
                       <td class="text-center py-2 px-2">{run.elapsed_time}ms</td>
                     </tr>
@@ -359,11 +359,11 @@ defmodule AlgorithmsWeb.SortingLive do
   defp bar_color(_idx, _highlight), do: "bg-blue-500"
 
   defp bar_width(count) do
-    max(4, div(600, count))
+    max(2, div(600, count))
   end
 
   defp bar_height(value, max_value) do
-    max(2, div(value * 100, max_value))
+    max(4, div(value * 240, max_value))
   end
 
   defp status_text(:idle), do: "Waiting"
