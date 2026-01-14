@@ -58,6 +58,14 @@ defmodule AlgorithmsWeb.SortingLive do
     {:noreply, assign(socket, updates)}
   end
 
+  def handle_event("select_algorithm", %{"algorithm" => algorithm}, socket) do
+    if socket.assigns.running do
+      {:noreply, socket}
+    else
+      {:noreply, assign(socket, algorithm: algorithm)}
+    end
+  end
+
   def handle_event("generate", _params, socket) do
     numbers = Sorting.generate_random_numbers(socket.assigns.count, socket.assigns.max_value)
 
@@ -222,26 +230,34 @@ defmodule AlgorithmsWeb.SortingLive do
               <span class="text-sm">{@delay}ms</span>
             </div>
 
-            <div>
+            <div class={@running && "pointer-events-none opacity-50"}>
               <label class="block text-sm mb-2">Algorithm</label>
-              <div class={["dropdown dropdown-hover w-full", @running && "pointer-events-none opacity-50"]}>
-                <div tabindex="0" role="button" class="btn btn-sm w-full justify-between bg-gray-700 border-gray-600 text-white hover:bg-gray-600">
-                  {algorithm_name(@algorithm)}
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-                <ul tabindex="0" class="dropdown-content menu bg-gray-700 rounded-box z-10 w-full p-2 shadow-lg border border-gray-600">
-                  <li><a phx-click="select_algorithm" phx-value-algorithm="insertion" class={@algorithm == "insertion" && "active"}>Insertion</a></li>
-                  <li><a phx-click="select_algorithm" phx-value-algorithm="selection" class={@algorithm == "selection" && "active"}>Selection</a></li>
-                  <li><a phx-click="select_algorithm" phx-value-algorithm="bubble" class={@algorithm == "bubble" && "active"}>Bubble</a></li>
-                  <li><a phx-click="select_algorithm" phx-value-algorithm="shell" class={@algorithm == "shell" && "active"}>Shell</a></li>
-                  <li><a phx-click="select_algorithm" phx-value-algorithm="merge" class={@algorithm == "merge" && "active"}>Merge</a></li>
-                  <li><a phx-click="select_algorithm" phx-value-algorithm="heap" class={@algorithm == "heap" && "active"}>Heap</a></li>
-                  <li><a phx-click="select_algorithm" phx-value-algorithm="quick" class={@algorithm == "quick" && "active"}>Quick</a></li>
-                  <li><a phx-click="select_algorithm" phx-value-algorithm="quick3" class={@algorithm == "quick3" && "active"}>Quick3</a></li>
-                </ul>
-              </div>
+              <button
+                type="button"
+                class="btn btn-sm w-full justify-between bg-gray-700 border-gray-600 text-white hover:bg-gray-600"
+                popovertarget="algorithm-popover"
+                style="anchor-name:--algorithm-anchor"
+              >
+                {algorithm_name(@algorithm)}
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <ul
+                class="dropdown menu w-52 rounded-box bg-gray-700 shadow-lg border border-gray-600"
+                popover
+                id="algorithm-popover"
+                style="position-anchor:--algorithm-anchor"
+              >
+                <li><a phx-click="select_algorithm" phx-value-algorithm="insertion" class={@algorithm == "insertion" && "active"}>Insertion</a></li>
+                <li><a phx-click="select_algorithm" phx-value-algorithm="selection" class={@algorithm == "selection" && "active"}>Selection</a></li>
+                <li><a phx-click="select_algorithm" phx-value-algorithm="bubble" class={@algorithm == "bubble" && "active"}>Bubble</a></li>
+                <li><a phx-click="select_algorithm" phx-value-algorithm="shell" class={@algorithm == "shell" && "active"}>Shell</a></li>
+                <li><a phx-click="select_algorithm" phx-value-algorithm="merge" class={@algorithm == "merge" && "active"}>Merge</a></li>
+                <li><a phx-click="select_algorithm" phx-value-algorithm="heap" class={@algorithm == "heap" && "active"}>Heap</a></li>
+                <li><a phx-click="select_algorithm" phx-value-algorithm="quick" class={@algorithm == "quick" && "active"}>Quick</a></li>
+                <li><a phx-click="select_algorithm" phx-value-algorithm="quick3" class={@algorithm == "quick3" && "active"}>Quick3</a></li>
+              </ul>
             </div>
           </form>
 
@@ -368,7 +384,7 @@ defmodule AlgorithmsWeb.SortingLive do
 
   defp status_text(:idle), do: "Waiting"
   defp status_text(:ready), do: "Ready"
-  defp status_text(:running), do: "Running..."
+  defp status_text(:running), do: "Running"
   defp status_text(:done), do: "Done"
 
   defp algorithm_name("insertion"), do: "Insertion"
