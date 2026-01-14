@@ -313,7 +313,12 @@ defmodule AlgorithmsWeb.SortingLive do
             <div class="grid grid-cols-3 gap-4 text-center">
               <div>
                 <p class="text-gray-400 text-sm">Status</p>
-                <p class="text-lg font-semibold">{status_text(@status)}</p>
+                <p class="text-lg font-semibold">
+                  {status_text(@status)}
+                  <%= if @status == :running do %>
+                    <span class="loading loading-spinner loading-xs"></span>
+                  <% end %>
+                </p>
               </div>
               <div>
                 <p class="text-gray-400 text-sm">Operations</p>
