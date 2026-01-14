@@ -7,7 +7,9 @@ defmodule AlgorithmsWeb.SortingLive do
   @default_max 100
   @default_delay 100
 
-  def mount(_params, _session, socket) do
+  def mount(params, _session, socket) do
+    algorithm = params["algorithm"] || "insertion"
+
     {:ok,
      assign(socket,
        numbers: [],
@@ -15,7 +17,7 @@ defmodule AlgorithmsWeb.SortingLive do
        count: @default_count,
        max_value: @default_max,
        delay: @default_delay,
-       algorithm: "insertion",
+       algorithm: algorithm,
        running: false,
        highlight: {nil, nil},
        operations: 0,
@@ -27,7 +29,8 @@ defmodule AlgorithmsWeb.SortingLive do
        history: [],
        generated_count: @default_count,
        generated_max_value: @default_max,
-       initial_delay: @default_delay
+       initial_delay: @default_delay,
+       page_title: "Run"
      )}
   end
 
@@ -197,9 +200,9 @@ defmodule AlgorithmsWeb.SortingLive do
 
       <div class="max-w-4xl mx-auto">
         <div class="bg-gray-800 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
-          <form phx-change="change_settings" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4">
+          <form phx-change="change_settings" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 text-gray-400">
             <div>
-              <label class="block text-sm">Quantity</label>
+              <label class="block text-sm mb-2">Quantity</label>
               <input
                 type="range"
                 name="count"
@@ -213,7 +216,7 @@ defmodule AlgorithmsWeb.SortingLive do
             </div>
 
             <div>
-              <label class="block text-sm">Max Value</label>
+              <label class="block text-sm mb-2">Max Value</label>
               <input
                 type="range"
                 name="max_value"
@@ -227,7 +230,7 @@ defmodule AlgorithmsWeb.SortingLive do
             </div>
 
             <div>
-              <label class="block text-sm">Delay (ms)</label>
+              <label class="block text-sm mb-2">Delay (ms)</label>
               <input
                 type="range"
                 name="delay"
@@ -240,10 +243,10 @@ defmodule AlgorithmsWeb.SortingLive do
             </div>
 
             <div class={@running && "pointer-events-none opacity-50"}>
-              <label class="block text-sm mb-2">Algorithm</label>
+              <label class="block text-sm mb-1">Algorithm</label>
               <button
                 type="button"
-                class="btn btn-sm w-full justify-between bg-gray-700 border-gray-600 text-white hover:bg-gray-600"
+                class="btn btn-sm w-full justify-between bg-gray-700 border-gray-600 text-gray-400 hover:bg-gray-600"
                 popovertarget="algorithm-popover"
                 style="anchor-name:--algorithm-anchor"
               >
@@ -312,7 +315,7 @@ defmodule AlgorithmsWeb.SortingLive do
           </div>
 
           <%= if @numbers == [] do %>
-            <p class="text-center text-gray-400 mt-4">Click "Generate Numbers" to begin</p>
+            <p class="text-center text-gray-400 mt-4">Click "Generate" to begin</p>
           <% end %>
         </div>
 
@@ -384,6 +387,17 @@ defmodule AlgorithmsWeb.SortingLive do
           </div>
         <% end %>
       </div>
+
+      <!-- Footer -->
+      <footer class="py-8 px-4 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2">
+            <img src="/images/logo.png" alt="Logo" class="w-8 h-8" />
+            <span class="font-semibold">Algorithms</span>
+          </div>
+          <p class="text-gray-500 text-sm">Built with Phoenix LiveView & daisyUI</p>
+        </div>
+      </footer>
     </div>
     """
   end

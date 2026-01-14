@@ -25,11 +25,57 @@ import {LiveSocket} from "phoenix_live_view"
 import {hooks as colocatedHooks} from "phoenix-colocated/algorithms"
 import topbar from "../vendor/topbar"
 
+// Custom hooks
+const Hooks = {
+  TypingEffect: {
+    mounted() {
+      const words = JSON.parse(this.el.dataset.words)
+      let wordIndex = 0
+      let charIndex = words[0].length
+      let isDeleting = true
+      let isPausing = false
+
+      const type = () => {
+        const currentWord = words[wordIndex]
+
+        if (isPausing) {
+          isPausing = false
+          setTimeout(type, 1500)
+          return
+        }
+
+        if (isDeleting) {
+          this.el.textContent = currentWord.substring(0, charIndex - 1)
+          charIndex--
+
+          if (charIndex === 0) {
+            isDeleting = false
+            wordIndex = (wordIndex + 1) % words.length
+          }
+          setTimeout(type, 50)
+        } else {
+          const nextWord = words[wordIndex]
+          this.el.textContent = nextWord.substring(0, charIndex + 1)
+          charIndex++
+
+          if (charIndex === nextWord.length) {
+            isDeleting = true
+            isPausing = true
+          }
+          setTimeout(type, 100)
+        }
+      }
+
+      setTimeout(type, 2000)
+    }
+  }
+}
+
 const csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 const liveSocket = new LiveSocket("/live", Socket, {
   longPollFallbackMs: 2500,
   params: {_csrf_token: csrfToken},
-  hooks: {...colocatedHooks},
+  hooks: {...colocatedHooks, ...Hooks},
 })
 
 // Show progress bar on live navigation and form submits
