@@ -17,8 +17,8 @@ defmodule AlgorithmsWeb.Router do
   scope "/", AlgorithmsWeb do
     pipe_through :browser
 
-    live "/", LandingLive
-    live "/run", SortingLive
+    live "/", HomeLive
+    live "/run", RunLive
   end
 
   # Other scopes may use custom stacks.

@@ -1,4 +1,4 @@
-defmodule AlgorithmsWeb.SortingLive do
+defmodule AlgorithmsWeb.RunLive do
   use AlgorithmsWeb, :live_view
 
   alias Algorithms.Sorting
@@ -194,8 +194,10 @@ defmodule AlgorithmsWeb.SortingLive do
     ~H"""
     <div class="min-h-screen bg-gray-900 text-white p-2 sm:p-4">
       <div class="flex items-center justify-center mb-3 sm:mb-4">
-        <img src="/images/logo.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12" />
-        <h1 class="text-2xl sm:text-3xl font-bold">Algorithms</h1>
+        <a href="/" class="flex items-center">
+          <img src="/images/logo.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12" />
+          <h1 class="text-2xl sm:text-3xl font-bold">Algorithms</h1>
+        </a>
       </div>
 
       <div class="max-w-4xl mx-auto">
@@ -391,10 +393,10 @@ defmodule AlgorithmsWeb.SortingLive do
       <!-- Footer -->
       <footer class="py-8 px-4 border-t border-gray-800">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div class="flex items-center gap-2">
+          <a href="/" class="flex items-center gap-2">
             <img src="/images/logo.png" alt="Logo" class="w-8 h-8" />
             <span class="font-semibold">Algorithms</span>
-          </div>
+          </a>
           <p class="text-gray-500 text-sm">Built with Phoenix LiveView & daisyUI</p>
         </div>
       </footer>

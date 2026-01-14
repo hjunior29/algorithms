@@ -1,4 +1,4 @@
-defmodule AlgorithmsWeb.LandingLive do
+defmodule AlgorithmsWeb.HomeLive do
   use AlgorithmsWeb, :live_view
 
   @typing_words ["Insertion Sort", "Bubble Sort", "Quick Sort", "Merge Sort", "Heap Sort", "Shell Sort"]
@@ -230,54 +230,8 @@ defmodule AlgorithmsWeb.LandingLive do
         </div>
       </section>
 
-      <!-- Comparison Section with Diff -->
-      <section class="py-20 px-4 bg-gray-800/50">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Before & After</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto">
-              See the transformation from chaos to order. Drag the slider to compare unsorted and sorted states.
-            </p>
-          </div>
-
-          <div class="flex justify-center">
-            <figure class="diff rounded-box w-full max-w-2xl aspect-16/9" tabindex="0">
-              <div class="diff-item-1" role="img" tabindex="0">
-                <div class="bg-gray-900 w-full h-full flex items-end justify-center gap-1 p-8">
-                  <div class="bg-red-500 w-8" style="height: 30%"></div>
-                  <div class="bg-red-500 w-8" style="height: 80%"></div>
-                  <div class="bg-red-500 w-8" style="height: 20%"></div>
-                  <div class="bg-red-500 w-8" style="height: 60%"></div>
-                  <div class="bg-red-500 w-8" style="height: 90%"></div>
-                  <div class="bg-red-500 w-8" style="height: 40%"></div>
-                  <div class="bg-red-500 w-8" style="height: 70%"></div>
-                  <div class="bg-red-500 w-8" style="height: 50%"></div>
-                  <div class="bg-red-500 w-8" style="height: 10%"></div>
-                  <div class="bg-red-500 w-8" style="height: 100%"></div>
-                </div>
-              </div>
-              <div class="diff-item-2" role="img">
-                <div class="bg-gray-900 w-full h-full flex items-end justify-center gap-1 p-8">
-                  <div class="bg-green-500 w-8" style="height: 10%"></div>
-                  <div class="bg-green-500 w-8" style="height: 20%"></div>
-                  <div class="bg-green-500 w-8" style="height: 30%"></div>
-                  <div class="bg-green-500 w-8" style="height: 40%"></div>
-                  <div class="bg-green-500 w-8" style="height: 50%"></div>
-                  <div class="bg-green-500 w-8" style="height: 60%"></div>
-                  <div class="bg-green-500 w-8" style="height: 70%"></div>
-                  <div class="bg-green-500 w-8" style="height: 80%"></div>
-                  <div class="bg-green-500 w-8" style="height: 90%"></div>
-                  <div class="bg-green-500 w-8" style="height: 100%"></div>
-                </div>
-              </div>
-              <div class="diff-resizer"></div>
-            </figure>
-          </div>
-        </div>
-      </section>
-
       <!-- CTA Section -->
-      <section class="py-20 px-4">
+      <section class="py-20 px-4 bg-gray-800/50">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Explore?</h2>
           <p class="text-gray-400 mb-8 max-w-xl mx-auto">
