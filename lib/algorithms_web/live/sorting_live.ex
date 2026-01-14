@@ -173,7 +173,10 @@ defmodule AlgorithmsWeb.SortingLive do
   def render(assigns) do
     ~H"""
     <div class="min-h-screen bg-gray-900 text-white p-4 sm:p-8">
-      <h1 class="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">Algorithms</h1>
+      <div class="flex items-center justify-center gap-3 mb-6 sm:mb-8">
+        <img src="/images/logo.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12" />
+        <h1 class="text-2xl sm:text-3xl font-bold">Algorithms</h1>
+      </div>
 
       <div class="max-w-4xl mx-auto">
         <div class="bg-gray-800 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
@@ -221,20 +224,24 @@ defmodule AlgorithmsWeb.SortingLive do
 
             <div>
               <label class="block text-sm mb-2">Algorithm</label>
-              <select
-                name="algorithm"
-                class="w-full bg-gray-700 rounded p-2"
-                disabled={@running}
-              >
-                <option value="insertion" selected={@algorithm == "insertion"}>Insertion</option>
-                <option value="selection" selected={@algorithm == "selection"}>Selection</option>
-                <option value="bubble" selected={@algorithm == "bubble"}>Bubble</option>
-                <option value="shell" selected={@algorithm == "shell"}>Shell</option>
-                <option value="merge" selected={@algorithm == "merge"}>Merge</option>
-                <option value="heap" selected={@algorithm == "heap"}>Heap</option>
-                <option value="quick" selected={@algorithm == "quick"}>Quick</option>
-                <option value="quick3" selected={@algorithm == "quick3"}>Quick3</option>
-              </select>
+              <div class={["dropdown dropdown-hover w-full", @running && "pointer-events-none opacity-50"]}>
+                <div tabindex="0" role="button" class="btn btn-sm w-full justify-between bg-gray-700 border-gray-600 text-white hover:bg-gray-600">
+                  {algorithm_name(@algorithm)}
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <ul tabindex="0" class="dropdown-content menu bg-gray-700 rounded-box z-10 w-full p-2 shadow-lg border border-gray-600">
+                  <li><a phx-click="select_algorithm" phx-value-algorithm="insertion" class={@algorithm == "insertion" && "active"}>Insertion</a></li>
+                  <li><a phx-click="select_algorithm" phx-value-algorithm="selection" class={@algorithm == "selection" && "active"}>Selection</a></li>
+                  <li><a phx-click="select_algorithm" phx-value-algorithm="bubble" class={@algorithm == "bubble" && "active"}>Bubble</a></li>
+                  <li><a phx-click="select_algorithm" phx-value-algorithm="shell" class={@algorithm == "shell" && "active"}>Shell</a></li>
+                  <li><a phx-click="select_algorithm" phx-value-algorithm="merge" class={@algorithm == "merge" && "active"}>Merge</a></li>
+                  <li><a phx-click="select_algorithm" phx-value-algorithm="heap" class={@algorithm == "heap" && "active"}>Heap</a></li>
+                  <li><a phx-click="select_algorithm" phx-value-algorithm="quick" class={@algorithm == "quick" && "active"}>Quick</a></li>
+                  <li><a phx-click="select_algorithm" phx-value-algorithm="quick3" class={@algorithm == "quick3" && "active"}>Quick3</a></li>
+                </ul>
+              </div>
             </div>
           </form>
 
