@@ -19,6 +19,8 @@ defmodule AlgorithmsWeb.SortingLive do
        running: false,
        highlight: {nil, nil},
        operations: 0,
+       progress: 0,
+       total_ops: 0,
        start_time: nil,
        elapsed_time: nil,
        status: :idle,
@@ -90,7 +92,8 @@ defmodule AlgorithmsWeb.SortingLive do
          running: true,
          start_time: System.monotonic_time(:millisecond),
          status: :running,
-         initial_delay: socket.assigns.delay
+         initial_delay: socket.assigns.delay,
+         progress: 0
        )}
     else
       {:noreply, socket}
@@ -103,6 +106,7 @@ defmodule AlgorithmsWeb.SortingLive do
        numbers: socket.assigns.original_numbers,
        highlight: {nil, nil},
        operations: 0,
+       progress: 0,
        elapsed_time: nil,
        running: false,
        status: :ready
@@ -113,6 +117,8 @@ defmodule AlgorithmsWeb.SortingLive do
     lv_pid = self()
     numbers = socket.assigns.numbers
     algorithm = socket.assigns.algorithm
+
+    total_ops = Sorting.count_operations(numbers, algorithm)
 
     Task.start(fn ->
       callback = fn event ->
@@ -133,19 +139,22 @@ defmodule AlgorithmsWeb.SortingLive do
       end
     end)
 
-    {:noreply, socket}
+    {:noreply, assign(socket, total_ops: total_ops)}
   end
 
   def handle_info({:sorting_event, {:step, numbers, i, j, ops}}, socket) do
-    {:noreply, assign(socket, numbers: numbers, highlight: {i, j}, operations: ops)}
+    progress = calc_progress_by_ops(ops, socket.assigns.total_ops)
+    {:noreply, assign(socket, numbers: numbers, highlight: {i, j}, operations: ops, progress: progress)}
   end
 
   def handle_info({:sorting_event, {:compare, numbers, i, j, ops}}, socket) do
-    {:noreply, assign(socket, numbers: numbers, highlight: {i, j}, operations: ops)}
+    progress = calc_progress_by_ops(ops, socket.assigns.total_ops)
+    {:noreply, assign(socket, numbers: numbers, highlight: {i, j}, operations: ops, progress: progress)}
   end
 
   def handle_info({:sorting_event, {:found_min, numbers, idx, ops}}, socket) do
-    {:noreply, assign(socket, numbers: numbers, highlight: {idx, idx}, operations: ops)}
+    progress = calc_progress_by_ops(ops, socket.assigns.total_ops)
+    {:noreply, assign(socket, numbers: numbers, highlight: {idx, idx}, operations: ops, progress: progress)}
   end
 
   def handle_info({:sorting_event, {:done, numbers, ops}}, socket) do
@@ -180,8 +189,8 @@ defmodule AlgorithmsWeb.SortingLive do
 
   def render(assigns) do
     ~H"""
-    <div class="min-h-screen bg-gray-900 text-white p-4 sm:p-8">
-      <div class="flex items-center justify-center gap-3 mb-6 sm:mb-8">
+    <div class="min-h-screen bg-gray-900 text-white p-2 sm:p-4">
+      <div class="flex items-center justify-center mb-3 sm:mb-4">
         <img src="/images/logo.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12" />
         <h1 class="text-2xl sm:text-3xl font-bold">Algorithms</h1>
       </div>
@@ -309,7 +318,7 @@ defmodule AlgorithmsWeb.SortingLive do
 
         <%= if @status != :idle do %>
           <div class="bg-gray-800 rounded-lg p-6">
-            <h2 class="text-xl font-semibold mb-4">Results</h2>
+            <h2 class="text-xl font-semibold mb-2">Results</h2>
             <div class="grid grid-cols-3 gap-4 text-center">
               <div>
                 <p class="text-gray-400 text-sm">Status</p>
@@ -335,12 +344,15 @@ defmodule AlgorithmsWeb.SortingLive do
                 </p>
               </div>
             </div>
+            <div class="mb-2">
+              <progress class="progress progress-primary w-full" value={@progress} max="100"></progress>
+            </div>
           </div>
         <% end %>
 
         <%= if @history != [] do %>
           <div class="bg-gray-800 rounded-lg p-6 mt-6">
-            <h2 class="text-xl font-semibold mb-4">History</h2>
+            <h2 class="text-xl font-semibold mb-2">History</h2>
             <div class="overflow-x-auto">
               <table class="w-full text-sm">
                 <thead>
@@ -386,6 +398,12 @@ defmodule AlgorithmsWeb.SortingLive do
   defp bar_height(value, max_value) do
     max(4, div(value * 240, max_value))
   end
+
+  defp calc_progress_by_ops(current_ops, total_ops) when total_ops > 0 do
+    min(100, div(current_ops * 100, total_ops))
+  end
+
+  defp calc_progress_by_ops(_current_ops, _total_ops), do: 0
 
   defp status_text(:idle), do: "Waiting"
   defp status_text(:ready), do: "Ready"

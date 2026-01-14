@@ -380,4 +380,27 @@ defmodule Algorithms.Sorting do
   def generate_random_numbers(count, max_value) do
     Enum.map(1..count, fn _ -> :rand.uniform(max_value) end)
   end
+
+  @doc """
+  Runs the algorithm in "dry run" mode to count total operations.
+  Returns the total number of operations the algorithm will perform.
+  """
+  def count_operations(numbers, algorithm) do
+    # Callback that does nothing, just lets the algorithm run
+    noop_callback = fn
+      {:done, _numbers, ops} -> ops
+      _ -> :ok
+    end
+
+    case algorithm do
+      "insertion" -> insertion_sort(numbers, noop_callback)
+      "selection" -> selection_sort(numbers, noop_callback)
+      "bubble" -> bubble_sort(numbers, noop_callback)
+      "shell" -> shell_sort(numbers, noop_callback)
+      "merge" -> merge_sort(numbers, noop_callback)
+      "heap" -> heap_sort(numbers, noop_callback)
+      "quick" -> quick_sort(numbers, noop_callback)
+      "quick3" -> quick3_sort(numbers, noop_callback)
+    end
+  end
 end
