@@ -96,7 +96,7 @@ defmodule AlgorithmsWeb.CoreComponents do
           <img src="/images/logo.png" alt="Logo" class="w-8 h-8" />
           <span class="font-semibold text-base-content">Algorithms</span>
         </a>
-        <p class="text-base-content/50 text-sm">{gettext("Built with Phoenix LiveView by")} <a href="https://github.com/hjunior29" class="text-primary hover:text-primary/80">hjunior29</a></p>
+        <p class="text-base-content/50 text-sm">{gettext("Built with Phoenix LiveView by")} <a href="https://github.com/hjunior29" class="text-primary hover:text-primary/80">hjunior29</a>❤️</p>
       </div>
     </footer>
     """
