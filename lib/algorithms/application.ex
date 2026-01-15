@@ -9,11 +9,8 @@ defmodule Algorithms.Application do
   def start(_type, _args) do
     children = [
       AlgorithmsWeb.Telemetry,
-      Algorithms.Repo,
       {DNSCluster, query: Application.get_env(:algorithms, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Algorithms.PubSub},
-      # Start a worker by calling: Algorithms.Worker.start_link(arg)
-      # {Algorithms.Worker, arg},
       # Start to serve requests, typically the last entry
       AlgorithmsWeb.Endpoint
     ]
