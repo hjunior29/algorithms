@@ -119,3 +119,22 @@ button {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+/* Scroll header */
+.scroll-header {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.scroll-header.header-scrolled {
+  backdrop-filter: blur(12px);
+}
+
+/* Dark theme header background */
+[data-theme="dark"] .scroll-header.header-scrolled {
+  background-color: rgba(17, 24, 39, 0.85);
+}
+
+/* Light theme header background */
+[data-theme="light"] .scroll-header.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+}

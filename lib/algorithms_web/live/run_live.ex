@@ -192,17 +192,12 @@ defmodule AlgorithmsWeb.RunLive do
 
   def render(assigns) do
     ~H"""
-    <div class="min-h-screen bg-gray-900 text-white p-2 sm:p-4">
-      <div class="flex items-center justify-center mb-3 sm:mb-4">
-        <a href="/" class="flex items-center">
-          <img src="/images/logo.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12" />
-          <h1 class="text-2xl sm:text-3xl font-bold">Algorithms</h1>
-        </a>
-      </div>
+    <div class="min-h-screen bg-base-100 text-base-content p-2 sm:p-4">
+      <.nav_header />
 
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-gray-800 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
-          <form phx-change="change_settings" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 text-gray-400">
+      <div class="max-w-4xl mx-auto mt-16">
+        <div class="bg-base-200 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
+          <form phx-change="change_settings" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 text-base-content/70">
             <div>
               <label class="block text-sm mb-2">Quantity</label>
               <input
@@ -211,7 +206,7 @@ defmodule AlgorithmsWeb.RunLive do
                 min="5"
                 max="50"
                 value={@count}
-                class="w-full"
+                class="range range-primary range-sm w-full"
                 disabled={@running}
               />
               <span class="text-sm">{@count}</span>
@@ -225,7 +220,7 @@ defmodule AlgorithmsWeb.RunLive do
                 min="10"
                 max="200"
                 value={@max_value}
-                class="w-full"
+                class="range range-primary range-sm w-full"
                 disabled={@running}
               />
               <span class="text-sm">{@max_value}</span>
@@ -239,7 +234,7 @@ defmodule AlgorithmsWeb.RunLive do
                 min="0"
                 max="500"
                 value={@delay}
-                class="w-full"
+                class="range range-primary range-sm w-full"
               />
               <span class="text-sm">{@delay}ms</span>
             </div>
@@ -248,7 +243,7 @@ defmodule AlgorithmsWeb.RunLive do
               <label class="block text-sm mb-1">Algorithm</label>
               <button
                 type="button"
-                class="btn btn-sm w-full justify-between bg-gray-700 border-gray-600 text-gray-400 hover:bg-gray-600"
+                class="btn btn-sm w-full justify-between bg-base-300 border-base-300 text-base-content hover:bg-base-100"
                 popovertarget="algorithm-popover"
                 style="anchor-name:--algorithm-anchor"
               >
@@ -258,7 +253,7 @@ defmodule AlgorithmsWeb.RunLive do
                 </svg>
               </button>
               <ul
-                class="dropdown menu w-52 rounded-box bg-gray-700 shadow-lg border border-gray-600"
+                class="dropdown menu w-52 rounded-box bg-base-200 shadow-lg border border-base-300"
                 popover
                 id="algorithm-popover"
                 style="position-anchor:--algorithm-anchor"
@@ -278,7 +273,7 @@ defmodule AlgorithmsWeb.RunLive do
           <div class="flex flex-wrap gap-2 sm:gap-4 justify-center">
             <button
               phx-click="generate"
-              class="bg-blue-600 hover:bg-blue-700 px-4 sm:px-6 py-2 rounded font-semibold disabled:opacity-50 text-sm sm:text-base"
+              class="btn btn-info px-4 sm:px-6 text-sm sm:text-base"
               disabled={@running}
             >
               Generate
@@ -286,7 +281,7 @@ defmodule AlgorithmsWeb.RunLive do
 
             <button
               phx-click="start"
-              class="bg-green-600 hover:bg-green-700 px-4 sm:px-6 py-2 rounded font-semibold disabled:opacity-50 text-sm sm:text-base"
+              class="btn btn-success px-4 sm:px-6 text-sm sm:text-base"
               disabled={@running or @numbers == []}
             >
               Start
@@ -294,7 +289,7 @@ defmodule AlgorithmsWeb.RunLive do
 
             <button
               phx-click="reset"
-              class="bg-yellow-600 hover:bg-yellow-700 px-4 sm:px-6 py-2 rounded font-semibold disabled:opacity-50 text-sm sm:text-base"
+              class="btn btn-warning px-4 sm:px-6 text-sm sm:text-base"
               disabled={@running or @original_numbers == []}
             >
               Reset
@@ -302,7 +297,7 @@ defmodule AlgorithmsWeb.RunLive do
           </div>
         </div>
 
-        <div class="bg-gray-800 rounded-lg p-6 mb-6">
+        <div class="bg-base-200 rounded-lg p-6 mb-6">
           <div class="flex items-end justify-center gap-1 h-64">
             <%= for {num, idx} <- Enum.with_index(@numbers) do %>
               <div
@@ -317,16 +312,16 @@ defmodule AlgorithmsWeb.RunLive do
           </div>
 
           <%= if @numbers == [] do %>
-            <p class="text-center text-gray-400 mt-4">Click "Generate" to begin</p>
+            <p class="text-center text-base-content/50 mt-4">Click "Generate" to begin</p>
           <% end %>
         </div>
 
         <%= if @status != :idle do %>
-          <div class="bg-gray-800 rounded-lg p-6">
+          <div class="bg-base-200 rounded-lg p-6 mb-6">
             <h2 class="text-xl font-semibold mb-2">Results</h2>
             <div class="grid grid-cols-3 gap-4 text-center">
               <div>
-                <p class="text-gray-400 text-sm">Status</p>
+                <p class="text-base-content/60 text-sm">Status</p>
                 <p class="text-lg font-semibold">
                   {status_text(@status)}
                   <%= if @status == :running do %>
@@ -335,11 +330,11 @@ defmodule AlgorithmsWeb.RunLive do
                 </p>
               </div>
               <div>
-                <p class="text-gray-400 text-sm">Operations</p>
+                <p class="text-base-content/60 text-sm">Operations</p>
                 <p class="text-lg font-semibold">{@operations}</p>
               </div>
               <div>
-                <p class="text-gray-400 text-sm">Time</p>
+                <p class="text-base-content/60 text-sm">Time</p>
                 <p class="text-lg font-semibold">
                   <%= if @elapsed_time do %>
                     {@elapsed_time}ms
@@ -356,12 +351,12 @@ defmodule AlgorithmsWeb.RunLive do
         <% end %>
 
         <%= if @history != [] do %>
-          <div class="bg-gray-800 rounded-lg p-6 mt-6">
+          <div class="bg-base-200 rounded-lg p-6 mb-6">
             <h2 class="text-xl font-semibold mb-2">History</h2>
             <div class="overflow-x-auto">
               <table class="w-full text-sm">
                 <thead>
-                  <tr class="text-gray-400 border-b border-gray-700">
+                  <tr class="text-base-content/60 border-b border-base-300">
                     <th class="text-left py-2 px-2">#</th>
                     <th class="text-left py-2 px-2">Algorithm</th>
                     <th class="text-center py-2 px-2">Count</th>
@@ -373,7 +368,7 @@ defmodule AlgorithmsWeb.RunLive do
                 </thead>
                 <tbody>
                   <%= for {run, idx} <- Enum.with_index(@history) do %>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
+                    <tr class="border-b border-base-300 hover:bg-base-300">
                       <td class="py-2 px-2">{length(@history) - idx}</td>
                       <td class="py-2 px-2">{algorithm_name(run.algorithm)}</td>
                       <td class="text-center py-2 px-2">{run.count}</td>
@@ -390,16 +385,7 @@ defmodule AlgorithmsWeb.RunLive do
         <% end %>
       </div>
 
-      <!-- Footer -->
-      <footer class="py-8 px-4 border-t border-gray-800">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <a href="/" class="flex items-center gap-2">
-            <img src="/images/logo.png" alt="Logo" class="w-8 h-8" />
-            <span class="font-semibold">Algorithms</span>
-          </a>
-          <p class="text-gray-500 text-sm">Built with Phoenix LiveView & daisyUI</p>
-        </div>
-      </footer>
+      <.nav_footer />
     </div>
     """
   end

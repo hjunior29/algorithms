@@ -27,6 +27,43 @@ import topbar from "../vendor/topbar"
 
 // Custom hooks
 const Hooks = {
+  ScrollHeader: {
+    mounted() {
+      const header = this.el
+
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          header.classList.add('header-scrolled')
+        } else {
+          header.classList.remove('header-scrolled')
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll)
+      handleScroll()
+
+      this.cleanup = () => window.removeEventListener('scroll', handleScroll)
+    },
+    destroyed() {
+      if (this.cleanup) this.cleanup()
+    }
+  },
+  ThemeToggle: {
+    mounted() {
+      const checkbox = this.el.querySelector('input[type="checkbox"]')
+
+      // Set initial state based on current theme
+      const currentTheme = localStorage.getItem('phx:theme') ||
+        (document.documentElement.getAttribute('data-theme'))
+      checkbox.checked = currentTheme === 'dark'
+
+      checkbox.addEventListener('change', () => {
+        const newTheme = checkbox.checked ? 'dark' : 'light'
+        localStorage.setItem('phx:theme', newTheme)
+        document.documentElement.setAttribute('data-theme', newTheme)
+      })
+    }
+  },
   TypingEffect: {
     mounted() {
       const words = JSON.parse(this.el.dataset.words)
