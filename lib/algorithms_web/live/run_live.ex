@@ -30,7 +30,7 @@ defmodule AlgorithmsWeb.RunLive do
        generated_count: @default_count,
        generated_max_value: @default_max,
        initial_delay: @default_delay,
-       page_title: "Run"
+       page_title: gettext("Run")
      )}
   end
 
@@ -199,7 +199,7 @@ defmodule AlgorithmsWeb.RunLive do
         <div class="bg-base-200 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
           <form phx-change="change_settings" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 text-base-content/70">
             <div>
-              <label class="block text-sm mb-2">Quantity</label>
+              <label class="block text-sm mb-2">{gettext("Quantity")}</label>
               <input
                 type="range"
                 name="count"
@@ -213,7 +213,7 @@ defmodule AlgorithmsWeb.RunLive do
             </div>
 
             <div>
-              <label class="block text-sm mb-2">Max Value</label>
+              <label class="block text-sm mb-2">{gettext("Max Value")}</label>
               <input
                 type="range"
                 name="max_value"
@@ -227,7 +227,7 @@ defmodule AlgorithmsWeb.RunLive do
             </div>
 
             <div>
-              <label class="block text-sm mb-2">Delay (ms)</label>
+              <label class="block text-sm mb-2">{gettext("Delay (ms)")}</label>
               <input
                 type="range"
                 name="delay"
@@ -240,7 +240,7 @@ defmodule AlgorithmsWeb.RunLive do
             </div>
 
             <div class={@running && "pointer-events-none opacity-50"}>
-              <label class="block text-sm mb-1">Algorithm</label>
+              <label class="block text-sm mb-1">{gettext("Algorithm")}</label>
               <button
                 type="button"
                 class="btn btn-sm w-full justify-between bg-base-300 border-base-300 text-base-content hover:bg-base-100"
@@ -276,7 +276,7 @@ defmodule AlgorithmsWeb.RunLive do
               class="btn btn-info px-4 sm:px-6 text-sm sm:text-base"
               disabled={@running}
             >
-              Generate
+              {gettext("Generate")}
             </button>
 
             <button
@@ -284,7 +284,7 @@ defmodule AlgorithmsWeb.RunLive do
               class="btn btn-success px-4 sm:px-6 text-sm sm:text-base"
               disabled={@running or @numbers == []}
             >
-              Start
+              {gettext("Start")}
             </button>
 
             <button
@@ -292,7 +292,7 @@ defmodule AlgorithmsWeb.RunLive do
               class="btn btn-warning px-4 sm:px-6 text-sm sm:text-base"
               disabled={@running or @original_numbers == []}
             >
-              Reset
+              {gettext("Reset")}
             </button>
           </div>
         </div>
@@ -312,16 +312,16 @@ defmodule AlgorithmsWeb.RunLive do
           </div>
 
           <%= if @numbers == [] do %>
-            <p class="text-center text-base-content/50 mt-4">Click "Generate" to begin</p>
+            <p class="text-center text-base-content/50 mt-4">{gettext("Click \"Generate\" to begin")}</p>
           <% end %>
         </div>
 
         <%= if @status != :idle do %>
           <div class="bg-base-200 rounded-lg p-6 mb-6">
-            <h2 class="text-xl font-semibold mb-2">Results</h2>
+            <h2 class="text-xl font-semibold mb-2">{gettext("Results")}</h2>
             <div class="grid grid-cols-3 gap-4 text-center">
               <div>
-                <p class="text-base-content/60 text-sm">Status</p>
+                <p class="text-base-content/60 text-sm">{gettext("Status")}</p>
                 <p class="text-lg font-semibold">
                   {status_text(@status)}
                   <%= if @status == :running do %>
@@ -330,11 +330,11 @@ defmodule AlgorithmsWeb.RunLive do
                 </p>
               </div>
               <div>
-                <p class="text-base-content/60 text-sm">Operations</p>
+                <p class="text-base-content/60 text-sm">{gettext("Operations")}</p>
                 <p class="text-lg font-semibold">{@operations}</p>
               </div>
               <div>
-                <p class="text-base-content/60 text-sm">Time</p>
+                <p class="text-base-content/60 text-sm">{gettext("Time")}</p>
                 <p class="text-lg font-semibold">
                   <%= if @elapsed_time do %>
                     {@elapsed_time}ms
@@ -352,18 +352,18 @@ defmodule AlgorithmsWeb.RunLive do
 
         <%= if @history != [] do %>
           <div class="bg-base-200 rounded-lg p-6 mb-6">
-            <h2 class="text-xl font-semibold mb-2">History</h2>
+            <h2 class="text-xl font-semibold mb-2">{gettext("History")}</h2>
             <div class="overflow-x-auto">
               <table class="w-full text-sm">
                 <thead>
                   <tr class="text-base-content/60 border-b border-base-300">
                     <th class="text-left py-2 px-2">#</th>
-                    <th class="text-left py-2 px-2">Algorithm</th>
-                    <th class="text-center py-2 px-2">Count</th>
-                    <th class="text-center py-2 px-2">Max</th>
-                    <th class="text-center py-2 px-2">Delay</th>
-                    <th class="text-center py-2 px-2">Operations</th>
-                    <th class="text-center py-2 px-2">Time</th>
+                    <th class="text-left py-2 px-2">{gettext("Algorithm")}</th>
+                    <th class="text-center py-2 px-2">{gettext("Count")}</th>
+                    <th class="text-center py-2 px-2">{gettext("Max")}</th>
+                    <th class="text-center py-2 px-2">{gettext("Delay")}</th>
+                    <th class="text-center py-2 px-2">{gettext("Operations")}</th>
+                    <th class="text-center py-2 px-2">{gettext("Time")}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -407,10 +407,10 @@ defmodule AlgorithmsWeb.RunLive do
 
   defp calc_progress_by_ops(_current_ops, _total_ops), do: 0
 
-  defp status_text(:idle), do: "Waiting"
-  defp status_text(:ready), do: "Ready"
-  defp status_text(:running), do: "Running"
-  defp status_text(:done), do: "Done"
+  defp status_text(:idle), do: gettext("Waiting")
+  defp status_text(:ready), do: gettext("Ready")
+  defp status_text(:running), do: gettext("Running")
+  defp status_text(:done), do: gettext("Done")
 
   defp algorithm_name("insertion"), do: "Insertion"
   defp algorithm_name("selection"), do: "Selection"

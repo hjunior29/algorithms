@@ -51,6 +51,7 @@ defmodule AlgorithmsWeb do
   def live_view do
     quote do
       use Phoenix.LiveView
+      on_mount AlgorithmsWeb.Hooks.SetLocale
 
       unquote(html_helpers())
     end

@@ -8,7 +8,7 @@ defmodule AlgorithmsWeb.HomeLive do
      assign(socket,
        typing_words: @typing_words,
        current_word_index: 0,
-       page_title: "Algorithms run"
+       page_title: gettext("Run")
      )}
   end
 
@@ -26,7 +26,7 @@ defmodule AlgorithmsWeb.HomeLive do
 
         <div class="relative z-10 text-center max-w-4xl mx-auto">
           <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
-            Run
+            {gettext("Run")}
             <span
               id="typing-text"
               phx-hook="TypingEffect"
@@ -36,14 +36,14 @@ defmodule AlgorithmsWeb.HomeLive do
           </h1>
 
           <p class="text-lg sm:text-xl text-base-content/60 mb-12 max-w-2xl mx-auto">
-            Watch sorting algorithms come to life. Understand how different algorithms work by seeing them in action, step by step.
+            {gettext("Watch sorting algorithms come to life. Understand how different algorithms work by seeing them in action, step by step.")}
           </p>
 
           <a
             href="/run"
             class="btn btn-primary btn-lg gap-2 text-lg px-8"
           >
-            Run
+            {gettext("Run")}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
@@ -62,9 +62,9 @@ defmodule AlgorithmsWeb.HomeLive do
       <section class="py-20 px-4 bg-base-200/50">
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Why Algorithm Visualization?</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">{gettext("Why Algorithm Visualization?")}</h2>
             <p class="text-base-content/60 max-w-2xl mx-auto">
-              Understanding sorting algorithms is fundamental to computer science. Watching them work visually transforms abstract concepts into intuitive knowledge.
+              {gettext("Understanding sorting algorithms is fundamental to computer science. Watching them work visually transforms abstract concepts into intuitive knowledge.")}
             </p>
           </div>
 
@@ -78,8 +78,8 @@ defmodule AlgorithmsWeb.HomeLive do
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                     </svg>
                   </div>
-                  <h3 class="card-title">Learn Visually</h3>
-                  <p class="text-base-content/60">See exactly how each algorithm processes data, making complex logic easy to understand.</p>
+                  <h3 class="card-title">{gettext("Learn Visually")}</h3>
+                  <p class="text-base-content/60">{gettext("See exactly how each algorithm processes data, making complex logic easy to understand.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -93,8 +93,8 @@ defmodule AlgorithmsWeb.HomeLive do
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <h3 class="card-title">Compare Performance</h3>
-                  <p class="text-base-content/60">Track operations and execution time to understand the efficiency of different approaches.</p>
+                  <h3 class="card-title">{gettext("Compare Performance")}</h3>
+                  <p class="text-base-content/60">{gettext("Track operations and execution time to understand the efficiency of different approaches.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -108,8 +108,8 @@ defmodule AlgorithmsWeb.HomeLive do
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                     </svg>
                   </div>
-                  <h3 class="card-title">Interactive Controls</h3>
-                  <p class="text-base-content/60">Adjust speed, array size, and values in real-time to explore different scenarios.</p>
+                  <h3 class="card-title">{gettext("Interactive Controls")}</h3>
+                  <p class="text-base-content/60">{gettext("Adjust speed, array size, and values in real-time to explore different scenarios.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -122,9 +122,9 @@ defmodule AlgorithmsWeb.HomeLive do
       <section class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Featured Algorithms</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">{gettext("Featured Algorithms")}</h2>
             <p class="text-base-content/60 max-w-2xl mx-auto">
-              Explore 8 classic sorting algorithms, from simple to advanced. Each one has its own strengths and ideal use cases.
+              {gettext("Explore 8 classic sorting algorithms, from simple to advanced. Each one has its own strengths and ideal use cases.")}
             </p>
           </div>
 
@@ -134,8 +134,8 @@ defmodule AlgorithmsWeb.HomeLive do
               <div class="card bg-base-200 border border-primary/20 hover:border-primary/40 transition-colors">
                 <div class="card-body">
                   <div class="badge badge-primary mb-2">O(n²)</div>
-                  <h3 class="card-title">Insertion Sort</h3>
-                  <p class="text-base-content/60 text-sm">Builds the sorted array one element at a time. Efficient for small or nearly sorted data.</p>
+                  <h3 class="card-title">{gettext("Insertion Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Builds the sorted array one element at a time. Efficient for small or nearly sorted data.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -146,8 +146,8 @@ defmodule AlgorithmsWeb.HomeLive do
               <div class="card bg-base-200 border border-success/20 hover:border-success/40 transition-colors">
                 <div class="card-body">
                   <div class="badge badge-success mb-2">O(n²)</div>
-                  <h3 class="card-title">Selection Sort</h3>
-                  <p class="text-base-content/60 text-sm">Repeatedly finds the minimum element and moves it to the sorted portion.</p>
+                  <h3 class="card-title">{gettext("Selection Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Repeatedly finds the minimum element and moves it to the sorted portion.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -158,8 +158,8 @@ defmodule AlgorithmsWeb.HomeLive do
               <div class="card bg-base-200 border border-warning/20 hover:border-warning/40 transition-colors">
                 <div class="card-body">
                   <div class="badge badge-warning mb-2">O(n²)</div>
-                  <h3 class="card-title">Bubble Sort</h3>
-                  <p class="text-base-content/60 text-sm">Repeatedly swaps adjacent elements if they are in the wrong order.</p>
+                  <h3 class="card-title">{gettext("Bubble Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Repeatedly swaps adjacent elements if they are in the wrong order.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -170,8 +170,8 @@ defmodule AlgorithmsWeb.HomeLive do
               <div class="card bg-base-200 border border-secondary/20 hover:border-secondary/40 transition-colors">
                 <div class="card-body">
                   <div class="badge badge-secondary mb-2">O(n log n)</div>
-                  <h3 class="card-title">Shell Sort</h3>
-                  <p class="text-base-content/60 text-sm">Generalization of insertion sort that allows exchange of far apart elements.</p>
+                  <h3 class="card-title">{gettext("Shell Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Generalization of insertion sort that allows exchange of far apart elements.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -182,8 +182,8 @@ defmodule AlgorithmsWeb.HomeLive do
               <div class="card bg-base-200 border border-info/20 hover:border-info/40 transition-colors">
                 <div class="card-body">
                   <div class="badge badge-info mb-2">O(n log n)</div>
-                  <h3 class="card-title">Merge Sort</h3>
-                  <p class="text-base-content/60 text-sm">Divide and conquer algorithm that splits, sorts, and merges arrays.</p>
+                  <h3 class="card-title">{gettext("Merge Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Divide and conquer algorithm that splits, sorts, and merges arrays.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -194,8 +194,8 @@ defmodule AlgorithmsWeb.HomeLive do
               <div class="card bg-base-200 border border-error/20 hover:border-error/40 transition-colors">
                 <div class="card-body">
                   <div class="badge badge-error mb-2">O(n log n)</div>
-                  <h3 class="card-title">Heap Sort</h3>
-                  <p class="text-base-content/60 text-sm">Uses a binary heap data structure to sort elements efficiently.</p>
+                  <h3 class="card-title">{gettext("Heap Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Uses a binary heap data structure to sort elements efficiently.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -206,8 +206,8 @@ defmodule AlgorithmsWeb.HomeLive do
               <div class="card bg-base-200 border border-warning/20 hover:border-warning/40 transition-colors">
                 <div class="card-body">
                   <div class="badge badge-warning mb-2">O(n log n)</div>
-                  <h3 class="card-title">Quick Sort</h3>
-                  <p class="text-base-content/60 text-sm">Fast divide and conquer using a pivot element to partition arrays.</p>
+                  <h3 class="card-title">{gettext("Quick Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Fast divide and conquer using a pivot element to partition arrays.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -218,8 +218,8 @@ defmodule AlgorithmsWeb.HomeLive do
               <div class="card bg-base-200 border border-secondary/20 hover:border-secondary/40 transition-colors">
                 <div class="card-body">
                   <div class="badge badge-secondary mb-2">O(n log n)</div>
-                  <h3 class="card-title">Quick3 Sort</h3>
-                  <p class="text-base-content/60 text-sm">3-way partitioning variant, excellent for arrays with many duplicates.</p>
+                  <h3 class="card-title">{gettext("Quick3 Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("3-way partitioning variant, excellent for arrays with many duplicates.")}</p>
                 </div>
               </div>
               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -231,12 +231,12 @@ defmodule AlgorithmsWeb.HomeLive do
       <!-- CTA Section -->
       <section class="py-20 px-4 bg-base-200/50">
         <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Explore?</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-6">{gettext("Ready to Explore?")}</h2>
           <p class="text-base-content/60 mb-8 max-w-xl mx-auto">
-            Start visualizing sorting algorithms now. Generate random data, pick an algorithm, and watch the magic happen.
+            {gettext("Start visualizing sorting algorithms now. Generate random data, pick an algorithm, and watch the magic happen.")}
           </p>
           <a href="/run" class="btn btn-primary btn-lg gap-2">
-            Run
+            {gettext("Run")}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

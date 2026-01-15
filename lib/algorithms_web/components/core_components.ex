@@ -39,6 +39,8 @@ defmodule AlgorithmsWeb.CoreComponents do
       <.nav_header />
   """
   def nav_header(assigns) do
+    assigns = assign_new(assigns, :locale, fn -> Gettext.get_locale(AlgorithmsWeb.Gettext) end)
+
     ~H"""
     <header
       id="main-header"
@@ -67,17 +69,17 @@ defmodule AlgorithmsWeb.CoreComponents do
             </svg>
           </label>
 
-          <!-- Language Selector (placeholder) -->
+          <!-- Language Selector -->
           <div class="dropdown dropdown-end">
             <button tabindex="0" class="btn btn-ghost btn-sm gap-1">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
-              <span class="text-sm">EN</span>
+              <span class="text-sm uppercase">{@locale}</span>
             </button>
             <ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-10 w-32 p-2 shadow-lg">
-              <li><a class="active">English</a></li>
-              <li><a>Português</a></li>
+              <li><a href="/locale/en" class={@locale == "en" && "active"}>English</a></li>
+              <li><a href="/locale/pt" class={@locale == "pt" && "active"}>Português</a></li>
             </ul>
           </div>
         </div>
@@ -94,7 +96,7 @@ defmodule AlgorithmsWeb.CoreComponents do
           <img src="/images/logo.png" alt="Logo" class="w-8 h-8" />
           <span class="font-semibold text-base-content">Algorithms</span>
         </a>
-        <p class="text-base-content/50 text-sm">Built with Phoenix LiveView by <a href="https://github.com/hjunior29" class="text-primary hover:text-primary/80">hjunior29 </a>❤️</p>
+        <p class="text-base-content/50 text-sm">{gettext("Built with Phoenix LiveView by")} <a href="https://github.com/hjunior29" class="text-primary hover:text-primary/80">hjunior29</a></p>
       </div>
     </footer>
     """

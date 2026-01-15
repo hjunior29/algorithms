@@ -8,6 +8,7 @@ defmodule AlgorithmsWeb.Router do
     plug :put_root_layout, html: {AlgorithmsWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug AlgorithmsWeb.Plugs.Locale
   end
 
   pipeline :api do
@@ -19,6 +20,7 @@ defmodule AlgorithmsWeb.Router do
 
     live "/", HomeLive
     live "/run", RunLive
+    get "/locale/:locale", LocaleController, :switch
   end
 
   # Other scopes may use custom stacks.
