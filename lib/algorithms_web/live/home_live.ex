@@ -129,117 +129,93 @@ defmodule AlgorithmsWeb.HomeLive do
           </div>
 
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Insertion Sort -->
-            <div class="hover-3d">
-              <a href="/run?algorithm=insertion" class="hover-3d">
-                <div class="card bg-base-200 border border-primary/20 hover:border-primary/40 transition-colors">
-                  <div class="card-body">
-                    <div class="badge badge-primary mb-2">O(n²)</div>
-                    <h3 class="card-title">{gettext("Insertion Sort")}</h3>
-                    <p class="text-base-content/60 text-sm">{gettext("Builds the sorted array one element at a time. Efficient for small or nearly sorted data.")}</p>
-                  </div>
+            <a href="/run?algorithm=insertion" class="hover-3d">
+              <div class="card bg-base-200 border border-base-300 h-full">
+                <div class="card-body">
+                  <div class="badge badge-primary mb-2">O(n²)</div>
+                  <h3 class="card-title">{gettext("Insertion Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Builds the sorted array one element at a time. Efficient for small or nearly sorted data.")}</p>
                 </div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-              </a>
-            </div>
+              </div>
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </a>
 
-            <!-- Selection Sort -->
-            <div class="hover-3d">
-              <a href="/run?algorithm=selection" class="hover-3d">
-                <div class="card bg-base-200 border border-success/20 hover:border-success/40 transition-colors">
-                  <div class="card-body">
-                    <div class="badge badge-success mb-2">O(n²)</div>
-                    <h3 class="card-title">{gettext("Selection Sort")}</h3>
-                    <p class="text-base-content/60 text-sm">{gettext("Repeatedly finds the minimum element and moves it to the sorted portion.")}</p>
-                  </div>
+            <a href="/run?algorithm=selection" class="hover-3d">
+              <div class="card bg-base-200 border border-base-300 h-full">
+                <div class="card-body">
+                  <div class="badge badge-success mb-2">O(n²)</div>
+                  <h3 class="card-title">{gettext("Selection Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Repeatedly finds the minimum element and moves it to the sorted portion.")}</p>
                 </div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-              </a>
-            </div>
+              </div>
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </a>
 
-            <!-- Bubble Sort -->
-            <div class="hover-3d">
-              <a href="/run?algorithm=bubble" class="hover-3d">
-                <div class="card bg-base-200 border border-warning/20 hover:border-warning/40 transition-colors">
-                  <div class="card-body">
-                    <div class="badge badge-warning mb-2">O(n²)</div>
-                    <h3 class="card-title">{gettext("Bubble Sort")}</h3>
-                    <p class="text-base-content/60 text-sm">{gettext("Repeatedly swaps adjacent elements if they are in the wrong order.")}</p>
-                  </div>
+            <a href="/run?algorithm=bubble" class="hover-3d">
+              <div class="card bg-base-200 border border-base-300 h-full">
+                <div class="card-body">
+                  <div class="badge badge-warning mb-2">O(n²)</div>
+                  <h3 class="card-title">{gettext("Bubble Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Repeatedly swaps adjacent elements if they are in the wrong order.")}</p>
                 </div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-              </a>
-            </div>
+              </div>
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </a>
 
-            <!-- Shell Sort -->
-            <div class="hover-3d">
-              <a href="/run?algorithm=shell" class="hover-3d">
-                <div class="card bg-base-200 border border-secondary/20 hover:border-secondary/40 transition-colors">
-                  <div class="card-body">
-                    <div class="badge badge-secondary mb-2">O(n log n)</div>
-                    <h3 class="card-title">{gettext("Shell Sort")}</h3>
-                    <p class="text-base-content/60 text-sm">{gettext("Generalization of insertion sort that allows exchange of far apart elements.")}</p>
-                  </div>
+            <a href="/run?algorithm=shell" class="hover-3d">
+              <div class="card bg-base-200 border border-base-300 h-full">
+                <div class="card-body">
+                  <div class="badge badge-secondary mb-2">O(n log n)</div>
+                  <h3 class="card-title">{gettext("Shell Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Generalization of insertion sort that allows exchange of far apart elements.")}</p>
                 </div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-              </a>
-            </div>
+              </div>
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </a>
 
-            <!-- Merge Sort -->
-            <div class="hover-3d">
-              <a href="/run?algorithm=merge" class="hover-3d">
-                <div class="card bg-base-200 border border-info/20 hover:border-info/40 transition-colors">
-                  <div class="card-body">
-                    <div class="badge badge-info mb-2">O(n log n)</div>
-                    <h3 class="card-title">{gettext("Merge Sort")}</h3>
-                    <p class="text-base-content/60 text-sm">{gettext("Divide and conquer algorithm that splits, sorts, and merges arrays.")}</p>
-                  </div>
+            <a href="/run?algorithm=merge" class="hover-3d">
+              <div class="card bg-base-200 border border-base-300 h-full">
+                <div class="card-body">
+                  <div class="badge badge-info mb-2">O(n log n)</div>
+                  <h3 class="card-title">{gettext("Merge Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Divide and conquer algorithm that splits, sorts, and merges arrays.")}</p>
                 </div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-              </a>
-            </div>
+              </div>
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </a>
 
-            <!-- Heap Sort -->
-            <div class="hover-3d">
-              <a href="/run?algorithm=heap" class="hover-3d">
-                <div class="card bg-base-200 border border-error/20 hover:border-error/40 transition-colors">
-                  <div class="card-body">
-                    <div class="badge badge-error mb-2">O(n log n)</div>
-                    <h3 class="card-title">{gettext("Heap Sort")}</h3>
-                    <p class="text-base-content/60 text-sm">{gettext("Uses a binary heap data structure to sort elements efficiently.")}</p>
-                  </div>
+            <a href="/run?algorithm=heap" class="hover-3d">
+              <div class="card bg-base-200 border border-base-300 h-full">
+                <div class="card-body">
+                  <div class="badge badge-error mb-2">O(n log n)</div>
+                  <h3 class="card-title">{gettext("Heap Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Uses a binary heap data structure to sort elements efficiently.")}</p>
                 </div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-              </a>
-            </div>
+              </div>
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </a>
 
-            <!-- Quick Sort -->
-            <div class="hover-3d">
-              <a href="/run?algorithm=quick" class="hover-3d">
-                <div class="card bg-base-200 border border-warning/20 hover:border-warning/40 transition-colors">
-                  <div class="card-body">
-                    <div class="badge badge-warning mb-2">O(n log n)</div>
-                    <h3 class="card-title">{gettext("Quick Sort")}</h3>
-                    <p class="text-base-content/60 text-sm">{gettext("Fast divide and conquer using a pivot element to partition arrays.")}</p>
-                  </div>
+            <a href="/run?algorithm=quick" class="hover-3d">
+              <div class="card bg-base-200 border border-base-300 h-full">
+                <div class="card-body">
+                  <div class="badge badge-warning mb-2">O(n log n)</div>
+                  <h3 class="card-title">{gettext("Quick Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("Fast divide and conquer using a pivot element to partition arrays.")}</p>
                 </div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-              </a>
-            </div>
+              </div>
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </a>
 
-            <!-- Quick3 Sort -->
-            <div class="hover-3d">
-              <a href="/run?algorithm=quick3" class="hover-3d">
-                <div class="card bg-base-200 border border-secondary/20 hover:border-secondary/40 transition-colors">
-                  <div class="card-body">
-                    <div class="badge badge-secondary mb-2">O(n log n)</div>
-                    <h3 class="card-title">{gettext("Quick3 Sort")}</h3>
-                    <p class="text-base-content/60 text-sm">{gettext("3-way partitioning variant, excellent for arrays with many duplicates.")}</p>
-                  </div>
+            <a href="/run?algorithm=quick3" class="hover-3d">
+              <div class="card bg-base-200 border border-base-300 h-full">
+                <div class="card-body">
+                  <div class="badge badge-secondary mb-2">O(n log n)</div>
+                  <h3 class="card-title">{gettext("Quick3 Sort")}</h3>
+                  <p class="text-base-content/60 text-sm">{gettext("3-way partitioning variant, excellent for arrays with many duplicates.")}</p>
                 </div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-              </a>
-            </div>
+              </div>
+              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </a>
           </div>
         </div>
       </section>
