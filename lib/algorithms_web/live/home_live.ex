@@ -8,7 +8,7 @@ defmodule AlgorithmsWeb.HomeLive do
      assign(socket,
        typing_words: @typing_words,
        current_word_index: 0,
-       page_title: gettext("Run")
+       page_title: gettext("Home")
      )}
   end
 
