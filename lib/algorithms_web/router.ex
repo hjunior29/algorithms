@@ -20,6 +20,8 @@ defmodule AlgorithmsWeb.Router do
 
     live "/", HomeLive
     live "/run", RunLive
+    live "/learn", LearnLive
+    live "/learn/:algorithm", LearnLive
     get "/locale/:locale", LocaleController, :switch
   end
 

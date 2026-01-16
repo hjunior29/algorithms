@@ -11,21 +11,22 @@
 msgid ""
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:222
+#: lib/algorithms_web/live/home_live.ex:226
 #, elixir-autogen, elixir-format
 msgid "3-way partitioning variant, excellent for arrays with many duplicates."
 msgstr ""
 
-#: lib/algorithms_web/components/core_components.ex:439
+#: lib/algorithms_web/components/core_components.ex:449
 #, elixir-autogen, elixir-format
 msgid "Actions"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:112
+#: lib/algorithms_web/live/home_live.ex:124
 #, elixir-autogen, elixir-format
 msgid "Adjust speed, array size, and values in real-time to explore different scenarios."
 msgstr ""
 
+#: lib/algorithms_web/live/learn_live.ex:274
 #: lib/algorithms_web/live/run_live.ex:243
 #: lib/algorithms_web/live/run_live.ex:361
 #, elixir-autogen, elixir-format
@@ -38,17 +39,17 @@ msgstr ""
 msgid "Attempting to reconnect"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:161
+#: lib/algorithms_web/live/home_live.ex:170
 #, elixir-autogen, elixir-format
 msgid "Bubble Sort"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:138
+#: lib/algorithms_web/live/home_live.ex:149
 #, elixir-autogen, elixir-format
 msgid "Builds the sorted array one element at a time. Efficient for small or nearly sorted data."
 msgstr ""
 
-#: lib/algorithms_web/components/core_components.ex:99
+#: lib/algorithms_web/components/core_components.ex:109
 #, elixir-autogen, elixir-format
 msgid "Built with Phoenix LiveView by"
 msgstr ""
@@ -58,7 +59,7 @@ msgstr ""
 msgid "Click \"Generate\" to begin"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:96
+#: lib/algorithms_web/live/home_live.ex:108
 #, elixir-autogen, elixir-format
 msgid "Compare Performance"
 msgstr ""
@@ -78,7 +79,7 @@ msgstr ""
 msgid "Delay (ms)"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:186
+#: lib/algorithms_web/live/home_live.ex:193
 #, elixir-autogen, elixir-format
 msgid "Divide and conquer algorithm that splits, sorts, and merges arrays."
 msgstr ""
@@ -88,22 +89,22 @@ msgstr ""
 msgid "Done"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:127
+#: lib/algorithms_web/live/home_live.ex:139
 #, elixir-autogen, elixir-format
 msgid "Explore 8 classic sorting algorithms, from simple to advanced. Each one has its own strengths and ideal use cases."
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:210
+#: lib/algorithms_web/live/home_live.ex:215
 #, elixir-autogen, elixir-format
 msgid "Fast divide and conquer using a pivot element to partition arrays."
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:125
+#: lib/algorithms_web/live/home_live.ex:137
 #, elixir-autogen, elixir-format
 msgid "Featured Algorithms"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:174
+#: lib/algorithms_web/live/home_live.ex:182
 #, elixir-autogen, elixir-format
 msgid "Generalization of insertion sort that allows exchange of far apart elements."
 msgstr ""
@@ -113,27 +114,29 @@ msgstr ""
 msgid "Generate"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:197
+#: lib/algorithms_web/live/home_live.ex:203
 #, elixir-autogen, elixir-format
 msgid "Heap Sort"
 msgstr ""
 
+#: lib/algorithms_web/live/home_live.ex:284
+#: lib/algorithms_web/live/learn_live.ex:136
 #: lib/algorithms_web/live/run_live.ex:355
 #, elixir-autogen, elixir-format
 msgid "History"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:137
+#: lib/algorithms_web/live/home_live.ex:148
 #, elixir-autogen, elixir-format
 msgid "Insertion Sort"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:111
+#: lib/algorithms_web/live/home_live.ex:123
 #, elixir-autogen, elixir-format
 msgid "Interactive Controls"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:81
+#: lib/algorithms_web/live/home_live.ex:93
 #, elixir-autogen, elixir-format
 msgid "Learn Visually"
 msgstr ""
@@ -148,7 +151,7 @@ msgstr ""
 msgid "Max Value"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:185
+#: lib/algorithms_web/live/home_live.ex:192
 #, elixir-autogen, elixir-format
 msgid "Merge Sort"
 msgstr ""
@@ -164,12 +167,12 @@ msgstr ""
 msgid "Quantity"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:209
+#: lib/algorithms_web/live/home_live.ex:214
 #, elixir-autogen, elixir-format
 msgid "Quick Sort"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:221
+#: lib/algorithms_web/live/home_live.ex:225
 #, elixir-autogen, elixir-format
 msgid "Quick3 Sort"
 msgstr ""
@@ -179,17 +182,17 @@ msgstr ""
 msgid "Ready"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:234
+#: lib/algorithms_web/live/home_live.ex:325
 #, elixir-autogen, elixir-format
 msgid "Ready to Explore?"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:150
+#: lib/algorithms_web/live/home_live.ex:160
 #, elixir-autogen, elixir-format
 msgid "Repeatedly finds the minimum element and moves it to the sorted portion."
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:162
+#: lib/algorithms_web/live/home_live.ex:171
 #, elixir-autogen, elixir-format
 msgid "Repeatedly swaps adjacent elements if they are in the wrong order."
 msgstr ""
@@ -204,10 +207,11 @@ msgstr ""
 msgid "Results"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:11
+#: lib/algorithms_web/components/core_components.ex:60
 #: lib/algorithms_web/live/home_live.ex:29
-#: lib/algorithms_web/live/home_live.ex:46
-#: lib/algorithms_web/live/home_live.ex:239
+#: lib/algorithms_web/live/home_live.ex:47
+#: lib/algorithms_web/live/home_live.ex:330
+#: lib/algorithms_web/live/learn_live.ex:206
 #: lib/algorithms_web/live/run_live.ex:33
 #, elixir-autogen, elixir-format
 msgid "Run"
@@ -218,17 +222,17 @@ msgstr ""
 msgid "Running"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:82
+#: lib/algorithms_web/live/home_live.ex:94
 #, elixir-autogen, elixir-format
 msgid "See exactly how each algorithm processes data, making complex logic easy to understand."
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:149
+#: lib/algorithms_web/live/home_live.ex:159
 #, elixir-autogen, elixir-format
 msgid "Selection Sort"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:173
+#: lib/algorithms_web/live/home_live.ex:181
 #, elixir-autogen, elixir-format
 msgid "Shell Sort"
 msgstr ""
@@ -243,7 +247,7 @@ msgstr ""
 msgid "Start"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:236
+#: lib/algorithms_web/live/home_live.ex:327
 #, elixir-autogen, elixir-format
 msgid "Start visualizing sorting algorithms now. Generate random data, pick an algorithm, and watch the magic happen."
 msgstr ""
@@ -259,17 +263,17 @@ msgstr ""
 msgid "Time"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:97
+#: lib/algorithms_web/live/home_live.ex:109
 #, elixir-autogen, elixir-format
 msgid "Track operations and execution time to understand the efficiency of different approaches."
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:67
+#: lib/algorithms_web/live/home_live.ex:79
 #, elixir-autogen, elixir-format
 msgid "Understanding sorting algorithms is fundamental to computer science. Watching them work visually transforms abstract concepts into intuitive knowledge."
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:198
+#: lib/algorithms_web/live/home_live.ex:204
 #, elixir-autogen, elixir-format
 msgid "Uses a binary heap data structure to sort elements efficiently."
 msgstr ""
@@ -289,12 +293,868 @@ msgstr ""
 msgid "We can't find the internet"
 msgstr ""
 
-#: lib/algorithms_web/live/home_live.ex:65
+#: lib/algorithms_web/live/home_live.ex:77
 #, elixir-autogen, elixir-format
 msgid "Why Algorithm Visualization?"
 msgstr ""
 
-#: lib/algorithms_web/components/core_components.ex:145
+#: lib/algorithms_web/components/core_components.ex:155
 #, elixir-autogen, elixir-format
 msgid "close"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:422
+#, elixir-autogen, elixir-format
+msgid "(3-way Quick Sort) is a variation developed by Dijkstra for handling arrays with many duplicate keys."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:361
+#, elixir-autogen, elixir-format
+msgid "3-way partitioning for duplicates."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:561
+#, elixir-autogen, elixir-format
+msgid "Adapts well to existing order"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:572
+#, elixir-autogen, elixir-format
+msgid "Always O(n log n)"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:526
+#, elixir-autogen, elixir-format
+msgid "Approaches O(n) performance"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:593
+#, elixir-autogen, elixir-format
+msgid "Arrays"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:528
+#, elixir-autogen, elixir-format
+msgid "As a subroutine"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:607
+#, elixir-autogen, elixir-format
+msgid "As good as Quick Sort, better with duplicates"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:275
+#, elixir-autogen, elixir-format
+msgid "Average"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:176
+#, elixir-autogen, elixir-format
+msgid "Average Case"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:118
+#, elixir-autogen, elixir-format
+msgid "Back to all algorithms"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:172
+#, elixir-autogen, elixir-format
+msgid "Best Case"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:489
+#, elixir-autogen, elixir-format
+msgid "Build a max-heap from the input array"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:354
+#, elixir-autogen, elixir-format
+msgid "Builds sorted array one element at a time."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:527
+#, elixir-autogen, elixir-format
+msgid "Can sort data as it arrives"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:539
+#, elixir-autogen, elixir-format
+msgid "Checking if sorted"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:501
+#: lib/algorithms_web/live/learn_live.ex:512
+#, elixir-autogen, elixir-format
+msgid "Choose a pivot element"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:606
+#, elixir-autogen, elixir-format
+msgid "Common prefixes are handled efficiently"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:560
+#, elixir-autogen, elixir-format
+msgid "Compact implementation"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:455
+#, elixir-autogen, elixir-format
+msgid "Compare adjacent elements from the beginning"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:467
+#, elixir-autogen, elixir-format
+msgid "Compare elements that are 'gap' positions apart"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:433
+#, elixir-autogen, elixir-format
+msgid "Compare it with elements before it"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:293
+#: lib/algorithms_web/live/learn_live.ex:169
+#, elixir-autogen, elixir-format
+msgid "Complexity"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:457
+#, elixir-autogen, elixir-format
+msgid "Continue to the end of the array"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:481
+#, elixir-autogen, elixir-format
+msgid "Copy remaining elements from either half"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:384
+#, elixir-autogen, elixir-format
+msgid "Despite being inefficient for most real-world applications, it's valuable for educational purposes and can be optimized with an early termination flag."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:368
+#, elixir-autogen, elixir-format
+msgid "Despite its O(n²) average complexity, it remains widely used due to its simplicity, low overhead, and excellent performance on small or nearly sorted datasets."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:416
+#, elixir-autogen, elixir-format
+msgid "Despite its O(n²) worst case, careful pivot selection (like median-of-three) makes this scenario extremely rare in practice."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:548
+#, elixir-autogen, elixir-format
+msgid "Detecting sorted arrays"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:358
+#, elixir-autogen, elixir-format
+msgid "Divide and conquer with merging."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:478
+#, elixir-autogen, elixir-format
+msgid "Divide the array into two halves"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:547
+#, elixir-autogen, elixir-format
+msgid "Easy to understand and implement"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:539
+#, elixir-autogen, elixir-format
+msgid "Easy to verify correctness"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:547
+#, elixir-autogen, elixir-format
+msgid "Educational purposes"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:516
+#, elixir-autogen, elixir-format
+msgid "Elements equal to pivot are already in place"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:559
+#, elixir-autogen, elixir-format
+msgid "Embedded systems"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:593
+#, elixir-autogen, elixir-format
+msgid "Excellent cache performance"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:570
+#, elixir-autogen, elixir-format
+msgid "External sorting"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:592
+#, elixir-autogen, elixir-format
+msgid "Fastest on average"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:444
+#, elixir-autogen, elixir-format
+msgid "Find the minimum element in the unsorted portion"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:583
+#, elixir-autogen, elixir-format
+msgid "Finding k largest/smallest"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:355
+#, elixir-autogen, elixir-format
+msgid "Finds minimum and moves to sorted portion."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:607
+#, elixir-autogen, elixir-format
+msgid "General-purpose"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:592
+#, elixir-autogen, elixir-format
+msgid "General-purpose sorting"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:551
+#, elixir-autogen, elixir-format
+msgid "Generally not recommended for production use"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:558
+#, elixir-autogen, elixir-format
+msgid "Good balance of simplicity and speed"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:582
+#, elixir-autogen, elixir-format
+msgid "Guaranteed O(n log n)"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:572
+#, elixir-autogen, elixir-format
+msgid "Guaranteed performance"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:492
+#, elixir-autogen, elixir-format
+msgid "Heapify the root to restore heap property"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:11
+#, elixir-autogen, elixir-format
+msgid "Home"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:146
+#, elixir-autogen, elixir-format
+msgid "How it works"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:435
+#, elixir-autogen, elixir-format
+msgid "Insert the element at the correct position"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:357
+#, elixir-autogen, elixir-format
+msgid "Insertion sort with diminishing gaps."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:423
+#, elixir-autogen, elixir-format
+msgid "Instead of two partitions, it creates three: elements less than, equal to, and greater than the pivot."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:595
+#, elixir-autogen, elixir-format
+msgid "Large datasets"
+msgstr ""
+
+#: lib/algorithms_web/components/core_components.ex:63
+#: lib/algorithms_web/live/home_live.ex:57
+#: lib/algorithms_web/live/learn_live.ex:92
+#, elixir-autogen, elixir-format
+msgid "Learn"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:234
+#, elixir-autogen, elixir-format
+msgid "Learn Sorting Algorithms"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:537
+#, elixir-autogen, elixir-format
+msgid "Like flash memory"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:605
+#, elixir-autogen, elixir-format
+msgid "Like sorting grades or categories"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:605
+#, elixir-autogen, elixir-format
+msgid "Limited key range"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:604
+#, elixir-autogen, elixir-format
+msgid "Linear time for all equal elements"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:569
+#, elixir-autogen, elixir-format
+msgid "Linked lists"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:559
+#, elixir-autogen, elixir-format
+msgid "Low memory overhead, no recursion"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:604
+#, elixir-autogen, elixir-format
+msgid "Many duplicate keys"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:594
+#, elixir-autogen, elixir-format
+msgid "Many practical applications"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:558
+#, elixir-autogen, elixir-format
+msgid "Medium-sized arrays"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:581
+#, elixir-autogen, elixir-format
+msgid "Memory constrained"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:537
+#, elixir-autogen, elixir-format
+msgid "Memory writes are expensive"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:400
+#, elixir-autogen, elixir-format
+msgid "Merge Sort is stable and predictable, making it ideal for sorting linked lists and external sorting (sorting data that doesn't fit in memory)."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:480
+#, elixir-autogen, elixir-format
+msgid "Merge the sorted halves by comparing elements"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:536
+#, elixir-autogen, elixir-format
+msgid "Minimal swaps needed"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:446
+#, elixir-autogen, elixir-format
+msgid "Move the boundary of sorted portion one element ahead"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:584
+#, elixir-autogen, elixir-format
+msgid "Natural fit for heap operations"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:573
+#, elixir-autogen, elixir-format
+msgid "Naturally parallelizable"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:526
+#, elixir-autogen, elixir-format
+msgid "Nearly sorted data"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:191
+#: lib/algorithms_web/live/learn_live.ex:307
+#, elixir-autogen, elixir-format
+msgid "No"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:569
+#, elixir-autogen, elixir-format
+msgid "No random access needed, O(1) extra space"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:582
+#, elixir-autogen, elixir-format
+msgid "No worst case degradation"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:527
+#, elixir-autogen, elixir-format
+msgid "Online sorting"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:581
+#, elixir-autogen, elixir-format
+msgid "Only O(1) extra space"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:536
+#, elixir-autogen, elixir-format
+msgid "Only O(n) swaps are made"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:218
+#, elixir-autogen, elixir-format
+msgid "Other algorithms"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:525
+#, elixir-autogen, elixir-format
+msgid "Overhead is minimal for n < 50"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:573
+#, elixir-autogen, elixir-format
+msgid "Parallel processing"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:583
+#, elixir-autogen, elixir-format
+msgid "Partial sorting is efficient"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:561
+#, elixir-autogen, elixir-format
+msgid "Partially sorted data"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:360
+#, elixir-autogen, elixir-format
+msgid "Partition around pivot element."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:513
+#, elixir-autogen, elixir-format
+msgid "Partition into three: less than, equal to, greater than pivot"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:502
+#, elixir-autogen, elixir-format
+msgid "Partition: place smaller elements left, larger right"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:571
+#, elixir-autogen, elixir-format
+msgid "Preserves order of equal elements"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:584
+#, elixir-autogen, elixir-format
+msgid "Priority queues"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:479
+#, elixir-autogen, elixir-format
+msgid "Recursively sort each half"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:515
+#, elixir-autogen, elixir-format
+msgid "Recursively sort the 'greater than' partition"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:514
+#, elixir-autogen, elixir-format
+msgid "Recursively sort the 'less than' partition"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:503
+#, elixir-autogen, elixir-format
+msgid "Recursively sort the left partition"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:504
+#, elixir-autogen, elixir-format
+msgid "Recursively sort the right partition"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:491
+#, elixir-autogen, elixir-format
+msgid "Reduce heap size by one"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:469
+#, elixir-autogen, elixir-format
+msgid "Reduce the gap (typically by half)"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:436
+#, elixir-autogen, elixir-format
+msgid "Repeat for all remaining elements"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:458
+#, elixir-autogen, elixir-format
+msgid "Repeat passes until no swaps are needed"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:470
+#, elixir-autogen, elixir-format
+msgid "Repeat until gap becomes 1 (final insertion sort)"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:493
+#, elixir-autogen, elixir-format
+msgid "Repeat until heap size is 1"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:447
+#, elixir-autogen, elixir-format
+msgid "Repeat until the entire array is sorted"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:595
+#, elixir-autogen, elixir-format
+msgid "Scales well with size"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:203
+#, elixir-autogen, elixir-format
+msgid "See this algorithm in action with the visualizer."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:434
+#, elixir-autogen, elixir-format
+msgid "Shift larger elements one position ahead"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:538
+#, elixir-autogen, elixir-format
+msgid "Simple implementation"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:525
+#: lib/algorithms_web/live/learn_live.ex:538
+#, elixir-autogen, elixir-format
+msgid "Small datasets"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:570
+#, elixir-autogen, elixir-format
+msgid "Sorting data larger than memory"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:185
+#: lib/algorithms_web/live/learn_live.ex:252
+#: lib/algorithms_web/live/learn_live.ex:277
+#, elixir-autogen, elixir-format
+msgid "Space"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:189
+#: lib/algorithms_web/live/learn_live.ex:255
+#: lib/algorithms_web/live/learn_live.ex:278
+#, elixir-autogen, elixir-format
+msgid "Stable"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:571
+#, elixir-autogen, elixir-format
+msgid "Stable sort required"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:432
+#, elixir-autogen, elixir-format
+msgid "Start from the second element (index 1)"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:466
+#, elixir-autogen, elixir-format
+msgid "Start with a large gap (typically n/2)"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:606
+#, elixir-autogen, elixir-format
+msgid "String sorting"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:468
+#, elixir-autogen, elixir-format
+msgid "Swap if they are in the wrong order"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:445
+#, elixir-autogen, elixir-format
+msgid "Swap it with the first unsorted element"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:490
+#, elixir-autogen, elixir-format
+msgid "Swap the root (maximum) with the last element"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:456
+#, elixir-autogen, elixir-format
+msgid "Swap them if they are in the wrong order"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:356
+#, elixir-autogen, elixir-format
+msgid "Swaps adjacent elements repeatedly."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:407
+#, elixir-autogen, elixir-format
+msgid "The algorithm first builds a max-heap from the input, then repeatedly extracts the maximum element and rebuilds the heap."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:391
+#, elixir-autogen, elixir-format
+msgid "The algorithm is a generalization of insertion sort that allows the exchange of items that are far apart, progressively reducing the gap between elements to compare."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:399
+#, elixir-autogen, elixir-format
+msgid "The algorithm uses the divide-and-conquer paradigm: it divides the array in half, recursively sorts each half, then merges the sorted halves."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:367
+#, elixir-autogen, elixir-format
+msgid "The algorithm was first described by John Mauchly in 1946, making it one of the earliest sorting algorithms to be formally analyzed."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:375
+#, elixir-autogen, elixir-format
+msgid "The algorithm was one of the first sorting methods to be formally studied in computer science, appearing in early computing literature in the 1950s."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:415
+#, elixir-autogen, elixir-format
+msgid "The algorithm works by selecting a 'pivot' element and partitioning the array around it, placing smaller elements before and larger elements after."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:392
+#, elixir-autogen, elixir-format
+msgid "The efficiency depends heavily on the gap sequence used. Shell's original sequence gives O(n²), but better sequences can achieve O(n log² n) or better."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:383
+#, elixir-autogen, elixir-format
+msgid "The name comes from the way smaller elements 'bubble' to the top of the list. It was analyzed as early as 1956 by mathematician Edward Friend."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:424
+#, elixir-autogen, elixir-format
+msgid "This variant was later improved by Bentley and McIlroy (1993) and is now the default sorting algorithm in many standard libraries when duplicates are common."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:201
+#, elixir-autogen, elixir-format
+msgid "Try it yourself"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:236
+#, elixir-autogen, elixir-format
+msgid "Understand the history, complexity, and best use cases for each sorting algorithm."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:255
+#, elixir-autogen, elixir-format
+msgid "Unstable"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:597
+#, elixir-autogen, elixir-format
+msgid "Used as the default sort in C, Java, and many other languages"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:528
+#, elixir-autogen, elixir-format
+msgid "Used in hybrid algorithms like Timsort"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:359
+#, elixir-autogen, elixir-format
+msgid "Uses binary heap data structure."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:549
+#, elixir-autogen, elixir-format
+msgid "Very small datasets"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:560
+#, elixir-autogen, elixir-format
+msgid "When code size matters"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:594
+#, elixir-autogen, elixir-format
+msgid "When stability not needed"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:156
+#, elixir-autogen, elixir-format
+msgid "When to use"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:549
+#, elixir-autogen, elixir-format
+msgid "Where simplicity matters more than speed"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:408
+#, elixir-autogen, elixir-format
+msgid "While it has guaranteed O(n log n) complexity and uses O(1) extra space, it typically performs slower than Quick Sort in practice due to poor cache locality."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:376
+#, elixir-autogen, elixir-format
+msgid "While not efficient for large datasets, it has the advantage of making the minimum number of swaps (O(n)), which can be useful when memory writes are expensive."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:548
+#, elixir-autogen, elixir-format
+msgid "With early termination optimization"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:276
+#, elixir-autogen, elixir-format
+msgid "Worst"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:180
+#, elixir-autogen, elixir-format
+msgid "Worst Case"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:191
+#: lib/algorithms_web/live/learn_live.ex:307
+#, elixir-autogen, elixir-format
+msgid "Yes"
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:374
+#, elixir-autogen, elixir-format
+msgid "is an in-place comparison sorting algorithm. It divides the input into a sorted and unsorted region."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:366
+#, elixir-autogen, elixir-format
+msgid "is one of the simplest sorting algorithms. It was developed based on how people typically sort playing cards in their hands."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:382
+#, elixir-autogen, elixir-format
+msgid "is perhaps the most well-known sorting algorithm, often taught as an introduction to sorting concepts."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:414
+#, elixir-autogen, elixir-format
+msgid "was developed by Tony Hoare in 1959 and published in 1961. It's often the fastest sorting algorithm in practice."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:390
+#, elixir-autogen, elixir-format
+msgid "was invented by Donald Shell in 1959. It was one of the first algorithms to break the O(n²) barrier."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:406
+#, elixir-autogen, elixir-format
+msgid "was invented by J. W. J. Williams in 1964. It uses a binary heap data structure to efficiently find and remove the maximum element."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:398
+#, elixir-autogen, elixir-format
+msgid "was invented by John von Neumann in 1945. It's one of the most respected sorting algorithms due to its guaranteed O(n log n) performance."
+msgstr ""
+
+#: lib/algorithms_web/live/learn_live.ex:268
+#, elixir-autogen, elixir-format
+msgid "Theoretical Ranking"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:294
+#, elixir-autogen, elixir-format
+msgid "Best, average, and worst case analysis"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:269
+#, elixir-autogen, elixir-format
+msgid "Discover the ideal scenarios for each algorithm based on data characteristics."
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:240
+#, elixir-autogen, elixir-format
+msgid "Dive Deeper with Learn"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:274
+#, elixir-autogen, elixir-format
+msgid "Explore Learn Section"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:242
+#, elixir-autogen, elixir-format
+msgid "Go beyond visualization. Our Learn section provides comprehensive documentation for each algorithm, including historical context, step-by-step breakdowns, and practical use cases."
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:302
+#, elixir-autogen, elixir-format
+msgid "How it Works"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:251
+#, elixir-autogen, elixir-format
+msgid "Learn who invented each algorithm and when, understanding the evolution of sorting techniques."
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:285
+#, elixir-autogen, elixir-format
+msgid "Origins and inventors of each algorithm"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:311
+#, elixir-autogen, elixir-format
+msgid "Ranking"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:250
+#, elixir-autogen, elixir-format
+msgid "Rich History"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:259
+#, elixir-autogen, elixir-format
+msgid "Step-by-Step Guide"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:303
+#, elixir-autogen, elixir-format
+msgid "Step-by-step algorithm breakdown"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:312
+#, elixir-autogen, elixir-format
+msgid "Theoretical efficiency comparison"
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:260
+#, elixir-autogen, elixir-format
+msgid "Understand exactly how each algorithm works with clear, numbered instructions."
+msgstr ""
+
+#: lib/algorithms_web/live/home_live.ex:268
+#, elixir-autogen, elixir-format
+msgid "When to Use"
 msgstr ""

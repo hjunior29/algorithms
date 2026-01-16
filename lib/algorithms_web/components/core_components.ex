@@ -54,6 +54,16 @@ defmodule AlgorithmsWeb.CoreComponents do
           <span class="font-semibold text-base-content">Algorithms</span>
         </a>
 
+        <!-- Center: Navigation Links -->
+        <nav class="hidden sm:flex items-center gap-6">
+          <a href="/run" class="text-base-content/70 hover:text-base-content transition-colors text-sm font-medium">
+            {gettext("Run")}
+          </a>
+          <a href="/learn" class="text-base-content/70 hover:text-base-content transition-colors text-sm font-medium">
+            {gettext("Learn")}
+          </a>
+        </nav>
+
         <!-- Right side: Theme & Language -->
         <div class="flex items-center gap-2">
           <!-- Theme Toggle -->
