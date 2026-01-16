@@ -1158,3 +1158,8 @@ msgstr "Entenda exatamente como cada algoritmo funciona com instruções claras 
 #, elixir-autogen, elixir-format
 msgid "When to Use"
 msgstr "Quando Usar"
+
+#: lib/algorithms_web/live/learn_live.ex
+#, elixir-autogen, elixir-format
+msgid "Implementation"
+msgstr "Implementação"

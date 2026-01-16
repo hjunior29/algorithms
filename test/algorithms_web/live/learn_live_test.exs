@@ -101,6 +101,28 @@ defmodule AlgorithmsWeb.LearnLiveTest do
       assert html =~ "Bubble"
       assert html =~ "Quick"
     end
+
+    test "shows implementation section with code tabs", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn/insertion")
+
+      assert html =~ "Implementation"
+      assert html =~ "Python"
+      assert html =~ "JavaScript"
+      assert html =~ "Go"
+      assert html =~ "Rust"
+    end
+
+    test "code blocks have language classes for highlight.js", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn/quick")
+
+      # Highlight.js uses language-* classes
+      assert html =~ "language-python"
+      assert html =~ "language-javascript"
+      assert html =~ "language-go"
+      assert html =~ "language-rust"
+      # Check for actual code content
+      assert html =~ "quick_sort" or html =~ "quickSort"
+    end
   end
 
   describe "navigation" do

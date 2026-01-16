@@ -61,6 +61,15 @@ const Hooks = {
         const newTheme = checkbox.checked ? 'dark' : 'light'
         localStorage.setItem('phx:theme', newTheme)
         document.documentElement.setAttribute('data-theme', newTheme)
+
+        // Update highlight.js theme
+        const lightTheme = document.querySelector('link[data-highlight-theme="light"]')
+        const darkTheme = document.querySelector('link[data-highlight-theme="dark"]')
+        if (lightTheme && darkTheme) {
+          const isDark = newTheme === 'dark'
+          lightTheme.media = isDark ? 'not all' : 'all'
+          darkTheme.media = isDark ? 'all' : 'not all'
+        }
       })
     }
   },
@@ -104,6 +113,21 @@ const Hooks = {
       }
 
       setTimeout(type, 2000)
+    }
+  },
+  HighlightCode: {
+    mounted() {
+      this.highlight()
+    },
+    updated() {
+      this.highlight()
+    },
+    highlight() {
+      if (typeof hljs !== 'undefined') {
+        this.el.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightElement(block)
+        })
+      }
     }
   }
 }

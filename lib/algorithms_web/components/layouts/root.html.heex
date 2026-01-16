@@ -9,25 +9,49 @@
       {assigns[:page_title]}
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/css/app.css"} />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" media="(prefers-color-scheme: light)" data-highlight-theme="light" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" media="(prefers-color-scheme: dark)" data-highlight-theme="dark" />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/js/app.js"}>
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>
       (() => {
+        const updateHighlightTheme = (isDark) => {
+          const lightTheme = document.querySelector('link[data-highlight-theme="light"]');
+          const darkTheme = document.querySelector('link[data-highlight-theme="dark"]');
+          if (lightTheme && darkTheme) {
+            lightTheme.media = isDark ? 'not all' : 'all';
+            darkTheme.media = isDark ? 'all' : 'not all';
+          }
+        };
+
         const setTheme = (theme) => {
           if (theme === "system") {
             localStorage.removeItem("phx:theme");
             document.documentElement.removeAttribute("data-theme");
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            updateHighlightTheme(isDark);
           } else {
             localStorage.setItem("phx:theme", theme);
             document.documentElement.setAttribute("data-theme", theme);
+            updateHighlightTheme(theme === 'dark');
           }
         };
+
+        const savedTheme = localStorage.getItem("phx:theme");
         if (!document.documentElement.hasAttribute("data-theme")) {
-          setTheme(localStorage.getItem("phx:theme") || "system");
+          setTheme(savedTheme || "system");
+        } else if (savedTheme) {
+          updateHighlightTheme(savedTheme === 'dark');
         }
+
         window.addEventListener("storage", (e) => e.key === "phx:theme" && setTheme(e.newValue || "system"));
-        
         window.addEventListener("phx:set-theme", (e) => setTheme(e.target.dataset.phxTheme));
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+          if (!localStorage.getItem("phx:theme")) {
+            updateHighlightTheme(e.matches);
+          }
+        });
       })();
     </script>
   </head>

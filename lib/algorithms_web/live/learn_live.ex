@@ -159,6 +159,26 @@ defmodule AlgorithmsWeb.LearnLive do
                   </div>
                 </div>
               </div>
+
+              <!-- Code Implementation -->
+              <div class="card" id={"code-card-#{@selected.id}"} phx-hook="HighlightCode">
+                  <h3 class="card-title text-xl mb-4">{gettext("Implementation")}</h3>
+                  <div role="tablist" class="tabs tabs-boxed bg-base-300 mb-4 rounded-xl">
+                    <%= for {{lang, label}, index} <- Enum.with_index(code_languages()) do %>
+                      <input
+                        type="radio"
+                        name={"code_tabs_#{@selected.id}"}
+                        role="tab"
+                        class="tab"
+                        aria-label={label}
+                        checked={index == 0}
+                      />
+                      <div role="tabpanel" class="tab-content p-0 mt-4">
+                        <pre class="rounded-b-xl !m-0 overflow-hidden"><code class={"language-#{lang}"}>{String.trim(algorithm_code(@selected.id)[lang])}</code></pre>
+                      </div>
+                    <% end %>
+                  </div>
+              </div>
             </div>
 
             <!-- Sidebar -->
@@ -607,5 +627,636 @@ defmodule AlgorithmsWeb.LearnLive do
       <li><strong>#{gettext("General-purpose")}</strong>: #{gettext("As good as Quick Sort, better with duplicates")}</li>
     </ul>
     """
+  end
+
+  # Code implementations for each algorithm
+  defp algorithm_code("insertion") do
+    %{
+      "python" => """
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    return arr
+""",
+      "javascript" => """
+function insertionSort(arr) {
+    for (let i = 1; i < arr.length; i++) {
+        let key = arr[i];
+        let j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+    return arr;
+}
+""",
+      "go" => """
+func insertionSort(arr []int) []int {
+    for i := 1; i < len(arr); i++ {
+        key := arr[i]
+        j := i - 1
+        for j >= 0 && arr[j] > key {
+            arr[j+1] = arr[j]
+            j--
+        }
+        arr[j+1] = key
+    }
+    return arr
+}
+""",
+      "rust" => """
+fn insertion_sort<T: Ord>(arr: &mut [T]) {
+    for i in 1..arr.len() {
+        let mut j = i;
+        while j > 0 && arr[j - 1] > arr[j] {
+            arr.swap(j - 1, j);
+            j -= 1;
+        }
+    }
+}
+"""
+    }
+  end
+
+  defp algorithm_code("selection") do
+    %{
+      "python" => """
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
+""",
+      "javascript" => """
+function selectionSort(arr) {
+    const n = arr.length;
+    for (let i = 0; i < n; i++) {
+        let minIdx = i;
+        for (let j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIdx]) {
+                minIdx = j;
+            }
+        }
+        [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+    }
+    return arr;
+}
+""",
+      "go" => """
+func selectionSort(arr []int) []int {
+    n := len(arr)
+    for i := 0; i < n; i++ {
+        minIdx := i
+        for j := i + 1; j < n; j++ {
+            if arr[j] < arr[minIdx] {
+                minIdx = j
+            }
+        }
+        arr[i], arr[minIdx] = arr[minIdx], arr[i]
+    }
+    return arr
+}
+""",
+      "rust" => """
+fn selection_sort<T: Ord>(arr: &mut [T]) {
+    let n = arr.len();
+    for i in 0..n {
+        let min_idx = (i..n)
+            .min_by_key(|&j| &arr[j])
+            .unwrap();
+        arr.swap(i, min_idx);
+    }
+}
+"""
+    }
+  end
+
+  defp algorithm_code("bubble") do
+    %{
+      "python" => """
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        if not swapped:
+            break
+    return arr
+""",
+      "javascript" => """
+function bubbleSort(arr) {
+    const n = arr.length;
+    for (let i = 0; i < n; i++) {
+        let swapped = false;
+        for (let j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                swapped = true;
+            }
+        }
+        if (!swapped) break;
+    }
+    return arr;
+}
+""",
+      "go" => """
+func bubbleSort(arr []int) []int {
+    n := len(arr)
+    for i := 0; i < n; i++ {
+        swapped := false
+        for j := 0; j < n-i-1; j++ {
+            if arr[j] > arr[j+1] {
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = true
+            }
+        }
+        if !swapped {
+            break
+        }
+    }
+    return arr
+}
+""",
+      "rust" => """
+fn bubble_sort<T: Ord>(arr: &mut [T]) {
+    let n = arr.len();
+    for i in 0..n {
+        let mut swapped = false;
+        for j in 0..n - i - 1 {
+            if arr[j] > arr[j + 1] {
+                arr.swap(j, j + 1);
+                swapped = true;
+            }
+        }
+        if !swapped { break; }
+    }
+}
+"""
+    }
+  end
+
+  defp algorithm_code("shell") do
+    %{
+      "python" => """
+def shell_sort(arr):
+    n = len(arr)
+    gap = n // 2
+    while gap > 0:
+        for i in range(gap, n):
+            temp = arr[i]
+            j = i
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            arr[j] = temp
+        gap //= 2
+    return arr
+""",
+      "javascript" => """
+function shellSort(arr) {
+    const n = arr.length;
+    let gap = Math.floor(n / 2);
+    while (gap > 0) {
+        for (let i = gap; i < n; i++) {
+            let temp = arr[i];
+            let j = i;
+            while (j >= gap && arr[j - gap] > temp) {
+                arr[j] = arr[j - gap];
+                j -= gap;
+            }
+            arr[j] = temp;
+        }
+        gap = Math.floor(gap / 2);
+    }
+    return arr;
+}
+""",
+      "go" => """
+func shellSort(arr []int) []int {
+    n := len(arr)
+    gap := n / 2
+    for gap > 0 {
+        for i := gap; i < n; i++ {
+            temp := arr[i]
+            j := i
+            for j >= gap && arr[j-gap] > temp {
+                arr[j] = arr[j-gap]
+                j -= gap
+            }
+            arr[j] = temp
+        }
+        gap /= 2
+    }
+    return arr
+}
+""",
+      "rust" => """
+fn shell_sort<T: Ord + Copy>(arr: &mut [T]) {
+    let n = arr.len();
+    let mut gap = n / 2;
+    while gap > 0 {
+        for i in gap..n {
+            let temp = arr[i];
+            let mut j = i;
+            while j >= gap && arr[j - gap] > temp {
+                arr[j] = arr[j - gap];
+                j -= gap;
+            }
+            arr[j] = temp;
+        }
+        gap /= 2;
+    }
+}
+"""
+    }
+  end
+
+  defp algorithm_code("merge") do
+    %{
+      "python" => """
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+""",
+      "javascript" => """
+function mergeSort(arr) {
+    if (arr.length <= 1) return arr;
+    const mid = Math.floor(arr.length / 2);
+    const left = mergeSort(arr.slice(0, mid));
+    const right = mergeSort(arr.slice(mid));
+    return merge(left, right);
+}
+
+function merge(left, right) {
+    const result = [];
+    let i = 0, j = 0;
+    while (i < left.length && j < right.length) {
+        if (left[i] <= right[j]) {
+            result.push(left[i++]);
+        } else {
+            result.push(right[j++]);
+        }
+    }
+    return result.concat(left.slice(i), right.slice(j));
+}
+""",
+      "go" => """
+func mergeSort(arr []int) []int {
+    if len(arr) <= 1 {
+        return arr
+    }
+    mid := len(arr) / 2
+    left := mergeSort(arr[:mid])
+    right := mergeSort(arr[mid:])
+    return merge(left, right)
+}
+
+func merge(left, right []int) []int {
+    result := make([]int, 0, len(left)+len(right))
+    i, j := 0, 0
+    for i < len(left) && j < len(right) {
+        if left[i] <= right[j] {
+            result = append(result, left[i])
+            i++
+        } else {
+            result = append(result, right[j])
+            j++
+        }
+    }
+    result = append(result, left[i:]...)
+    result = append(result, right[j:]...)
+    return result
+}
+""",
+      "rust" => """
+fn merge_sort<T: Ord + Clone>(arr: &[T]) -> Vec<T> {
+    if arr.len() <= 1 {
+        return arr.to_vec();
+    }
+    let mid = arr.len() / 2;
+    let left = merge_sort(&arr[..mid]);
+    let right = merge_sort(&arr[mid..]);
+    merge(&left, &right)
+}
+
+fn merge<T: Ord + Clone>(left: &[T], right: &[T]) -> Vec<T> {
+    let mut result = Vec::with_capacity(left.len() + right.len());
+    let (mut i, mut j) = (0, 0);
+    while i < left.len() && j < right.len() {
+        if left[i] <= right[j] {
+            result.push(left[i].clone());
+            i += 1;
+        } else {
+            result.push(right[j].clone());
+            j += 1;
+        }
+    }
+    result.extend_from_slice(&left[i..]);
+    result.extend_from_slice(&right[j..]);
+    result
+}
+"""
+    }
+  end
+
+  defp algorithm_code("heap") do
+    %{
+      "python" => """
+def heap_sort(arr):
+    n = len(arr)
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+    for i in range(n - 1, 0, -1):
+        arr[0], arr[i] = arr[i], arr[0]
+        heapify(arr, i, 0)
+    return arr
+
+def heapify(arr, n, i):
+    largest = i
+    left, right = 2 * i + 1, 2 * i + 2
+    if left < n and arr[left] > arr[largest]:
+        largest = left
+    if right < n and arr[right] > arr[largest]:
+        largest = right
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        heapify(arr, n, largest)
+""",
+      "javascript" => """
+function heapSort(arr) {
+    const n = arr.length;
+    for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+        heapify(arr, n, i);
+    }
+    for (let i = n - 1; i > 0; i--) {
+        [arr[0], arr[i]] = [arr[i], arr[0]];
+        heapify(arr, i, 0);
+    }
+    return arr;
+}
+
+function heapify(arr, n, i) {
+    let largest = i;
+    const left = 2 * i + 1, right = 2 * i + 2;
+    if (left < n && arr[left] > arr[largest]) largest = left;
+    if (right < n && arr[right] > arr[largest]) largest = right;
+    if (largest !== i) {
+        [arr[i], arr[largest]] = [arr[largest], arr[i]];
+        heapify(arr, n, largest);
+    }
+}
+""",
+      "go" => """
+func heapSort(arr []int) []int {
+    n := len(arr)
+    for i := n/2 - 1; i >= 0; i-- {
+        heapify(arr, n, i)
+    }
+    for i := n - 1; i > 0; i-- {
+        arr[0], arr[i] = arr[i], arr[0]
+        heapify(arr, i, 0)
+    }
+    return arr
+}
+
+func heapify(arr []int, n, i int) {
+    largest := i
+    left, right := 2*i+1, 2*i+2
+    if left < n && arr[left] > arr[largest] {
+        largest = left
+    }
+    if right < n && arr[right] > arr[largest] {
+        largest = right
+    }
+    if largest != i {
+        arr[i], arr[largest] = arr[largest], arr[i]
+        heapify(arr, n, largest)
+    }
+}
+""",
+      "rust" => """
+fn heap_sort<T: Ord>(arr: &mut [T]) {
+    let n = arr.len();
+    for i in (0..n / 2).rev() {
+        heapify(arr, n, i);
+    }
+    for i in (1..n).rev() {
+        arr.swap(0, i);
+        heapify(arr, i, 0);
+    }
+}
+
+fn heapify<T: Ord>(arr: &mut [T], n: usize, i: usize) {
+    let mut largest = i;
+    let left = 2 * i + 1;
+    let right = 2 * i + 2;
+    if left < n && arr[left] > arr[largest] { largest = left; }
+    if right < n && arr[right] > arr[largest] { largest = right; }
+    if largest != i {
+        arr.swap(i, largest);
+        heapify(arr, n, largest);
+    }
+}
+"""
+    }
+  end
+
+  defp algorithm_code("quick") do
+    %{
+      "python" => """
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quick_sort(left) + middle + quick_sort(right)
+""",
+      "javascript" => """
+function quickSort(arr) {
+    if (arr.length <= 1) return arr;
+    const pivot = arr[Math.floor(arr.length / 2)];
+    const left = arr.filter(x => x < pivot);
+    const middle = arr.filter(x => x === pivot);
+    const right = arr.filter(x => x > pivot);
+    return [...quickSort(left), ...middle, ...quickSort(right)];
+}
+""",
+      "go" => """
+func quickSort(arr []int) []int {
+    if len(arr) <= 1 {
+        return arr
+    }
+    pivot := arr[len(arr)/2]
+    var left, middle, right []int
+    for _, x := range arr {
+        switch {
+        case x < pivot:
+            left = append(left, x)
+        case x == pivot:
+            middle = append(middle, x)
+        default:
+            right = append(right, x)
+        }
+    }
+    result := quickSort(left)
+    result = append(result, middle...)
+    result = append(result, quickSort(right)...)
+    return result
+}
+""",
+      "rust" => """
+fn quick_sort<T: Ord + Clone>(arr: &[T]) -> Vec<T> {
+    if arr.len() <= 1 {
+        return arr.to_vec();
+    }
+    let pivot = arr[arr.len() / 2].clone();
+    let left: Vec<_> = arr.iter().filter(|x| **x < pivot).cloned().collect();
+    let middle: Vec<_> = arr.iter().filter(|x| **x == pivot).cloned().collect();
+    let right: Vec<_> = arr.iter().filter(|x| **x > pivot).cloned().collect();
+    [quick_sort(&left), middle, quick_sort(&right)].concat()
+}
+"""
+    }
+  end
+
+  defp algorithm_code("quick3") do
+    %{
+      "python" => """
+def quick3_sort(arr, lo=0, hi=None):
+    if hi is None:
+        hi = len(arr) - 1
+    if lo >= hi:
+        return arr
+    lt, gt = lo, hi
+    pivot = arr[lo]
+    i = lo + 1
+    while i <= gt:
+        if arr[i] < pivot:
+            arr[lt], arr[i] = arr[i], arr[lt]
+            lt += 1
+            i += 1
+        elif arr[i] > pivot:
+            arr[gt], arr[i] = arr[i], arr[gt]
+            gt -= 1
+        else:
+            i += 1
+    quick3_sort(arr, lo, lt - 1)
+    quick3_sort(arr, gt + 1, hi)
+    return arr
+""",
+      "javascript" => """
+function quick3Sort(arr, lo = 0, hi = arr.length - 1) {
+    if (lo >= hi) return arr;
+    let lt = lo, gt = hi, i = lo + 1;
+    const pivot = arr[lo];
+    while (i <= gt) {
+        if (arr[i] < pivot) {
+            [arr[lt], arr[i]] = [arr[i], arr[lt]];
+            lt++; i++;
+        } else if (arr[i] > pivot) {
+            [arr[gt], arr[i]] = [arr[i], arr[gt]];
+            gt--;
+        } else {
+            i++;
+        }
+    }
+    quick3Sort(arr, lo, lt - 1);
+    quick3Sort(arr, gt + 1, hi);
+    return arr;
+}
+""",
+      "go" => """
+func quick3Sort(arr []int, lo, hi int) {
+    if lo >= hi {
+        return
+    }
+    lt, gt, i := lo, hi, lo+1
+    pivot := arr[lo]
+    for i <= gt {
+        switch {
+        case arr[i] < pivot:
+            arr[lt], arr[i] = arr[i], arr[lt]
+            lt++
+            i++
+        case arr[i] > pivot:
+            arr[gt], arr[i] = arr[i], arr[gt]
+            gt--
+        default:
+            i++
+        }
+    }
+    quick3Sort(arr, lo, lt-1)
+    quick3Sort(arr, gt+1, hi)
+}
+""",
+      "rust" => """
+fn quick3_sort<T: Ord>(arr: &mut [T]) {
+    if arr.len() <= 1 { return; }
+    let (mut lt, mut gt, mut i) = (0, arr.len() - 1, 1);
+    while i <= gt {
+        match arr[i].cmp(&arr[lt]) {
+            std::cmp::Ordering::Less => {
+                arr.swap(lt, i);
+                lt += 1;
+                i += 1;
+            }
+            std::cmp::Ordering::Greater => {
+                arr.swap(i, gt);
+                gt -= 1;
+            }
+            std::cmp::Ordering::Equal => i += 1,
+        }
+    }
+    quick3_sort(&mut arr[..lt]);
+    if gt + 1 < arr.len() {
+        quick3_sort(&mut arr[gt + 1..]);
+    }
+}
+"""
+    }
+  end
+
+  # Supported languages with display names
+  defp code_languages do
+    [
+      {"python", "Python"},
+      {"javascript", "JavaScript"},
+      {"go", "Go"},
+      {"rust", "Rust"}
+    ]
   end
 end
