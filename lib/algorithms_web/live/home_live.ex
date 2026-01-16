@@ -177,7 +177,7 @@ defmodule AlgorithmsWeb.HomeLive do
             <a href="/run?algorithm=shell" class="hover-3d">
               <div class="card bg-base-200 border border-base-300 h-full">
                 <div class="card-body">
-                  <div class="badge badge-secondary mb-2">O(n log n)</div>
+                  <div class="badge badge-secondary mb-2">O(n^1.3)</div>
                   <h3 class="card-title">{gettext("Shell Sort")}</h3>
                   <p class="text-base-content/60 text-sm">{gettext("Generalization of insertion sort that allows exchange of far apart elements.")}</p>
                 </div>

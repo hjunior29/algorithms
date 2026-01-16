@@ -77,7 +77,7 @@ defmodule AlgorithmsWeb.LearnLive do
       name: "Quick3 Sort",
       complexity_best: "O(n)",
       complexity_avg: "O(n log n)",
-      complexity_worst: "O(n log n)",
+      complexity_worst: "O(n²)",
       space: "O(log n)",
       stable: false,
       color: "secondary"
