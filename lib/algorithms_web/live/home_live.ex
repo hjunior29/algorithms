@@ -309,7 +309,7 @@ defmodule AlgorithmsWeb.HomeLive do
                 <div class="card bg-base-200 border border-base-300">
                   <div class="card-body p-4">
                     <div class="badge badge-error mb-2">{gettext("Ranking")}</div>
-                    <p class="text-sm text-base-content/60">{gettext("Theoretical efficiency comparison")}</p>
+                    <p class="text-sm text-base-content/60">{gettext("Comparative chart of sorting algorithms")}</p>
                   </div>
                 </div>
                 <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>

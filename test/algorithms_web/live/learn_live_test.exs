@@ -18,10 +18,10 @@ defmodule AlgorithmsWeb.LearnLiveTest do
       assert html =~ "Quick3 Sort"
     end
 
-    test "displays theoretical ranking table", %{conn: conn} do
+    test "displays comparative chart", %{conn: conn} do
       {:ok, _view, html} = live(conn, "/learn")
 
-      assert html =~ "Theoretical Ranking"
+      assert html =~ "Comparative Chart"
       assert html =~ "Average"
       assert html =~ "Worst"
       assert html =~ "Space"
@@ -143,7 +143,7 @@ defmodule AlgorithmsWeb.LearnLiveTest do
       {:ok, _view, html} = view |> element("a.btn[href='/learn']") |> render_click() |> follow_redirect(conn)
 
       assert html =~ "Learn Sorting Algorithms"
-      assert html =~ "Theoretical Ranking"
+      assert html =~ "Comparative Chart"
     end
 
     test "can navigate between algorithms via sidebar", %{conn: conn} do

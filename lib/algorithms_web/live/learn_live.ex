@@ -283,9 +283,9 @@ defmodule AlgorithmsWeb.LearnLive do
             <% end %>
           </div>
 
-          <!-- Theoretical Ranking -->
+          <!-- Comparative Chart -->
           <div class="mt-16">
-            <h2 class="text-2xl font-bold mb-6 text-center">{gettext("Theoretical Ranking")}</h2>
+            <h2 class="text-2xl font-bold mb-6 text-center">{gettext("Comparative Chart")}</h2>
             <div class="overflow-x-auto">
               <table class="table bg-base-200 rounded-lg">
                 <thead>
@@ -293,6 +293,7 @@ defmodule AlgorithmsWeb.LearnLive do
                     <th class="text-base-content">#</th>
                     <th class="text-base-content">{gettext("Algorithm")}</th>
                     <th class="text-center text-base-content">{gettext("Average")}</th>
+                    <th class="text-center text-base-content">{gettext("Best")}</th>
                     <th class="text-center text-base-content">{gettext("Worst")}</th>
                     <th class="text-center text-base-content">{gettext("Space")}</th>
                     <th class="text-center text-base-content">{gettext("Stable")}</th>
@@ -310,6 +311,11 @@ defmodule AlgorithmsWeb.LearnLive do
                       <td class="text-center">
                         <span class={"badge badge-sm " <> complexity_badge_class(algo.complexity_avg)}>
                           {algo.complexity_avg}
+                        </span>
+                      </td>
+                      <td class="text-center">
+                        <span class={"badge badge-sm " <> complexity_badge_class(algo.complexity_best)}>
+                          {algo.complexity_best}
                         </span>
                       </td>
                       <td class="text-center">
@@ -341,7 +347,7 @@ defmodule AlgorithmsWeb.LearnLive do
     """
   end
 
-  # Ranking algorithms by theoretical efficiency
+  # Ranking algorithms by efficiency
   defp ranked_algorithms(algorithms) do
     Enum.sort_by(algorithms, fn algo ->
       {complexity_rank(algo.complexity_avg), complexity_rank(algo.complexity_worst), space_rank(algo.space)}
@@ -383,65 +389,49 @@ defmodule AlgorithmsWeb.LearnLive do
   # Full descriptions
   defp algorithm_description("insertion") do
     """
-    <p><strong>Insertion Sort</strong> #{gettext("is one of the simplest sorting algorithms. It was developed based on how people typically sort playing cards in their hands.")}</p>
-    <p>#{gettext("The algorithm was first described by John Mauchly in 1946, making it one of the earliest sorting algorithms to be formally analyzed.")}</p>
-    <p>#{gettext("Despite its O(n²) average complexity, it remains widely used due to its simplicity, low overhead, and excellent performance on small or nearly sorted datasets.")}</p>
+    <p><strong>Insertion Sort</strong> #{gettext("is one of the simplest sorting algorithms. It was developed based on how people typically sort playing cards in their hands.")} #{gettext("The algorithm was first described by John Mauchly in 1946, making it one of the earliest sorting algorithms to be formally analyzed.")} #{gettext("Despite its O(n²) average complexity, it remains widely used due to its simplicity, low overhead, and excellent performance on small or nearly sorted datasets.")}</p>
     """
   end
 
   defp algorithm_description("selection") do
     """
-    <p><strong>Selection Sort</strong> #{gettext("is an in-place comparison sorting algorithm. It divides the input into a sorted and unsorted region.")}</p>
-    <p>#{gettext("The algorithm was one of the first sorting methods to be formally studied in computer science, appearing in early computing literature in the 1950s.")}</p>
-    <p>#{gettext("While not efficient for large datasets, it has the advantage of making the minimum number of swaps (O(n)), which can be useful when memory writes are expensive.")}</p>
+    <p><strong>Selection Sort</strong> #{gettext("is an in-place comparison sorting algorithm. It divides the input into a sorted and unsorted region.")} #{gettext("The algorithm was one of the first sorting methods to be formally studied in computer science, appearing in early computing literature in the 1950s.")} #{gettext("While not efficient for large datasets, it has the advantage of making the minimum number of swaps (O(n)), which can be useful when memory writes are expensive.")}</p>
     """
   end
 
   defp algorithm_description("bubble") do
     """
-    <p><strong>Bubble Sort</strong> #{gettext("is perhaps the most well-known sorting algorithm, often taught as an introduction to sorting concepts.")}</p>
-    <p>#{gettext("The name comes from the way smaller elements 'bubble' to the top of the list. It was analyzed as early as 1956 by mathematician Edward Friend.")}</p>
-    <p>#{gettext("Despite being inefficient for most real-world applications, it's valuable for educational purposes and can be optimized with an early termination flag.")}</p>
+    <p><strong>Bubble Sort</strong> #{gettext("is perhaps the most well-known sorting algorithm, often taught as an introduction to sorting concepts.")} #{gettext("The name comes from the way smaller elements 'bubble' to the top of the list. It was analyzed as early as 1956 by mathematician Edward Friend.")} #{gettext("Despite being inefficient for most real-world applications, it's valuable for educational purposes and can be optimized with an early termination flag.")}</p>
     """
   end
 
   defp algorithm_description("shell") do
     """
-    <p><strong>Shell Sort</strong> #{gettext("was invented by Donald Shell in 1959. It was one of the first algorithms to break the O(n²) barrier.")}</p>
-    <p>#{gettext("The algorithm is a generalization of insertion sort that allows the exchange of items that are far apart, progressively reducing the gap between elements to compare.")}</p>
-    <p>#{gettext("The efficiency depends heavily on the gap sequence used. Shell's original sequence gives O(n²), but better sequences can achieve O(n log² n) or better.")}</p>
+    <p><strong>Shell Sort</strong> #{gettext("was invented by Donald Shell in 1959. It was one of the first algorithms to break the O(n²) barrier.")} #{gettext("The algorithm is a generalization of insertion sort that allows the exchange of items that are far apart, progressively reducing the gap between elements to compare.")} #{gettext("The efficiency depends heavily on the gap sequence used. Shell's original sequence gives O(n²), but better sequences can achieve O(n log² n) or better.")}</p>
     """
   end
 
   defp algorithm_description("merge") do
     """
-    <p><strong>Merge Sort</strong> #{gettext("was invented by John von Neumann in 1945. It's one of the most respected sorting algorithms due to its guaranteed O(n log n) performance.")}</p>
-    <p>#{gettext("The algorithm uses the divide-and-conquer paradigm: it divides the array in half, recursively sorts each half, then merges the sorted halves.")}</p>
-    <p>#{gettext("Merge Sort is stable and predictable, making it ideal for sorting linked lists and external sorting (sorting data that doesn't fit in memory).")}</p>
+    <p><strong>Merge Sort</strong> #{gettext("was invented by John von Neumann in 1945. It's one of the most respected sorting algorithms due to its guaranteed O(n log n) performance.")} #{gettext("The algorithm uses the divide-and-conquer paradigm: it divides the array in half, recursively sorts each half, then merges the sorted halves.")} #{gettext("Merge Sort is stable and predictable, making it ideal for sorting linked lists and external sorting (sorting data that doesn't fit in memory).")}</p>
     """
   end
 
   defp algorithm_description("heap") do
     """
-    <p><strong>Heap Sort</strong> #{gettext("was invented by J. W. J. Williams in 1964. It uses a binary heap data structure to efficiently find and remove the maximum element.")}</p>
-    <p>#{gettext("The algorithm first builds a max-heap from the input, then repeatedly extracts the maximum element and rebuilds the heap.")}</p>
-    <p>#{gettext("While it has guaranteed O(n log n) complexity and uses O(1) extra space, it typically performs slower than Quick Sort in practice due to poor cache locality.")}</p>
+    <p><strong>Heap Sort</strong> #{gettext("was invented by J. W. J. Williams in 1964. It uses a binary heap data structure to efficiently find and remove the maximum element.")} #{gettext("The algorithm first builds a max-heap from the input, then repeatedly extracts the maximum element and rebuilds the heap.")} #{gettext("While it has guaranteed O(n log n) complexity and uses O(1) extra space, it typically performs slower than Quick Sort in practice due to poor cache locality.")}</p>
     """
   end
 
   defp algorithm_description("quick") do
     """
-    <p><strong>Quick Sort</strong> #{gettext("was developed by Tony Hoare in 1959 and published in 1961. It's often the fastest sorting algorithm in practice.")}</p>
-    <p>#{gettext("The algorithm works by selecting a 'pivot' element and partitioning the array around it, placing smaller elements before and larger elements after.")}</p>
-    <p>#{gettext("Despite its O(n²) worst case, careful pivot selection (like median-of-three) makes this scenario extremely rare in practice.")}</p>
+    <p><strong>Quick Sort</strong> #{gettext("was developed by Tony Hoare in 1959 and published in 1961. It's often the fastest sorting algorithm in practice.")} #{gettext("The algorithm works by selecting a 'pivot' element and partitioning the array around it, placing smaller elements before and larger elements after.")} #{gettext("Despite its O(n²) worst case, careful pivot selection (like median-of-three) makes this scenario extremely rare in practice.")}</p>
     """
   end
 
   defp algorithm_description("quick3") do
     """
-    <p><strong>Quick3 Sort</strong> #{gettext("(3-way Quick Sort) is a variation developed by Dijkstra for handling arrays with many duplicate keys.")}</p>
-    <p>#{gettext("Instead of two partitions, it creates three: elements less than, equal to, and greater than the pivot.")}</p>
-    <p>#{gettext("This variant was later improved by Bentley and McIlroy (1993) and is now the default sorting algorithm in many standard libraries when duplicates are common.")}</p>
+    <p><strong>Quick3 Sort</strong> #{gettext("(3-way Quick Sort) is a variation developed by Dijkstra for handling arrays with many duplicate keys.")} #{gettext("Instead of two partitions, it creates three: elements less than, equal to, and greater than the pivot.")} #{gettext("This variant was later improved by Bentley and McIlroy (1993) and is now the default sorting algorithm in many standard libraries when duplicates are common.")}</p>
     """
   end
 
@@ -568,7 +558,6 @@ defmodule AlgorithmsWeb.LearnLive do
       <li><strong>#{gettext("Detecting sorted arrays")}</strong>: #{gettext("With early termination optimization")}</li>
       <li><strong>#{gettext("Very small datasets")}</strong>: #{gettext("Where simplicity matters more than speed")}</li>
     </ul>
-    <p class="mt-4 text-warning">⚠️ #{gettext("Generally not recommended for production use")}</p>
     """
   end
 
