@@ -240,7 +240,7 @@ defmodule AlgorithmsWeb.RunLive do
             </div>
 
             <div class={@running && "pointer-events-none opacity-50"}>
-              <label class="block text-sm mb-1">{gettext("Algorithm")}</label>
+              <label class="block text-sm mb-2">{gettext("Algorithm")}</label>
               <button
                 type="button"
                 class="btn btn-sm w-full justify-between bg-base-300 border-base-300 text-base-content hover:bg-base-100"
