@@ -28,6 +28,97 @@ defmodule AlgorithmsWeb.LearnLiveTest do
       assert html =~ "Stable"
     end
 
+    test "displays understanding the concepts section", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn")
+
+      assert html =~ "Understanding the Concepts"
+      assert html =~ "Before diving into algorithms"
+    end
+
+    test "displays complexity growth visualization chart", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn")
+
+      assert html =~ "Complexity Growth Visualization"
+      assert html =~ "Input Size (n)"
+      assert html =~ "Operations"
+      # Check SVG elements for each complexity curve
+      assert html =~ "O(1)"
+      assert html =~ "O(log n)"
+      assert html =~ "O(n log n)"
+    end
+
+    test "displays time complexity card with best/avg/worst explanations", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn")
+
+      assert html =~ "Time Complexity"
+      assert html =~ "Time complexity describes how the runtime"
+      assert html =~ "The minimum time the algorithm takes"
+      assert html =~ "Expected time for random input"
+      assert html =~ "Maximum time the algorithm can take"
+    end
+
+    test "displays space complexity card", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn")
+
+      assert html =~ "Space Complexity"
+      assert html =~ "Space complexity measures the additional memory"
+      assert html =~ "Constant space"
+      assert html =~ "Logarithmic - typically from recursion stack"
+      assert html =~ "Linear - memory grows with input size"
+    end
+
+    test "displays stability card with example", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn")
+
+      assert html =~ "Stability"
+      assert html =~ "A stable sorting algorithm maintains the relative order"
+      assert html =~ "Example:"
+      assert html =~ "Input: [(A,2), (B,1), (C,2), (D,1)]"
+      assert html =~ "Stable: [(B,1), (D,1), (A,2), (C,2)]"
+      assert html =~ "Unstable: [(D,1), (B,1), (C,2), (A,2)]"
+    end
+
+    test "displays big o notation card with table", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn")
+
+      assert html =~ "Big O Notation"
+      assert html =~ "Big O describes the upper bound"
+      assert html =~ "Notation"
+      assert html =~ "Name"
+      assert html =~ "Ops for n=1000"
+      # Check table content
+      assert html =~ "Constant"
+      assert html =~ "Logarithmic"
+      assert html =~ "Linear"
+      assert html =~ "Linearithmic"
+      assert html =~ "Quadratic"
+      # Check explanation text
+      assert html =~ "The table shows how many operations each complexity requires"
+    end
+
+    test "displays practical tips section", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn")
+
+      assert html =~ "Practical Tips for Choosing an Algorithm"
+      assert html =~ "Small Data (n &lt; 50)"
+      assert html =~ "Nearly Sorted Data"
+      assert html =~ "Large Data"
+      assert html =~ "Simple algorithms like Insertion Sort"
+      assert html =~ "Insertion Sort and Bubble Sort approach O(n)"
+      assert html =~ "Use O(n log n) algorithms"
+    end
+
+    test "complexity legend shows all complexity types", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/learn")
+
+      # Check legend items
+      assert html =~ "O(1) - "
+      assert html =~ "O(log n) - "
+      assert html =~ "O(n) - "
+      assert html =~ "O(n log n) - "
+      assert html =~ "O(n²) - "
+    end
+
     test "shows complexity badges on algorithm cards", %{conn: conn} do
       {:ok, _view, html} = live(conn, "/learn")
 

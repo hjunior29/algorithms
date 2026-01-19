@@ -339,6 +339,232 @@ defmodule AlgorithmsWeb.LearnLive do
               </table>
             </div>
           </div>
+
+          <!-- Understanding the Concepts Section -->
+          <div class="mt-16">
+            <h2 class="text-2xl font-bold mb-6 text-center">{gettext("Understanding the Concepts")}</h2>
+            <p class="text-base-content/60 max-w-3xl mx-auto text-center mb-10">
+              {gettext("Before diving into algorithms, it's essential to understand the key metrics used to evaluate and compare them.")}
+            </p>
+
+            <!-- Complexity Graph -->
+            <div class="card bg-base-200 border border-base-300 mb-10">
+              <div class="card-body">
+                <h3 class="card-title text-xl mb-4">{gettext("Complexity Growth Visualization")}</h3>
+                <p class="text-base-content/60 mb-6">
+                  {gettext("This chart shows how different time complexities scale as the input size (n) increases. Notice how O(n²) grows much faster than O(n log n).")}
+                </p>
+                <div class="w-full h-80 relative" id="complexity-chart" phx-hook="ComplexityChart">
+                  <div class="absolute inset-0 flex items-center justify-center text-base-content/40">
+                    <svg class="w-full h-full" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid meet">
+                      <!-- Grid lines -->
+                      <defs>
+                        <pattern id="grid" width="50" height="30" patternUnits="userSpaceOnUse">
+                          <path d="M 50 0 L 0 0 0 30" fill="none" stroke="currentColor" stroke-opacity="0.1" stroke-width="1"/>
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#grid)" />
+
+                      <!-- Axes -->
+                      <line x1="50" y1="250" x2="480" y2="250" stroke="currentColor" stroke-width="2" stroke-opacity="0.5"/>
+                      <line x1="50" y1="250" x2="50" y2="20" stroke="currentColor" stroke-width="2" stroke-opacity="0.5"/>
+
+                      <!-- Axis labels -->
+                      <text x="265" y="290" text-anchor="middle" fill="currentColor" font-size="14" opacity="0.7">{gettext("Input Size (n)")}</text>
+                      <text x="25" y="140" text-anchor="middle" fill="currentColor" font-size="14" opacity="0.7" transform="rotate(-90, 25, 140)">{gettext("Operations")}</text>
+
+                      <!-- O(1) - Constant -->
+                      <line x1="50" y1="230" x2="470" y2="230" stroke="#22c55e" stroke-width="3"/>
+                      <text x="475" y="235" fill="#22c55e" font-size="12" font-weight="bold">O(1)</text>
+
+                      <!-- O(log n) - Logarithmic -->
+                      <path d="M 50 230 Q 150 180, 250 160 T 470 130" fill="none" stroke="#3b82f6" stroke-width="3"/>
+                      <text x="475" y="135" fill="#3b82f6" font-size="12" font-weight="bold">O(log n)</text>
+
+                      <!-- O(n) - Linear -->
+                      <line x1="50" y1="230" x2="470" y2="80" stroke="#06b6d4" stroke-width="3"/>
+                      <text x="475" y="85" fill="#06b6d4" font-size="12" font-weight="bold">O(n)</text>
+
+                      <!-- O(n log n) - Linearithmic -->
+                      <path d="M 50 230 C 150 200, 250 140, 470 50" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+                      <text x="475" y="55" fill="#8b5cf6" font-size="12" font-weight="bold">O(n log n)</text>
+
+                      <!-- O(n²) - Quadratic -->
+                      <path d="M 50 230 Q 200 220, 280 180 T 400 30" fill="none" stroke="#f59e0b" stroke-width="3"/>
+                      <text x="405" y="30" fill="#f59e0b" font-size="12" font-weight="bold">O(n²)</text>
+
+                      <!-- Scale markers on X axis -->
+                      <text x="50" y="265" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.5">0</text>
+                      <text x="155" y="265" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.5">25</text>
+                      <text x="260" y="265" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.5">50</text>
+                      <text x="365" y="265" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.5">75</text>
+                      <text x="470" y="265" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.5">100</text>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Legend -->
+                <div class="flex flex-wrap justify-center gap-4 mt-4">
+                  <div class="flex items-center gap-2">
+                    <div class="w-4 h-1 bg-success rounded"></div>
+                    <span class="text-sm">O(1) - {gettext("Constant")}</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-4 h-1 bg-blue-500 rounded"></div>
+                    <span class="text-sm">O(log n) - {gettext("Logarithmic")}</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-4 h-1 bg-cyan-500 rounded"></div>
+                    <span class="text-sm">O(n) - {gettext("Linear")}</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-4 h-1 bg-violet-500 rounded"></div>
+                    <span class="text-sm">O(n log n) - {gettext("Linearithmic")}</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-4 h-1 bg-amber-500 rounded"></div>
+                    <span class="text-sm">O(n²) - {gettext("Quadratic")}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Concept Cards Grid -->
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Time Complexity Card -->
+              <div class="card bg-base-200 border border-base-300">
+                <div class="card-body">
+                  <h3 class="card-title text-lg flex items-center gap-2">
+                    {gettext("Time Complexity")}
+                  </h3>
+                  <p class="text-base-content/70 text-sm mb-4">
+                    {gettext("Time complexity describes how the runtime of an algorithm grows as the input size increases. It's expressed using Big O notation.")}
+                  </p>
+                  <div class="space-y-3">
+                    <div class="flex items-start gap-3">
+                      <span class="badge badge-success badge-sm mt-1">Best</span>
+                      <p class="text-sm text-base-content/60">{gettext("The minimum time the algorithm takes (ideal input)")}</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <span class="badge badge-warning badge-sm mt-1">Avg</span>
+                      <p class="text-sm text-base-content/60">{gettext("Expected time for random input")}</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <span class="badge badge-error badge-sm mt-1">Worst</span>
+                      <p class="text-sm text-base-content/60">{gettext("Maximum time the algorithm can take")}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Space Complexity Card -->
+              <div class="card bg-base-200 border border-base-300">
+                <div class="card-body">
+                  <h3 class="card-title text-lg flex items-center gap-2">
+                    {gettext("Space Complexity")}
+                  </h3>
+                  <p class="text-base-content/70 text-sm mb-4">
+                    {gettext("Space complexity measures the additional memory an algorithm needs relative to the input size.")}
+                  </p>
+                  <div class="space-y-3">
+                    <div class="flex items-start gap-3">
+                      <span class="badge badge-success badge-sm mt-1">O(1)</span>
+                      <p class="text-sm text-base-content/60">{gettext("Constant space - uses fixed memory regardless of input")}</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <span class="badge badge-info badge-sm mt-1">O(log n)</span>
+                      <p class="text-sm text-base-content/60">{gettext("Logarithmic - typically from recursion stack")}</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <span class="badge badge-warning badge-sm mt-1">O(n)</span>
+                      <p class="text-sm text-base-content/60">{gettext("Linear - memory grows with input size")}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stability Card -->
+              <div class="card bg-base-200 border border-base-300">
+                <div class="card-body">
+                  <h3 class="card-title text-lg flex items-center gap-2">
+                    {gettext("Stability")}
+                  </h3>
+                  <p class="text-base-content/70 text-sm mb-4">
+                    {gettext("A stable sorting algorithm maintains the relative order of elements with equal keys.")}
+                  </p>
+                  <div class="bg-base-300 rounded-lg p-4">
+                    <p class="text-sm font-medium mb-2">{gettext("Example:")}</p>
+                    <div class="text-sm text-base-content/70 space-y-1">
+                      <p>{gettext("Input: [(A,2), (B,1), (C,2), (D,1)]")}</p>
+                      <p class="text-success">{gettext("Stable: [(B,1), (D,1), (A,2), (C,2)]")}</p>
+                      <p class="text-error">{gettext("Unstable: [(D,1), (B,1), (C,2), (A,2)]")}</p>
+                    </div>
+                  </div>
+                  <p class="text-xs text-base-content/50 mt-3">
+                    {gettext("Stability matters when sorting by multiple criteria or preserving previous orderings.")}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Big O Notation Card -->
+              <div class="card bg-base-200 border border-base-300">
+                <div class="card-body">
+                  <h3 class="card-title text-lg flex items-center gap-2">
+                    {gettext("Big O Notation")}
+                  </h3>
+                  <p class="text-base-content/70 text-sm mb-4">
+                    {gettext("Big O describes the upper bound of an algorithm's growth rate, focusing on the dominant term.")}
+                  </p>
+                  <div class="overflow-x-auto">
+                    <table class="table table-sm">
+                      <thead>
+                        <tr>
+                          <th>{gettext("Notation")}</th>
+                          <th>{gettext("Name")}</th>
+                          <th class="text-right">
+                            <div class="tooltip tooltip-left" data-tip={gettext("Operations needed to process 1,000 elements")}>
+                              {gettext("Ops for n=1000")}
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td class="font-mono text-success">O(1)</td><td>{gettext("Constant")}</td><td class="text-right font-mono">1 {gettext("op")}</td></tr>
+                        <tr><td class="font-mono text-blue-500">O(log n)</td><td>{gettext("Logarithmic")}</td><td class="text-right font-mono">~10 {gettext("ops")}</td></tr>
+                        <tr><td class="font-mono text-cyan-500">O(n)</td><td>{gettext("Linear")}</td><td class="text-right font-mono">1,000 {gettext("ops")}</td></tr>
+                        <tr><td class="font-mono text-violet-500">O(n log n)</td><td>{gettext("Linearithmic")}</td><td class="text-right font-mono">~10,000 {gettext("ops")}</td></tr>
+                        <tr><td class="font-mono text-amber-500">O(n²)</td><td>{gettext("Quadratic")}</td><td class="text-right font-mono">1,000,000 {gettext("ops")}</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="text-xs text-base-content/50 mt-3">
+                    {gettext("The table shows how many operations each complexity requires to process 1,000 items. Notice how O(n²) needs 1 million operations while O(n) only needs 1,000.")}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Practical Tips -->
+            <div class="card bg-base-200 border border-base-300 mt-6">
+              <div class="card-body">
+                <h3 class="card-title text-lg">{gettext("Practical Tips for Choosing an Algorithm")}</h3>
+                <div class="grid md:grid-cols-3 gap-4 mt-4">
+                  <div class="bg-base-300 rounded-lg p-4">
+                    <h4 class="font-semibold text-primary mb-2">{gettext("Small Data (n < 50)")}</h4>
+                    <p class="text-sm text-base-content/60">{gettext("Simple algorithms like Insertion Sort often outperform complex ones due to low overhead.")}</p>
+                  </div>
+                  <div class="bg-base-300 rounded-lg p-4">
+                    <h4 class="font-semibold text-secondary mb-2">{gettext("Nearly Sorted Data")}</h4>
+                    <p class="text-sm text-base-content/60">{gettext("Insertion Sort and Bubble Sort approach O(n) performance on nearly sorted arrays.")}</p>
+                  </div>
+                  <div class="bg-base-300 rounded-lg p-4">
+                    <h4 class="font-semibold text-accent mb-2">{gettext("Large Data")}</h4>
+                    <p class="text-sm text-base-content/60">{gettext("Use O(n log n) algorithms like Merge Sort, Heap Sort, or Quick Sort for best performance.")}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
 
