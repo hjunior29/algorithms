@@ -385,7 +385,6 @@ defmodule AlgorithmsWeb.RunLive do
         <% end %>
       </div>
 
-      <.nav_footer />
     </div>
     """
   end

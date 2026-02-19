@@ -138,3 +138,8 @@ button {
 [data-theme="light"] .scroll-header.header-scrolled {
   background-color: rgba(255, 255, 255, 0.85);
 }
+
+/* Prevent layout shift from scrollbar appearing/disappearing */
+html {
+  scrollbar-gutter: stable both-edges;
+}

@@ -35,9 +35,16 @@ defmodule AlgorithmsWeb.HomeLive do
             >{@typing_words |> List.first()}</span><span class="typing-cursor">|</span>
           </h1>
 
-          <p class="text-lg sm:text-xl text-base-content/60 mb-12 max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-base-content/60 mb-10 max-w-2xl mx-auto">
             {gettext("Watch sorting algorithms come to life. Understand how different algorithms work by seeing them in action, step by step.")}
           </p>
+
+          <div
+            id="sorting-demo"
+            phx-hook="SortingDemo"
+            class="flex items-end gap-[3px] h-32 sm:h-40 w-full max-w-md mx-auto mb-10 px-2"
+          >
+          </div>
 
           <div class="flex flex-wrap gap-4 justify-center">
             <a

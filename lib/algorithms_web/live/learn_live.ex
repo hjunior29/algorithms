@@ -568,7 +568,6 @@ defmodule AlgorithmsWeb.LearnLive do
         <% end %>
       </div>
 
-      <.nav_footer />
     </div>
     """
   end

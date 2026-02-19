@@ -115,6 +115,136 @@ const Hooks = {
       setTimeout(type, 2000)
     }
   },
+  SortingDemo: {
+    mounted() {
+      this.stopped = false
+      this.bars = []
+      this.container = this.el
+      this.initBars()
+      this.runLoop()
+    },
+    destroyed() {
+      this.stopped = true
+    },
+    setColor(bar, type) {
+      bar.classList.remove("bg-primary", "bg-error", "bg-success")
+      bar.classList.add(type)
+    },
+    initBars() {
+      const count = 24
+      this.values = Array.from({length: count}, (_, i) => ((i + 1) / count) * 100)
+      this.shuffle(this.values)
+
+      this.container.innerHTML = ""
+      this.bars = this.values.map((val) => {
+        const bar = document.createElement("div")
+        bar.className = "bg-primary rounded-t transition-all duration-200"
+        bar.style.height = `${val}%`
+        bar.style.flex = "1"
+        this.container.appendChild(bar)
+        return bar
+      })
+    },
+    shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]]
+      }
+    },
+    sleep(ms) {
+      return new Promise(r => setTimeout(r, ms))
+    },
+    updateBars() {
+      this.bars.forEach((bar, i) => {
+        bar.style.height = `${this.values[i]}%`
+        this.setColor(bar, "bg-primary")
+      })
+    },
+    highlight(i, j) {
+      this.bars.forEach((bar, idx) => {
+        this.setColor(bar, (idx === i || idx === j) ? "bg-error" : "bg-primary")
+      })
+    },
+    async markSorted() {
+      for (let i = 0; i < this.bars.length; i++) {
+        if (this.stopped) return
+        this.setColor(this.bars[i], "bg-success")
+        await this.sleep(30)
+      }
+    },
+    async bubbleSort() {
+      const arr = this.values
+      const n = arr.length
+      for (let i = 0; i < n - 1; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+          if (this.stopped) return
+          this.highlight(j, j + 1)
+          await this.sleep(60)
+          if (arr[j] > arr[j + 1]) {
+            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+            this.updateBars()
+            this.highlight(j, j + 1)
+            await this.sleep(60)
+          }
+        }
+      }
+    },
+    async insertionSort() {
+      const arr = this.values
+      for (let i = 1; i < arr.length; i++) {
+        let j = i
+        while (j > 0 && arr[j - 1] > arr[j]) {
+          if (this.stopped) return
+          this.highlight(j - 1, j);
+          [arr[j - 1], arr[j]] = [arr[j], arr[j - 1]]
+          this.updateBars()
+          this.highlight(j - 1, j)
+          await this.sleep(50)
+          j--
+        }
+      }
+    },
+    async selectionSort() {
+      const arr = this.values
+      for (let i = 0; i < arr.length - 1; i++) {
+        let minIdx = i
+        for (let j = i + 1; j < arr.length; j++) {
+          if (this.stopped) return
+          this.highlight(minIdx, j)
+          await this.sleep(50)
+          if (arr[j] < arr[minIdx]) minIdx = j
+        }
+        if (minIdx !== i) {
+          [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]]
+          this.updateBars()
+          this.highlight(i, minIdx)
+          await this.sleep(50)
+        }
+      }
+    },
+    async runLoop() {
+      const algorithms = [
+        () => this.bubbleSort(),
+        () => this.insertionSort(),
+        () => this.selectionSort()
+      ]
+      let algoIdx = 0
+
+      while (!this.stopped) {
+        this.shuffle(this.values)
+        this.updateBars()
+        await this.sleep(800)
+
+        await algorithms[algoIdx]()
+        if (this.stopped) return
+
+        await this.markSorted()
+        await this.sleep(1500)
+
+        algoIdx = (algoIdx + 1) % algorithms.length
+      }
+    }
+  },
   HighlightCode: {
     mounted() {
       this.highlight()
