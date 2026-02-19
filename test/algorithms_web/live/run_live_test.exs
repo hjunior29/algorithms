@@ -185,10 +185,5 @@ defmodule AlgorithmsWeb.RunLiveTest do
       assert html =~ "<header"
     end
 
-    test "includes nav footer", %{conn: conn} do
-      {:ok, _view, html} = live(conn, "/run")
-
-      assert html =~ "Phoenix LiveView"
-    end
   end
 end

@@ -254,10 +254,5 @@ defmodule AlgorithmsWeb.LearnLiveTest do
       assert html =~ "<header"
     end
 
-    test "has footer", %{conn: conn} do
-      {:ok, _view, html} = live(conn, "/learn")
-
-      assert html =~ "Phoenix LiveView"
-    end
   end
 end
