@@ -5,7 +5,7 @@ defmodule AlgorithmsWeb do
 
   This can be used in your application as:
 
-      use AlgorithmsWeb, :controller
+      use AlgorithmsWeb, :controlle
       use AlgorithmsWeb, :html
 
   The definitions below will be executed for every controller,
