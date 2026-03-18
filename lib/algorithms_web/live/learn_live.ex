@@ -5,8 +5,8 @@ defmodule AlgorithmsWeb.LearnLive do
     %{
       id: "insertion",
       name: "Insertion Sort",
-      complexity_best: "O(n)",
-      complexity_avg: "O(n²)",
+      complexity_best: "Ω(n)",
+      complexity_avg: "Θ(n²)",
       complexity_worst: "O(n²)",
       space: "O(1)",
       stable: true,
@@ -15,8 +15,8 @@ defmodule AlgorithmsWeb.LearnLive do
     %{
       id: "selection",
       name: "Selection Sort",
-      complexity_best: "O(n²)",
-      complexity_avg: "O(n²)",
+      complexity_best: "Ω(n²)",
+      complexity_avg: "Θ(n²)",
       complexity_worst: "O(n²)",
       space: "O(1)",
       stable: false,
@@ -25,8 +25,8 @@ defmodule AlgorithmsWeb.LearnLive do
     %{
       id: "bubble",
       name: "Bubble Sort",
-      complexity_best: "O(n)",
-      complexity_avg: "O(n²)",
+      complexity_best: "Ω(n)",
+      complexity_avg: "Θ(n²)",
       complexity_worst: "O(n²)",
       space: "O(1)",
       stable: true,
@@ -35,8 +35,8 @@ defmodule AlgorithmsWeb.LearnLive do
     %{
       id: "shell",
       name: "Shell Sort",
-      complexity_best: "O(n log n)",
-      complexity_avg: "O(n^1.3)",
+      complexity_best: "Ω(n log n)",
+      complexity_avg: "Θ(n^1.3)",
       complexity_worst: "O(n²)",
       space: "O(1)",
       stable: false,
@@ -45,8 +45,8 @@ defmodule AlgorithmsWeb.LearnLive do
     %{
       id: "merge",
       name: "Merge Sort",
-      complexity_best: "O(n log n)",
-      complexity_avg: "O(n log n)",
+      complexity_best: "Ω(n log n)",
+      complexity_avg: "Θ(n log n)",
       complexity_worst: "O(n log n)",
       space: "O(n)",
       stable: true,
@@ -55,8 +55,8 @@ defmodule AlgorithmsWeb.LearnLive do
     %{
       id: "heap",
       name: "Heap Sort",
-      complexity_best: "O(n log n)",
-      complexity_avg: "O(n log n)",
+      complexity_best: "Ω(n log n)",
+      complexity_avg: "Θ(n log n)",
       complexity_worst: "O(n log n)",
       space: "O(1)",
       stable: false,
@@ -65,8 +65,8 @@ defmodule AlgorithmsWeb.LearnLive do
     %{
       id: "quick",
       name: "Quick Sort",
-      complexity_best: "O(n log n)",
-      complexity_avg: "O(n log n)",
+      complexity_best: "Ω(n log n)",
+      complexity_avg: "Θ(n log n)",
       complexity_worst: "O(n²)",
       space: "O(log n)",
       stable: false,
@@ -75,8 +75,8 @@ defmodule AlgorithmsWeb.LearnLive do
     %{
       id: "quick3",
       name: "Quick3 Sort",
-      complexity_best: "O(n)",
-      complexity_avg: "O(n log n)",
+      complexity_best: "Ω(n)",
+      complexity_avg: "Θ(n log n)",
       complexity_worst: "O(n²)",
       space: "O(log n)",
       stable: false,
@@ -189,15 +189,15 @@ defmodule AlgorithmsWeb.LearnLive do
                   <h3 class="card-title text-lg mb-4">{gettext("Complexity")}</h3>
                   <div class="space-y-3">
                     <div class="flex justify-between items-center">
-                      <span class="text-base-content/60">{gettext("Best Case")}</span>
+                      <span class="text-base-content/60">{gettext("Best Case (Ω)")}</span>
                       <span class="font-mono font-semibold text-success">{@selected.complexity_best}</span>
                     </div>
                     <div class="flex justify-between items-center">
-                      <span class="text-base-content/60">{gettext("Average Case")}</span>
+                      <span class="text-base-content/60">{gettext("Average Case (Θ)")}</span>
                       <span class="font-mono font-semibold text-warning">{@selected.complexity_avg}</span>
                     </div>
                     <div class="flex justify-between items-center">
-                      <span class="text-base-content/60">{gettext("Worst Case")}</span>
+                      <span class="text-base-content/60">{gettext("Worst Case (O)")}</span>
                       <span class="font-mono font-semibold text-error">{@selected.complexity_worst}</span>
                     </div>
                     <div class="divider my-2"></div>
@@ -292,9 +292,9 @@ defmodule AlgorithmsWeb.LearnLive do
                   <tr class="bg-base-300">
                     <th class="text-base-content">#</th>
                     <th class="text-base-content">{gettext("Algorithm")}</th>
-                    <th class="text-center text-base-content">{gettext("Average")}</th>
-                    <th class="text-center text-base-content">{gettext("Best")}</th>
-                    <th class="text-center text-base-content">{gettext("Worst")}</th>
+                    <th class="text-center text-base-content">{gettext("Average")} Θ</th>
+                    <th class="text-center text-base-content">{gettext("Best")} Ω</th>
+                    <th class="text-center text-base-content">{gettext("Worst")} O</th>
                     <th class="text-center text-base-content">{gettext("Space")}</th>
                     <th class="text-center text-base-content">{gettext("Stable")}</th>
                   </tr>
@@ -352,7 +352,7 @@ defmodule AlgorithmsWeb.LearnLive do
               <div class="card-body">
                 <h3 class="card-title text-xl mb-4">{gettext("Complexity Growth Visualization")}</h3>
                 <p class="text-base-content/60 mb-6">
-                  {gettext("This chart shows how different time complexities scale as the input size (n) increases. Notice how O(n²) grows much faster than O(n log n).")}
+                  {gettext("This chart shows how different time complexities scale as the input size (n) increases. Notice how O(2ⁿ) and O(n!) grow absurdly fast compared to the others.")}
                 </p>
                 <div class="w-full h-80 relative" id="complexity-chart" phx-hook="ComplexityChart">
                   <div class="absolute inset-0 flex items-center justify-center text-base-content/40">
@@ -393,6 +393,14 @@ defmodule AlgorithmsWeb.LearnLive do
                       <path d="M 50 230 Q 200 220, 280 180 T 400 30" fill="none" stroke="#f59e0b" stroke-width="3"/>
                       <text x="405" y="30" fill="#f59e0b" font-size="12" font-weight="bold">O(n²)</text>
 
+                      <!-- O(2ⁿ) - Exponential -->
+                      <path d="M 50 230 C 100 229, 150 225, 200 210 S 250 150, 270 80 S 285 30, 290 20" fill="none" stroke="#ef4444" stroke-width="3"/>
+                      <text x="295" y="20" fill="#ef4444" font-size="12" font-weight="bold">O(2ⁿ)</text>
+
+                      <!-- O(n!) - Factorial -->
+                      <path d="M 50 230 C 80 229, 120 228, 160 220 S 200 180, 215 100 S 225 30, 230 20" fill="none" stroke="#ec4899" stroke-width="3"/>
+                      <text x="235" y="20" fill="#ec4899" font-size="12" font-weight="bold">O(n!)</text>
+
                       <!-- Scale markers on X axis -->
                       <text x="50" y="265" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.5">0</text>
                       <text x="155" y="265" text-anchor="middle" fill="currentColor" font-size="10" opacity="0.5">25</text>
@@ -425,96 +433,121 @@ defmodule AlgorithmsWeb.LearnLive do
                     <div class="w-4 h-1 bg-amber-500 rounded"></div>
                     <span class="text-sm">O(n²) - {gettext("Quadratic")}</span>
                   </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-4 h-1 bg-red-500 rounded"></div>
+                    <span class="text-sm">O(2ⁿ) - {gettext("Exponential")}</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-4 h-1 bg-pink-500 rounded"></div>
+                    <span class="text-sm">O(n!) - {gettext("Factorial")}</span>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Concept Cards Grid -->
             <div class="grid md:grid-cols-2 gap-6">
-              <!-- Time Complexity Card -->
-              <div class="card bg-base-200 border border-base-300">
-                <div class="card-body">
-                  <h3 class="card-title text-lg flex items-center gap-2">
-                    {gettext("Time Complexity")}
-                  </h3>
-                  <p class="text-base-content/70 text-sm mb-4">
-                    {gettext("Time complexity describes how the runtime of an algorithm grows as the input size increases. It's expressed using Big O notation.")}
-                  </p>
-                  <div class="space-y-3">
-                    <div class="flex items-start gap-3">
-                      <span class="badge badge-success badge-sm mt-1">Best</span>
-                      <p class="text-sm text-base-content/60">{gettext("The minimum time the algorithm takes (ideal input)")}</p>
+              <!-- Left Column: Time, Space, Stability -->
+              <div class="space-y-6">
+                <!-- Time Complexity Card -->
+                <div class="card bg-base-200 border border-base-300">
+                  <div class="card-body">
+                    <h3 class="card-title text-lg flex items-center gap-2">
+                      {gettext("Time Complexity")}
+                    </h3>
+                    <p class="text-base-content/70 text-sm mb-4">
+                      {gettext("Time complexity describes how the runtime of an algorithm grows as the input size increases. It's expressed using Big O notation.")}
+                    </p>
+                    <div class="space-y-3">
+                      <div class="flex items-start gap-3">
+                        <span class="badge badge-success badge-sm mt-1">Best Ω</span>
+                        <p class="text-sm text-base-content/60">{gettext("The minimum time the algorithm takes (ideal input)")}</p>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <span class="badge badge-warning badge-sm mt-1">Avg Θ</span>
+                        <p class="text-sm text-base-content/60">{gettext("Expected time for random input")}</p>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <span class="badge badge-error badge-sm mt-1">Worst O</span>
+                        <p class="text-sm text-base-content/60">{gettext("Maximum time the algorithm can take")}</p>
+                      </div>
                     </div>
-                    <div class="flex items-start gap-3">
-                      <span class="badge badge-warning badge-sm mt-1">Avg</span>
-                      <p class="text-sm text-base-content/60">{gettext("Expected time for random input")}</p>
+                  </div>
+                </div>
+
+                <!-- Space Complexity Card -->
+                <div class="card bg-base-200 border border-base-300">
+                  <div class="card-body">
+                    <h3 class="card-title text-lg flex items-center gap-2">
+                      {gettext("Space Complexity")}
+                    </h3>
+                    <p class="text-base-content/70 text-sm mb-4">
+                      {gettext("Space complexity measures the additional memory an algorithm needs relative to the input size.")}
+                    </p>
+                    <div class="space-y-3">
+                      <div class="flex items-start gap-3">
+                        <span class="badge badge-success badge-sm mt-1">O(1)</span>
+                        <p class="text-sm text-base-content/60">{gettext("Constant space - uses fixed memory regardless of input")}</p>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <span class="badge badge-info badge-sm mt-1">O(log n)</span>
+                        <p class="text-sm text-base-content/60">{gettext("Logarithmic - typically from recursion stack")}</p>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <span class="badge badge-warning badge-sm mt-1">O(n)</span>
+                        <p class="text-sm text-base-content/60">{gettext("Linear - memory grows with input size")}</p>
+                      </div>
                     </div>
-                    <div class="flex items-start gap-3">
-                      <span class="badge badge-error badge-sm mt-1">Worst</span>
-                      <p class="text-sm text-base-content/60">{gettext("Maximum time the algorithm can take")}</p>
+                  </div>
+                </div>
+
+                <!-- Stability Card -->
+                <div class="card bg-base-200 border border-base-300">
+                  <div class="card-body">
+                    <h3 class="card-title text-lg flex items-center gap-2">
+                      {gettext("Stability")}
+                    </h3>
+                    <p class="text-base-content/70 text-sm mb-4">
+                      {gettext("A stable sorting algorithm maintains the relative order of elements with equal keys.")}
+                    </p>
+                    <div class="bg-base-300 rounded-lg p-4">
+                      <p class="text-sm font-medium mb-2">{gettext("Example:")}</p>
+                      <div class="text-sm text-base-content/70 space-y-1">
+                        <p>{gettext("Input: [(A,2), (B,1), (C,2), (D,1)]")}</p>
+                        <p class="text-success">{gettext("Stable: [(B,1), (D,1), (A,2), (C,2)]")}</p>
+                        <p class="text-error">{gettext("Unstable: [(D,1), (B,1), (C,2), (A,2)]")}</p>
+                      </div>
                     </div>
+                    <p class="text-xs text-base-content/50 mt-3">
+                      {gettext("Stability matters when sorting by multiple criteria or preserving previous orderings.")}
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <!-- Space Complexity Card -->
-              <div class="card bg-base-200 border border-base-300">
+              <!-- Right Column: Asymptotic Notation -->
+              <div class="card bg-base-200 border border-base-300 h-fit">
                 <div class="card-body">
                   <h3 class="card-title text-lg flex items-center gap-2">
-                    {gettext("Space Complexity")}
+                    {gettext("Asymptotic Notation")}
                   </h3>
                   <p class="text-base-content/70 text-sm mb-4">
-                    {gettext("Space complexity measures the additional memory an algorithm needs relative to the input size.")}
+                    {gettext("Asymptotic notation describes how an algorithm's performance scales with input size.")}
                   </p>
-                  <div class="space-y-3">
+                  <div class="space-y-2 mb-4">
                     <div class="flex items-start gap-3">
-                      <span class="badge badge-success badge-sm mt-1">O(1)</span>
-                      <p class="text-sm text-base-content/60">{gettext("Constant space - uses fixed memory regardless of input")}</p>
+                      <span class="badge badge-success badge-sm mt-1">Ω</span>
+                      <p class="text-sm text-base-content/60">{gettext("Omega — lower bound (best case)")}</p>
                     </div>
                     <div class="flex items-start gap-3">
-                      <span class="badge badge-info badge-sm mt-1">O(log n)</span>
-                      <p class="text-sm text-base-content/60">{gettext("Logarithmic - typically from recursion stack")}</p>
+                      <span class="badge badge-warning badge-sm mt-1">Θ</span>
+                      <p class="text-sm text-base-content/60">{gettext("Theta — tight bound (average case)")}</p>
                     </div>
                     <div class="flex items-start gap-3">
-                      <span class="badge badge-warning badge-sm mt-1">O(n)</span>
-                      <p class="text-sm text-base-content/60">{gettext("Linear - memory grows with input size")}</p>
+                      <span class="badge badge-error badge-sm mt-1">O</span>
+                      <p class="text-sm text-base-content/60">{gettext("Big O — upper bound (worst case)")}</p>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <!-- Stability Card -->
-              <div class="card bg-base-200 border border-base-300">
-                <div class="card-body">
-                  <h3 class="card-title text-lg flex items-center gap-2">
-                    {gettext("Stability")}
-                  </h3>
-                  <p class="text-base-content/70 text-sm mb-4">
-                    {gettext("A stable sorting algorithm maintains the relative order of elements with equal keys.")}
-                  </p>
-                  <div class="bg-base-300 rounded-lg p-4">
-                    <p class="text-sm font-medium mb-2">{gettext("Example:")}</p>
-                    <div class="text-sm text-base-content/70 space-y-1">
-                      <p>{gettext("Input: [(A,2), (B,1), (C,2), (D,1)]")}</p>
-                      <p class="text-success">{gettext("Stable: [(B,1), (D,1), (A,2), (C,2)]")}</p>
-                      <p class="text-error">{gettext("Unstable: [(D,1), (B,1), (C,2), (A,2)]")}</p>
-                    </div>
-                  </div>
-                  <p class="text-xs text-base-content/50 mt-3">
-                    {gettext("Stability matters when sorting by multiple criteria or preserving previous orderings.")}
-                  </p>
-                </div>
-              </div>
-
-              <!-- Big O Notation Card -->
-              <div class="card bg-base-200 border border-base-300">
-                <div class="card-body">
-                  <h3 class="card-title text-lg flex items-center gap-2">
-                    {gettext("Big O Notation")}
-                  </h3>
-                  <p class="text-base-content/70 text-sm mb-4">
-                    {gettext("Big O describes the upper bound of an algorithm's growth rate, focusing on the dominant term.")}
-                  </p>
                   <div class="overflow-x-auto">
                     <table class="table table-sm">
                       <thead>
@@ -534,12 +567,19 @@ defmodule AlgorithmsWeb.LearnLive do
                         <tr><td class="font-mono text-cyan-500">O(n)</td><td>{gettext("Linear")}</td><td class="text-right font-mono">1,000 {gettext("ops")}</td></tr>
                         <tr><td class="font-mono text-violet-500">O(n log n)</td><td>{gettext("Linearithmic")}</td><td class="text-right font-mono">~10,000 {gettext("ops")}</td></tr>
                         <tr><td class="font-mono text-amber-500">O(n²)</td><td>{gettext("Quadratic")}</td><td class="text-right font-mono">1,000,000 {gettext("ops")}</td></tr>
+                        <tr><td class="font-mono text-red-500">O(2ⁿ)</td><td>{gettext("Exponential")}</td><td class="text-right font-mono">1.07e+301 {gettext("ops")}</td></tr>
+                        <tr><td class="font-mono text-pink-500">O(n!)</td><td>{gettext("Factorial")}</td><td class="text-right font-mono">∞ {gettext("ops")}</td></tr>
                       </tbody>
                     </table>
                   </div>
                   <p class="text-xs text-base-content/50 mt-3">
                     {gettext("The table shows how many operations each complexity requires to process 1,000 items. Notice how O(n²) needs 1 million operations while O(n) only needs 1,000.")}
                   </p>
+                  <div class="bg-base-300 rounded-lg p-4 mt-4">
+                    <p class="text-sm text-base-content/70">
+                      {gettext("To put it in perspective: 2¹⁰⁰⁰ is a number with 301 digits — far more than the estimated number of atoms in the observable universe (~10⁸⁰). And 1000! is so large it's effectively infinite. These complexities make problems practically unsolvable for even modest input sizes.")}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -579,10 +619,10 @@ defmodule AlgorithmsWeb.LearnLive do
     end)
   end
 
-  defp complexity_rank("O(n)"), do: 1
-  defp complexity_rank("O(n log n)"), do: 2
-  defp complexity_rank("O(n^1.3)"), do: 3
-  defp complexity_rank("O(n²)"), do: 4
+  defp complexity_rank(c) when c in ["O(n)", "Ω(n)", "Θ(n)"], do: 1
+  defp complexity_rank(c) when c in ["O(n log n)", "Ω(n log n)", "Θ(n log n)"], do: 2
+  defp complexity_rank(c) when c in ["O(n^1.3)", "Ω(n^1.3)", "Θ(n^1.3)"], do: 3
+  defp complexity_rank(c) when c in ["O(n²)", "Ω(n²)", "Θ(n²)"], do: 4
   defp complexity_rank(_), do: 5
 
   defp space_rank("O(1)"), do: 1
@@ -590,10 +630,10 @@ defmodule AlgorithmsWeb.LearnLive do
   defp space_rank("O(n)"), do: 3
   defp space_rank(_), do: 4
 
-  defp complexity_badge_class("O(n)"), do: "badge-success"
-  defp complexity_badge_class("O(n log n)"), do: "badge-info"
-  defp complexity_badge_class("O(n^1.3)"), do: "badge-warning"
-  defp complexity_badge_class("O(n²)"), do: "badge-error"
+  defp complexity_badge_class(c) when c in ["O(n)", "Ω(n)", "Θ(n)"], do: "badge-success"
+  defp complexity_badge_class(c) when c in ["O(n log n)", "Ω(n log n)", "Θ(n log n)"], do: "badge-info"
+  defp complexity_badge_class(c) when c in ["O(n^1.3)", "Ω(n^1.3)", "Θ(n^1.3)"], do: "badge-warning"
+  defp complexity_badge_class(c) when c in ["O(n²)", "Ω(n²)", "Θ(n²)"], do: "badge-error"
   defp complexity_badge_class(_), do: "badge-ghost"
 
   defp space_badge_class("O(1)"), do: "badge-success"

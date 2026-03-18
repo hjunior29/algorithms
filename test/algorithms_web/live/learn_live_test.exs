@@ -78,11 +78,11 @@ defmodule AlgorithmsWeb.LearnLiveTest do
       assert html =~ "Unstable: [(D,1), (B,1), (C,2), (A,2)]"
     end
 
-    test "displays big o notation card with table", %{conn: conn} do
+    test "displays asymptotic notation card with table", %{conn: conn} do
       {:ok, _view, html} = live(conn, "/learn")
 
-      assert html =~ "Big O Notation"
-      assert html =~ "Big O describes the upper bound"
+      assert html =~ "Asymptotic Notation"
+      assert html =~ "Asymptotic notation describes how"
       assert html =~ "Notation"
       assert html =~ "Name"
       assert html =~ "Ops for n=1000"

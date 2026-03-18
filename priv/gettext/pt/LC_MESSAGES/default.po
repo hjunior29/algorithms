@@ -11,7 +11,7 @@ msgstr ""
 "Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/algorithms_web/live/home_live.ex:226
+#: lib/algorithms_web/live/home_live.ex:233
 #, elixir-autogen, elixir-format
 msgid "3-way partitioning variant, excellent for arrays with many duplicates."
 msgstr "Variante de particionamento em 3 vias, excelente para arrays com muitas duplicatas."
@@ -21,7 +21,7 @@ msgstr "Variante de particionamento em 3 vias, excelente para arrays com muitas 
 msgid "Actions"
 msgstr "Ações"
 
-#: lib/algorithms_web/live/home_live.ex:124
+#: lib/algorithms_web/live/home_live.ex:131
 #, elixir-autogen, elixir-format
 msgid "Adjust speed, array size, and values in real-time to explore different scenarios."
 msgstr "Ajuste velocidade, tamanho do array e valores em tempo real para explorar diferentes cenários."
@@ -39,12 +39,12 @@ msgstr "Algoritmo"
 msgid "Attempting to reconnect"
 msgstr "Tentando reconectar"
 
-#: lib/algorithms_web/live/home_live.ex:170
+#: lib/algorithms_web/live/home_live.ex:177
 #, elixir-autogen, elixir-format
 msgid "Bubble Sort"
 msgstr "Bubble Sort"
 
-#: lib/algorithms_web/live/home_live.ex:149
+#: lib/algorithms_web/live/home_live.ex:156
 #, elixir-autogen, elixir-format
 msgid "Builds the sorted array one element at a time. Efficient for small or nearly sorted data."
 msgstr "Constrói o array ordenado um elemento por vez. Eficiente para dados pequenos ou quase ordenados."
@@ -59,7 +59,7 @@ msgstr "Feito com Phoenix LiveView por"
 msgid "Click \"Generate\" to begin"
 msgstr "Clique em \"Gerar\" para começar"
 
-#: lib/algorithms_web/live/home_live.ex:108
+#: lib/algorithms_web/live/home_live.ex:115
 #, elixir-autogen, elixir-format
 msgid "Compare Performance"
 msgstr "Compare Desempenho"
@@ -79,32 +79,32 @@ msgstr "Atraso"
 msgid "Delay (ms)"
 msgstr "Atraso (ms)"
 
-#: lib/algorithms_web/live/home_live.ex:193
+#: lib/algorithms_web/live/home_live.ex:200
 #, elixir-autogen, elixir-format
 msgid "Divide and conquer algorithm that splits, sorts, and merges arrays."
 msgstr "Algoritmo dividir e conquistar que divide, ordena e mescla arrays."
 
-#: lib/algorithms_web/live/run_live.ex:413
+#: lib/algorithms_web/live/run_live.ex:412
 #, elixir-autogen, elixir-format
 msgid "Done"
 msgstr "Concluído"
 
-#: lib/algorithms_web/live/home_live.ex:139
+#: lib/algorithms_web/live/home_live.ex:146
 #, elixir-autogen, elixir-format
 msgid "Explore 8 classic sorting algorithms, from simple to advanced. Each one has its own strengths and ideal use cases."
 msgstr "Explore 8 algoritmos clássicos de ordenação, do simples ao avançado. Cada um tem seus pontos fortes e casos de uso ideais."
 
-#: lib/algorithms_web/live/home_live.ex:215
+#: lib/algorithms_web/live/home_live.ex:222
 #, elixir-autogen, elixir-format
 msgid "Fast divide and conquer using a pivot element to partition arrays."
 msgstr "Dividir e conquistar rápido usando um elemento pivô para particionar arrays."
 
-#: lib/algorithms_web/live/home_live.ex:137
+#: lib/algorithms_web/live/home_live.ex:144
 #, elixir-autogen, elixir-format
 msgid "Featured Algorithms"
 msgstr "Algoritmos em Destaque"
 
-#: lib/algorithms_web/live/home_live.ex:182
+#: lib/algorithms_web/live/home_live.ex:189
 #, elixir-autogen, elixir-format
 msgid "Generalization of insertion sort that allows exchange of far apart elements."
 msgstr "Generalização do insertion sort que permite troca de elementos distantes."
@@ -114,29 +114,29 @@ msgstr "Generalização do insertion sort que permite troca de elementos distant
 msgid "Generate"
 msgstr "Gerar"
 
-#: lib/algorithms_web/live/home_live.ex:203
+#: lib/algorithms_web/live/home_live.ex:210
 #, elixir-autogen, elixir-format
 msgid "Heap Sort"
 msgstr "Heap Sort"
 
-#: lib/algorithms_web/live/home_live.ex:284
+#: lib/algorithms_web/live/home_live.ex:291
 #: lib/algorithms_web/live/learn_live.ex:136
 #: lib/algorithms_web/live/run_live.ex:355
 #, elixir-autogen, elixir-format
 msgid "History"
 msgstr "História"
 
-#: lib/algorithms_web/live/home_live.ex:148
+#: lib/algorithms_web/live/home_live.ex:155
 #, elixir-autogen, elixir-format
 msgid "Insertion Sort"
 msgstr "Insertion Sort"
 
-#: lib/algorithms_web/live/home_live.ex:123
+#: lib/algorithms_web/live/home_live.ex:130
 #, elixir-autogen, elixir-format
 msgid "Interactive Controls"
 msgstr "Controles Interativos"
 
-#: lib/algorithms_web/live/home_live.ex:93
+#: lib/algorithms_web/live/home_live.ex:100
 #, elixir-autogen, elixir-format
 msgid "Learn Visually"
 msgstr "Aprenda Visualmente"
@@ -151,7 +151,7 @@ msgstr "Máx"
 msgid "Max Value"
 msgstr "Valor Máximo"
 
-#: lib/algorithms_web/live/home_live.ex:192
+#: lib/algorithms_web/live/home_live.ex:199
 #, elixir-autogen, elixir-format
 msgid "Merge Sort"
 msgstr "Merge Sort"
@@ -168,32 +168,32 @@ msgstr "Operações"
 msgid "Quantity"
 msgstr "Quantidade"
 
-#: lib/algorithms_web/live/home_live.ex:214
+#: lib/algorithms_web/live/home_live.ex:221
 #, elixir-autogen, elixir-format
 msgid "Quick Sort"
 msgstr "Quick Sort"
 
-#: lib/algorithms_web/live/home_live.ex:225
+#: lib/algorithms_web/live/home_live.ex:232
 #, elixir-autogen, elixir-format
 msgid "Quick3 Sort"
 msgstr "Quick3 Sort"
 
-#: lib/algorithms_web/live/run_live.ex:411
+#: lib/algorithms_web/live/run_live.ex:410
 #, elixir-autogen, elixir-format
 msgid "Ready"
 msgstr "Pronto"
 
-#: lib/algorithms_web/live/home_live.ex:325
+#: lib/algorithms_web/live/home_live.ex:332
 #, elixir-autogen, elixir-format
 msgid "Ready to Explore?"
 msgstr "Pronto para Explorar?"
 
-#: lib/algorithms_web/live/home_live.ex:160
+#: lib/algorithms_web/live/home_live.ex:167
 #, elixir-autogen, elixir-format
 msgid "Repeatedly finds the minimum element and moves it to the sorted portion."
 msgstr "Encontra repetidamente o elemento mínimo e o move para a parte ordenada."
 
-#: lib/algorithms_web/live/home_live.ex:171
+#: lib/algorithms_web/live/home_live.ex:178
 #, elixir-autogen, elixir-format
 msgid "Repeatedly swaps adjacent elements if they are in the wrong order."
 msgstr "Troca repetidamente elementos adjacentes se estiverem na ordem errada."
@@ -210,30 +210,30 @@ msgstr "Resultados"
 
 #: lib/algorithms_web/components/core_components.ex:60
 #: lib/algorithms_web/live/home_live.ex:29
-#: lib/algorithms_web/live/home_live.ex:47
-#: lib/algorithms_web/live/home_live.ex:330
+#: lib/algorithms_web/live/home_live.ex:54
+#: lib/algorithms_web/live/home_live.ex:337
 #: lib/algorithms_web/live/learn_live.ex:226
 #: lib/algorithms_web/live/run_live.ex:33
 #, elixir-autogen, elixir-format
 msgid "Run"
 msgstr "Executar"
 
-#: lib/algorithms_web/live/run_live.ex:412
+#: lib/algorithms_web/live/run_live.ex:411
 #, elixir-autogen, elixir-format
 msgid "Running"
 msgstr "Executando"
 
-#: lib/algorithms_web/live/home_live.ex:94
+#: lib/algorithms_web/live/home_live.ex:101
 #, elixir-autogen, elixir-format
 msgid "See exactly how each algorithm processes data, making complex logic easy to understand."
 msgstr "Veja exatamente como cada algoritmo processa dados, tornando lógica complexa fácil de entender."
 
-#: lib/algorithms_web/live/home_live.ex:159
+#: lib/algorithms_web/live/home_live.ex:166
 #, elixir-autogen, elixir-format
 msgid "Selection Sort"
 msgstr "Selection Sort"
 
-#: lib/algorithms_web/live/home_live.ex:181
+#: lib/algorithms_web/live/home_live.ex:188
 #, elixir-autogen, elixir-format
 msgid "Shell Sort"
 msgstr "Shell Sort"
@@ -248,7 +248,7 @@ msgstr "Algo deu errado!"
 msgid "Start"
 msgstr "Iniciar"
 
-#: lib/algorithms_web/live/home_live.ex:327
+#: lib/algorithms_web/live/home_live.ex:334
 #, elixir-autogen, elixir-format
 msgid "Start visualizing sorting algorithms now. Generate random data, pick an algorithm, and watch the magic happen."
 msgstr "Comece a visualizar algoritmos de ordenação agora. Gere dados aleatórios, escolha um algoritmo e veja a mágica acontecer."
@@ -264,22 +264,22 @@ msgstr "Status"
 msgid "Time"
 msgstr "Tempo"
 
-#: lib/algorithms_web/live/home_live.ex:109
+#: lib/algorithms_web/live/home_live.ex:116
 #, elixir-autogen, elixir-format
 msgid "Track operations and execution time to understand the efficiency of different approaches."
 msgstr "Acompanhe operações e tempo de execução para entender a eficiência de diferentes abordagens."
 
-#: lib/algorithms_web/live/home_live.ex:79
+#: lib/algorithms_web/live/home_live.ex:86
 #, elixir-autogen, elixir-format
 msgid "Understanding sorting algorithms is fundamental to computer science. Watching them work visually transforms abstract concepts into intuitive knowledge."
 msgstr "Entender algoritmos de ordenação é fundamental para ciência da computação. Vê-los funcionando visualmente transforma conceitos abstratos em conhecimento intuitivo."
 
-#: lib/algorithms_web/live/home_live.ex:204
+#: lib/algorithms_web/live/home_live.ex:211
 #, elixir-autogen, elixir-format
 msgid "Uses a binary heap data structure to sort elements efficiently."
 msgstr "Usa uma estrutura de dados heap binário para ordenar elementos eficientemente."
 
-#: lib/algorithms_web/live/run_live.ex:410
+#: lib/algorithms_web/live/run_live.ex:409
 #, elixir-autogen, elixir-format
 msgid "Waiting"
 msgstr "Aguardando"
@@ -294,7 +294,7 @@ msgstr "Veja algoritmos de ordenação ganharem vida. Entenda como diferentes al
 msgid "We can't find the internet"
 msgstr "Não conseguimos encontrar a internet"
 
-#: lib/algorithms_web/live/home_live.ex:77
+#: lib/algorithms_web/live/home_live.ex:84
 #, elixir-autogen, elixir-format
 msgid "Why Algorithm Visualization?"
 msgstr "Por que Visualizar Algoritmos?"
@@ -304,42 +304,42 @@ msgstr "Por que Visualizar Algoritmos?"
 msgid "close"
 msgstr "fechar"
 
-#: lib/algorithms_web/live/learn_live.ex:672
+#: lib/algorithms_web/live/learn_live.ex:699
 #, elixir-autogen, elixir-format
 msgid "(3-way Quick Sort) is a variation developed by Dijkstra for handling arrays with many duplicate keys."
 msgstr "(Quick Sort de 3 vias) é uma variação desenvolvida por Dijkstra para lidar com arrays com muitas chaves duplicadas."
 
-#: lib/algorithms_web/live/learn_live.ex:625
+#: lib/algorithms_web/live/learn_live.ex:652
 #, elixir-autogen, elixir-format
 msgid "3-way partitioning for duplicates."
 msgstr "Particionamento em 3 vias para duplicatas."
 
-#: lib/algorithms_web/live/learn_live.ex:808
+#: lib/algorithms_web/live/learn_live.ex:835
 #, elixir-autogen, elixir-format
 msgid "Adapts well to existing order"
 msgstr "Adapta-se bem à ordem existente"
 
-#: lib/algorithms_web/live/learn_live.ex:819
+#: lib/algorithms_web/live/learn_live.ex:846
 #, elixir-autogen, elixir-format
 msgid "Always O(n log n)"
 msgstr "Sempre O(n log n)"
 
-#: lib/algorithms_web/live/learn_live.ex:774
+#: lib/algorithms_web/live/learn_live.ex:801
 #, elixir-autogen, elixir-format
 msgid "Approaches O(n) performance"
 msgstr "Aproxima-se de desempenho O(n)"
 
-#: lib/algorithms_web/live/learn_live.ex:840
+#: lib/algorithms_web/live/learn_live.ex:867
 #, elixir-autogen, elixir-format
 msgid "Arrays"
 msgstr "Arrays"
 
-#: lib/algorithms_web/live/learn_live.ex:776
+#: lib/algorithms_web/live/learn_live.ex:803
 #, elixir-autogen, elixir-format
 msgid "As a subroutine"
 msgstr "Como sub-rotina"
 
-#: lib/algorithms_web/live/learn_live.ex:854
+#: lib/algorithms_web/live/learn_live.ex:881
 #, elixir-autogen, elixir-format
 msgid "As good as Quick Sort, better with duplicates"
 msgstr "Tão bom quanto Quick Sort, melhor com duplicatas"
@@ -349,199 +349,189 @@ msgstr "Tão bom quanto Quick Sort, melhor com duplicatas"
 msgid "Average"
 msgstr "Média"
 
-#: lib/algorithms_web/live/learn_live.ex:196
-#, elixir-autogen, elixir-format
-msgid "Average Case"
-msgstr "Caso Médio"
-
 #: lib/algorithms_web/live/learn_live.ex:118
 #, elixir-autogen, elixir-format
 msgid "Back to all algorithms"
 msgstr "Voltar para todos os algoritmos"
 
-#: lib/algorithms_web/live/learn_live.ex:192
-#, elixir-autogen, elixir-format
-msgid "Best Case"
-msgstr "Melhor Caso"
-
-#: lib/algorithms_web/live/learn_live.ex:737
+#: lib/algorithms_web/live/learn_live.ex:764
 #, elixir-autogen, elixir-format
 msgid "Build a max-heap from the input array"
 msgstr "Construir um max-heap a partir do array de entrada"
 
-#: lib/algorithms_web/live/learn_live.ex:618
+#: lib/algorithms_web/live/learn_live.ex:645
 #, elixir-autogen, elixir-format
 msgid "Builds sorted array one element at a time."
 msgstr "Constrói array ordenado um elemento por vez."
 
-#: lib/algorithms_web/live/learn_live.ex:775
+#: lib/algorithms_web/live/learn_live.ex:802
 #, elixir-autogen, elixir-format
 msgid "Can sort data as it arrives"
 msgstr "Pode ordenar dados conforme chegam"
 
-#: lib/algorithms_web/live/learn_live.ex:787
+#: lib/algorithms_web/live/learn_live.ex:814
 #, elixir-autogen, elixir-format
 msgid "Checking if sorted"
 msgstr "Verificar se está ordenado"
 
-#: lib/algorithms_web/live/learn_live.ex:749
-#: lib/algorithms_web/live/learn_live.ex:760
+#: lib/algorithms_web/live/learn_live.ex:776
+#: lib/algorithms_web/live/learn_live.ex:787
 #, elixir-autogen, elixir-format
 msgid "Choose a pivot element"
 msgstr "Escolher um elemento pivô"
 
-#: lib/algorithms_web/live/learn_live.ex:853
+#: lib/algorithms_web/live/learn_live.ex:880
 #, elixir-autogen, elixir-format
 msgid "Common prefixes are handled efficiently"
 msgstr "Prefixos comuns são tratados eficientemente"
 
-#: lib/algorithms_web/live/learn_live.ex:807
+#: lib/algorithms_web/live/learn_live.ex:834
 #, elixir-autogen, elixir-format
 msgid "Compact implementation"
 msgstr "Implementação compacta"
 
-#: lib/algorithms_web/live/learn_live.ex:703
+#: lib/algorithms_web/live/learn_live.ex:730
 #, elixir-autogen, elixir-format
 msgid "Compare adjacent elements from the beginning"
 msgstr "Comparar elementos adjacentes desde o início"
 
-#: lib/algorithms_web/live/learn_live.ex:715
+#: lib/algorithms_web/live/learn_live.ex:742
 #, elixir-autogen, elixir-format
 msgid "Compare elements that are 'gap' positions apart"
 msgstr "Comparar elementos que estão 'gap' posições distantes"
 
-#: lib/algorithms_web/live/learn_live.ex:681
+#: lib/algorithms_web/live/learn_live.ex:708
 #, elixir-autogen, elixir-format
 msgid "Compare it with elements before it"
 msgstr "Comparar com elementos anteriores"
 
-#: lib/algorithms_web/live/home_live.ex:293
+#: lib/algorithms_web/live/home_live.ex:300
 #: lib/algorithms_web/live/learn_live.ex:189
 #, elixir-autogen, elixir-format
 msgid "Complexity"
 msgstr "Complexidade"
 
-#: lib/algorithms_web/live/learn_live.ex:705
+#: lib/algorithms_web/live/learn_live.ex:732
 #, elixir-autogen, elixir-format
 msgid "Continue to the end of the array"
 msgstr "Continuar até o final do array"
 
-#: lib/algorithms_web/live/learn_live.ex:729
+#: lib/algorithms_web/live/learn_live.ex:756
 #, elixir-autogen, elixir-format
 msgid "Copy remaining elements from either half"
 msgstr "Copiar elementos restantes de qualquer metade"
 
-#: lib/algorithms_web/live/learn_live.ex:642
+#: lib/algorithms_web/live/learn_live.ex:669
 #, elixir-autogen, elixir-format
 msgid "Despite being inefficient for most real-world applications, it's valuable for educational purposes and can be optimized with an early termination flag."
 msgstr "Apesar de ser ineficiente para a maioria das aplicações reais, é valioso para fins educacionais e pode ser otimizado com um flag de terminação antecipada."
 
-#: lib/algorithms_web/live/learn_live.ex:630
+#: lib/algorithms_web/live/learn_live.ex:657
 #, elixir-autogen, elixir-format
 msgid "Despite its O(n²) average complexity, it remains widely used due to its simplicity, low overhead, and excellent performance on small or nearly sorted datasets."
 msgstr "Apesar de sua complexidade média O(n²), continua amplamente utilizado devido à sua simplicidade, baixo overhead e excelente desempenho em conjuntos de dados pequenos ou quase ordenados."
 
-#: lib/algorithms_web/live/learn_live.ex:666
+#: lib/algorithms_web/live/learn_live.ex:693
 #, elixir-autogen, elixir-format
 msgid "Despite its O(n²) worst case, careful pivot selection (like median-of-three) makes this scenario extremely rare in practice."
 msgstr "Apesar do pior caso O(n²), a seleção cuidadosa do pivô (como mediana de três) torna este cenário extremamente raro na prática."
 
-#: lib/algorithms_web/live/learn_live.ex:796
+#: lib/algorithms_web/live/learn_live.ex:823
 #, elixir-autogen, elixir-format
 msgid "Detecting sorted arrays"
 msgstr "Detectar arrays ordenados"
 
-#: lib/algorithms_web/live/learn_live.ex:622
+#: lib/algorithms_web/live/learn_live.ex:649
 #, elixir-autogen, elixir-format
 msgid "Divide and conquer with merging."
 msgstr "Dividir e conquistar com mesclagem."
 
-#: lib/algorithms_web/live/learn_live.ex:726
+#: lib/algorithms_web/live/learn_live.ex:753
 #, elixir-autogen, elixir-format
 msgid "Divide the array into two halves"
 msgstr "Dividir o array em duas metades"
 
-#: lib/algorithms_web/live/learn_live.ex:795
+#: lib/algorithms_web/live/learn_live.ex:822
 #, elixir-autogen, elixir-format
 msgid "Easy to understand and implement"
 msgstr "Fácil de entender e implementar"
 
-#: lib/algorithms_web/live/learn_live.ex:787
+#: lib/algorithms_web/live/learn_live.ex:814
 #, elixir-autogen, elixir-format
 msgid "Easy to verify correctness"
 msgstr "Fácil de verificar corretude"
 
-#: lib/algorithms_web/live/learn_live.ex:795
+#: lib/algorithms_web/live/learn_live.ex:822
 #, elixir-autogen, elixir-format
 msgid "Educational purposes"
 msgstr "Fins educacionais"
 
-#: lib/algorithms_web/live/learn_live.ex:764
+#: lib/algorithms_web/live/learn_live.ex:791
 #, elixir-autogen, elixir-format
 msgid "Elements equal to pivot are already in place"
 msgstr "Elementos iguais ao pivô já estão no lugar"
 
-#: lib/algorithms_web/live/learn_live.ex:806
+#: lib/algorithms_web/live/learn_live.ex:833
 #, elixir-autogen, elixir-format
 msgid "Embedded systems"
 msgstr "Sistemas embarcados"
 
-#: lib/algorithms_web/live/learn_live.ex:840
+#: lib/algorithms_web/live/learn_live.ex:867
 #, elixir-autogen, elixir-format
 msgid "Excellent cache performance"
 msgstr "Excelente desempenho de cache"
 
-#: lib/algorithms_web/live/learn_live.ex:817
+#: lib/algorithms_web/live/learn_live.ex:844
 #, elixir-autogen, elixir-format
 msgid "External sorting"
 msgstr "Ordenação externa"
 
-#: lib/algorithms_web/live/learn_live.ex:839
+#: lib/algorithms_web/live/learn_live.ex:866
 #, elixir-autogen, elixir-format
 msgid "Fastest on average"
 msgstr "Mais rápido em média"
 
-#: lib/algorithms_web/live/learn_live.ex:692
+#: lib/algorithms_web/live/learn_live.ex:719
 #, elixir-autogen, elixir-format
 msgid "Find the minimum element in the unsorted portion"
 msgstr "Encontrar o elemento mínimo na parte não ordenada"
 
-#: lib/algorithms_web/live/learn_live.ex:830
+#: lib/algorithms_web/live/learn_live.ex:857
 #, elixir-autogen, elixir-format
 msgid "Finding k largest/smallest"
 msgstr "Encontrar k maiores/menores"
 
-#: lib/algorithms_web/live/learn_live.ex:619
+#: lib/algorithms_web/live/learn_live.ex:646
 #, elixir-autogen, elixir-format
 msgid "Finds minimum and moves to sorted portion."
 msgstr "Encontra o mínimo e move para a parte ordenada."
 
-#: lib/algorithms_web/live/learn_live.ex:854
+#: lib/algorithms_web/live/learn_live.ex:881
 #, elixir-autogen, elixir-format
 msgid "General-purpose"
 msgstr "Uso geral"
 
-#: lib/algorithms_web/live/learn_live.ex:839
+#: lib/algorithms_web/live/learn_live.ex:866
 #, elixir-autogen, elixir-format
 msgid "General-purpose sorting"
 msgstr "Ordenação de uso geral"
 
-#: lib/algorithms_web/live/learn_live.ex:805
+#: lib/algorithms_web/live/learn_live.ex:832
 #, elixir-autogen, elixir-format
 msgid "Good balance of simplicity and speed"
 msgstr "Bom equilíbrio entre simplicidade e velocidade"
 
-#: lib/algorithms_web/live/learn_live.ex:829
+#: lib/algorithms_web/live/learn_live.ex:856
 #, elixir-autogen, elixir-format
 msgid "Guaranteed O(n log n)"
 msgstr "O(n log n) garantido"
 
-#: lib/algorithms_web/live/learn_live.ex:819
+#: lib/algorithms_web/live/learn_live.ex:846
 #, elixir-autogen, elixir-format
 msgid "Guaranteed performance"
 msgstr "Desempenho garantido"
 
-#: lib/algorithms_web/live/learn_live.ex:740
+#: lib/algorithms_web/live/learn_live.ex:767
 #, elixir-autogen, elixir-format
 msgid "Heapify the root to restore heap property"
 msgstr "Heapify na raiz para restaurar propriedade do heap"
@@ -556,29 +546,29 @@ msgstr "Início"
 msgid "How it works"
 msgstr "Como funciona"
 
-#: lib/algorithms_web/live/learn_live.ex:683
+#: lib/algorithms_web/live/learn_live.ex:710
 #, elixir-autogen, elixir-format
 msgid "Insert the element at the correct position"
 msgstr "Inserir o elemento na posição correta"
 
-#: lib/algorithms_web/live/learn_live.ex:621
+#: lib/algorithms_web/live/learn_live.ex:648
 #, elixir-autogen, elixir-format
 msgid "Insertion sort with diminishing gaps."
 msgstr "Insertion sort com gaps decrescentes."
 
-#: lib/algorithms_web/live/learn_live.ex:672
+#: lib/algorithms_web/live/learn_live.ex:699
 #, elixir-autogen, elixir-format
 msgid "Instead of two partitions, it creates three: elements less than, equal to, and greater than the pivot."
 msgstr "Em vez de duas partições, cria três: elementos menores que, iguais a e maiores que o pivô."
 
-#: lib/algorithms_web/live/learn_live.ex:842
+#: lib/algorithms_web/live/learn_live.ex:869
 #, elixir-autogen, elixir-format
 msgid "Large datasets"
 msgstr "Grandes conjuntos de dados"
 
 #: lib/algorithms_web/components/core_components.ex:63
-#: lib/algorithms_web/live/home_live.ex:57
-#: lib/algorithms_web/live/home_live.ex:274
+#: lib/algorithms_web/live/home_live.ex:64
+#: lib/algorithms_web/live/home_live.ex:281
 #: lib/algorithms_web/live/learn_live.ex:92
 #, elixir-autogen, elixir-format
 msgid "Learn"
@@ -589,92 +579,92 @@ msgstr "Aprender"
 msgid "Learn Sorting Algorithms"
 msgstr "Aprenda Algoritmos de Ordenação"
 
-#: lib/algorithms_web/live/learn_live.ex:785
+#: lib/algorithms_web/live/learn_live.ex:812
 #, elixir-autogen, elixir-format
 msgid "Like flash memory"
 msgstr "Como memória flash"
 
-#: lib/algorithms_web/live/learn_live.ex:852
+#: lib/algorithms_web/live/learn_live.ex:879
 #, elixir-autogen, elixir-format
 msgid "Like sorting grades or categories"
 msgstr "Como ordenar notas ou categorias"
 
-#: lib/algorithms_web/live/learn_live.ex:852
+#: lib/algorithms_web/live/learn_live.ex:879
 #, elixir-autogen, elixir-format
 msgid "Limited key range"
 msgstr "Faixa de chaves limitada"
 
-#: lib/algorithms_web/live/learn_live.ex:851
+#: lib/algorithms_web/live/learn_live.ex:878
 #, elixir-autogen, elixir-format
 msgid "Linear time for all equal elements"
 msgstr "Tempo linear para todos elementos iguais"
 
-#: lib/algorithms_web/live/learn_live.ex:816
+#: lib/algorithms_web/live/learn_live.ex:843
 #, elixir-autogen, elixir-format
 msgid "Linked lists"
 msgstr "Listas encadeadas"
 
-#: lib/algorithms_web/live/learn_live.ex:806
+#: lib/algorithms_web/live/learn_live.ex:833
 #, elixir-autogen, elixir-format
 msgid "Low memory overhead, no recursion"
 msgstr "Baixo uso de memória, sem recursão"
 
-#: lib/algorithms_web/live/learn_live.ex:851
+#: lib/algorithms_web/live/learn_live.ex:878
 #, elixir-autogen, elixir-format
 msgid "Many duplicate keys"
 msgstr "Muitas chaves duplicadas"
 
-#: lib/algorithms_web/live/learn_live.ex:841
+#: lib/algorithms_web/live/learn_live.ex:868
 #, elixir-autogen, elixir-format
 msgid "Many practical applications"
 msgstr "Muitas aplicações práticas"
 
-#: lib/algorithms_web/live/learn_live.ex:805
+#: lib/algorithms_web/live/learn_live.ex:832
 #, elixir-autogen, elixir-format
 msgid "Medium-sized arrays"
 msgstr "Arrays de tamanho médio"
 
-#: lib/algorithms_web/live/learn_live.ex:828
+#: lib/algorithms_web/live/learn_live.ex:855
 #, elixir-autogen, elixir-format
 msgid "Memory constrained"
 msgstr "Memória limitada"
 
-#: lib/algorithms_web/live/learn_live.ex:785
+#: lib/algorithms_web/live/learn_live.ex:812
 #, elixir-autogen, elixir-format
 msgid "Memory writes are expensive"
 msgstr "Escritas em memória são caras"
 
-#: lib/algorithms_web/live/learn_live.ex:654
+#: lib/algorithms_web/live/learn_live.ex:681
 #, elixir-autogen, elixir-format
 msgid "Merge Sort is stable and predictable, making it ideal for sorting linked lists and external sorting (sorting data that doesn't fit in memory)."
 msgstr "Merge Sort é estável e previsível, tornando-o ideal para ordenar listas encadeadas e ordenação externa (ordenar dados que não cabem na memória)."
 
-#: lib/algorithms_web/live/learn_live.ex:728
+#: lib/algorithms_web/live/learn_live.ex:755
 #, elixir-autogen, elixir-format
 msgid "Merge the sorted halves by comparing elements"
 msgstr "Mesclar as metades ordenadas comparando elementos"
 
-#: lib/algorithms_web/live/learn_live.ex:784
+#: lib/algorithms_web/live/learn_live.ex:811
 #, elixir-autogen, elixir-format
 msgid "Minimal swaps needed"
 msgstr "Mínimo de trocas necessárias"
 
-#: lib/algorithms_web/live/learn_live.ex:694
+#: lib/algorithms_web/live/learn_live.ex:721
 #, elixir-autogen, elixir-format
 msgid "Move the boundary of sorted portion one element ahead"
 msgstr "Mover o limite da parte ordenada um elemento à frente"
 
-#: lib/algorithms_web/live/learn_live.ex:831
+#: lib/algorithms_web/live/learn_live.ex:858
 #, elixir-autogen, elixir-format
 msgid "Natural fit for heap operations"
 msgstr "Encaixe natural para operações de heap"
 
-#: lib/algorithms_web/live/learn_live.ex:820
+#: lib/algorithms_web/live/learn_live.ex:847
 #, elixir-autogen, elixir-format
 msgid "Naturally parallelizable"
 msgstr "Naturalmente paralelizável"
 
-#: lib/algorithms_web/live/learn_live.ex:774
+#: lib/algorithms_web/live/learn_live.ex:801
 #, elixir-autogen, elixir-format
 msgid "Nearly sorted data"
 msgstr "Dados quase ordenados"
@@ -685,27 +675,27 @@ msgstr "Dados quase ordenados"
 msgid "No"
 msgstr "Não"
 
-#: lib/algorithms_web/live/learn_live.ex:816
+#: lib/algorithms_web/live/learn_live.ex:843
 #, elixir-autogen, elixir-format
 msgid "No random access needed, O(1) extra space"
 msgstr "Não precisa de acesso aleatório, espaço extra O(1)"
 
-#: lib/algorithms_web/live/learn_live.ex:829
+#: lib/algorithms_web/live/learn_live.ex:856
 #, elixir-autogen, elixir-format
 msgid "No worst case degradation"
 msgstr "Sem degradação no pior caso"
 
-#: lib/algorithms_web/live/learn_live.ex:775
+#: lib/algorithms_web/live/learn_live.ex:802
 #, elixir-autogen, elixir-format
 msgid "Online sorting"
 msgstr "Ordenação online"
 
-#: lib/algorithms_web/live/learn_live.ex:828
+#: lib/algorithms_web/live/learn_live.ex:855
 #, elixir-autogen, elixir-format
 msgid "Only O(1) extra space"
 msgstr "Apenas O(1) de espaço extra"
 
-#: lib/algorithms_web/live/learn_live.ex:784
+#: lib/algorithms_web/live/learn_live.ex:811
 #, elixir-autogen, elixir-format
 msgid "Only O(n) swaps are made"
 msgstr "Apenas O(n) trocas são feitas"
@@ -715,112 +705,112 @@ msgstr "Apenas O(n) trocas são feitas"
 msgid "Other algorithms"
 msgstr "Outros algoritmos"
 
-#: lib/algorithms_web/live/learn_live.ex:773
+#: lib/algorithms_web/live/learn_live.ex:800
 #, elixir-autogen, elixir-format
 msgid "Overhead is minimal for n < 50"
 msgstr "Overhead é mínimo para n < 50"
 
-#: lib/algorithms_web/live/learn_live.ex:820
+#: lib/algorithms_web/live/learn_live.ex:847
 #, elixir-autogen, elixir-format
 msgid "Parallel processing"
 msgstr "Processamento paralelo"
 
-#: lib/algorithms_web/live/learn_live.ex:830
+#: lib/algorithms_web/live/learn_live.ex:857
 #, elixir-autogen, elixir-format
 msgid "Partial sorting is efficient"
 msgstr "Ordenação parcial é eficiente"
 
-#: lib/algorithms_web/live/learn_live.ex:808
+#: lib/algorithms_web/live/learn_live.ex:835
 #, elixir-autogen, elixir-format
 msgid "Partially sorted data"
 msgstr "Dados parcialmente ordenados"
 
-#: lib/algorithms_web/live/learn_live.ex:624
+#: lib/algorithms_web/live/learn_live.ex:651
 #, elixir-autogen, elixir-format
 msgid "Partition around pivot element."
 msgstr "Particiona em torno do elemento pivô."
 
-#: lib/algorithms_web/live/learn_live.ex:761
+#: lib/algorithms_web/live/learn_live.ex:788
 #, elixir-autogen, elixir-format
 msgid "Partition into three: less than, equal to, greater than pivot"
 msgstr "Particionar em três: menor que, igual a, maior que pivô"
 
-#: lib/algorithms_web/live/learn_live.ex:750
+#: lib/algorithms_web/live/learn_live.ex:777
 #, elixir-autogen, elixir-format
 msgid "Partition: place smaller elements left, larger right"
 msgstr "Particionar: colocar menores à esquerda, maiores à direita"
 
-#: lib/algorithms_web/live/learn_live.ex:818
+#: lib/algorithms_web/live/learn_live.ex:845
 #, elixir-autogen, elixir-format
 msgid "Preserves order of equal elements"
 msgstr "Preserva ordem de elementos iguais"
 
-#: lib/algorithms_web/live/learn_live.ex:831
+#: lib/algorithms_web/live/learn_live.ex:858
 #, elixir-autogen, elixir-format
 msgid "Priority queues"
 msgstr "Filas de prioridade"
 
-#: lib/algorithms_web/live/learn_live.ex:727
+#: lib/algorithms_web/live/learn_live.ex:754
 #, elixir-autogen, elixir-format
 msgid "Recursively sort each half"
 msgstr "Ordenar recursivamente cada metade"
 
-#: lib/algorithms_web/live/learn_live.ex:763
+#: lib/algorithms_web/live/learn_live.ex:790
 #, elixir-autogen, elixir-format
 msgid "Recursively sort the 'greater than' partition"
 msgstr "Ordenar recursivamente a partição 'maior que'"
 
-#: lib/algorithms_web/live/learn_live.ex:762
+#: lib/algorithms_web/live/learn_live.ex:789
 #, elixir-autogen, elixir-format
 msgid "Recursively sort the 'less than' partition"
 msgstr "Ordenar recursivamente a partição 'menor que'"
 
-#: lib/algorithms_web/live/learn_live.ex:751
+#: lib/algorithms_web/live/learn_live.ex:778
 #, elixir-autogen, elixir-format
 msgid "Recursively sort the left partition"
 msgstr "Ordenar recursivamente a partição esquerda"
 
-#: lib/algorithms_web/live/learn_live.ex:752
+#: lib/algorithms_web/live/learn_live.ex:779
 #, elixir-autogen, elixir-format
 msgid "Recursively sort the right partition"
 msgstr "Ordenar recursivamente a partição direita"
 
-#: lib/algorithms_web/live/learn_live.ex:739
+#: lib/algorithms_web/live/learn_live.ex:766
 #, elixir-autogen, elixir-format
 msgid "Reduce heap size by one"
 msgstr "Reduzir tamanho do heap em um"
 
-#: lib/algorithms_web/live/learn_live.ex:717
+#: lib/algorithms_web/live/learn_live.ex:744
 #, elixir-autogen, elixir-format
 msgid "Reduce the gap (typically by half)"
 msgstr "Reduzir o gap (tipicamente pela metade)"
 
-#: lib/algorithms_web/live/learn_live.ex:684
+#: lib/algorithms_web/live/learn_live.ex:711
 #, elixir-autogen, elixir-format
 msgid "Repeat for all remaining elements"
 msgstr "Repetir para todos os elementos restantes"
 
-#: lib/algorithms_web/live/learn_live.ex:706
+#: lib/algorithms_web/live/learn_live.ex:733
 #, elixir-autogen, elixir-format
 msgid "Repeat passes until no swaps are needed"
 msgstr "Repetir passagens até que nenhuma troca seja necessária"
 
-#: lib/algorithms_web/live/learn_live.ex:718
+#: lib/algorithms_web/live/learn_live.ex:745
 #, elixir-autogen, elixir-format
 msgid "Repeat until gap becomes 1 (final insertion sort)"
 msgstr "Repetir até que gap se torne 1 (insertion sort final)"
 
-#: lib/algorithms_web/live/learn_live.ex:741
+#: lib/algorithms_web/live/learn_live.ex:768
 #, elixir-autogen, elixir-format
 msgid "Repeat until heap size is 1"
 msgstr "Repetir até que o tamanho do heap seja 1"
 
-#: lib/algorithms_web/live/learn_live.ex:695
+#: lib/algorithms_web/live/learn_live.ex:722
 #, elixir-autogen, elixir-format
 msgid "Repeat until the entire array is sorted"
 msgstr "Repetir até que todo o array esteja ordenado"
 
-#: lib/algorithms_web/live/learn_live.ex:842
+#: lib/algorithms_web/live/learn_live.ex:869
 #, elixir-autogen, elixir-format
 msgid "Scales well with size"
 msgstr "Escala bem com o tamanho"
@@ -830,23 +820,23 @@ msgstr "Escala bem com o tamanho"
 msgid "See this algorithm in action with the visualizer."
 msgstr "Veja este algoritmo em ação com o visualizador."
 
-#: lib/algorithms_web/live/learn_live.ex:682
+#: lib/algorithms_web/live/learn_live.ex:709
 #, elixir-autogen, elixir-format
 msgid "Shift larger elements one position ahead"
 msgstr "Mover elementos maiores uma posição à frente"
 
-#: lib/algorithms_web/live/learn_live.ex:786
+#: lib/algorithms_web/live/learn_live.ex:813
 #, elixir-autogen, elixir-format
 msgid "Simple implementation"
 msgstr "Implementação simples"
 
-#: lib/algorithms_web/live/learn_live.ex:773
-#: lib/algorithms_web/live/learn_live.ex:786
+#: lib/algorithms_web/live/learn_live.ex:800
+#: lib/algorithms_web/live/learn_live.ex:813
 #, elixir-autogen, elixir-format
 msgid "Small datasets"
 msgstr "Conjuntos de dados pequenos"
 
-#: lib/algorithms_web/live/learn_live.ex:817
+#: lib/algorithms_web/live/learn_live.ex:844
 #, elixir-autogen, elixir-format
 msgid "Sorting data larger than memory"
 msgstr "Ordenar dados maiores que a memória"
@@ -865,92 +855,92 @@ msgstr "Espaço"
 msgid "Stable"
 msgstr "Estável"
 
-#: lib/algorithms_web/live/learn_live.ex:818
+#: lib/algorithms_web/live/learn_live.ex:845
 #, elixir-autogen, elixir-format
 msgid "Stable sort required"
 msgstr "Ordenação estável necessária"
 
-#: lib/algorithms_web/live/learn_live.ex:680
+#: lib/algorithms_web/live/learn_live.ex:707
 #, elixir-autogen, elixir-format
 msgid "Start from the second element (index 1)"
 msgstr "Começar do segundo elemento (índice 1)"
 
-#: lib/algorithms_web/live/learn_live.ex:714
+#: lib/algorithms_web/live/learn_live.ex:741
 #, elixir-autogen, elixir-format
 msgid "Start with a large gap (typically n/2)"
 msgstr "Começar com um gap grande (tipicamente n/2)"
 
-#: lib/algorithms_web/live/learn_live.ex:853
+#: lib/algorithms_web/live/learn_live.ex:880
 #, elixir-autogen, elixir-format
 msgid "String sorting"
 msgstr "Ordenação de strings"
 
-#: lib/algorithms_web/live/learn_live.ex:716
+#: lib/algorithms_web/live/learn_live.ex:743
 #, elixir-autogen, elixir-format
 msgid "Swap if they are in the wrong order"
 msgstr "Trocar se estiverem na ordem errada"
 
-#: lib/algorithms_web/live/learn_live.ex:693
+#: lib/algorithms_web/live/learn_live.ex:720
 #, elixir-autogen, elixir-format
 msgid "Swap it with the first unsorted element"
 msgstr "Trocar com o primeiro elemento não ordenado"
 
-#: lib/algorithms_web/live/learn_live.ex:738
+#: lib/algorithms_web/live/learn_live.ex:765
 #, elixir-autogen, elixir-format
 msgid "Swap the root (maximum) with the last element"
 msgstr "Trocar a raiz (máximo) com o último elemento"
 
-#: lib/algorithms_web/live/learn_live.ex:704
+#: lib/algorithms_web/live/learn_live.ex:731
 #, elixir-autogen, elixir-format
 msgid "Swap them if they are in the wrong order"
 msgstr "Trocar se estiverem na ordem errada"
 
-#: lib/algorithms_web/live/learn_live.ex:620
+#: lib/algorithms_web/live/learn_live.ex:647
 #, elixir-autogen, elixir-format
 msgid "Swaps adjacent elements repeatedly."
 msgstr "Troca elementos adjacentes repetidamente."
 
-#: lib/algorithms_web/live/learn_live.ex:660
+#: lib/algorithms_web/live/learn_live.ex:687
 #, elixir-autogen, elixir-format
 msgid "The algorithm first builds a max-heap from the input, then repeatedly extracts the maximum element and rebuilds the heap."
 msgstr "O algoritmo primeiro constrói um max-heap da entrada, depois extrai repetidamente o elemento máximo e reconstrói o heap."
 
-#: lib/algorithms_web/live/learn_live.ex:648
+#: lib/algorithms_web/live/learn_live.ex:675
 #, elixir-autogen, elixir-format
 msgid "The algorithm is a generalization of insertion sort that allows the exchange of items that are far apart, progressively reducing the gap between elements to compare."
 msgstr "O algoritmo é uma generalização do insertion sort que permite a troca de itens distantes, reduzindo progressivamente a distância entre elementos a comparar."
 
-#: lib/algorithms_web/live/learn_live.ex:654
+#: lib/algorithms_web/live/learn_live.ex:681
 #, elixir-autogen, elixir-format
 msgid "The algorithm uses the divide-and-conquer paradigm: it divides the array in half, recursively sorts each half, then merges the sorted halves."
 msgstr "O algoritmo usa o paradigma dividir e conquistar: divide o array ao meio, ordena recursivamente cada metade, depois mescla as metades ordenadas."
 
-#: lib/algorithms_web/live/learn_live.ex:630
+#: lib/algorithms_web/live/learn_live.ex:657
 #, elixir-autogen, elixir-format
 msgid "The algorithm was first described by John Mauchly in 1946, making it one of the earliest sorting algorithms to be formally analyzed."
 msgstr "O algoritmo foi descrito pela primeira vez por John Mauchly em 1946, tornando-o um dos primeiros algoritmos de ordenação a ser formalmente analisado."
 
-#: lib/algorithms_web/live/learn_live.ex:636
+#: lib/algorithms_web/live/learn_live.ex:663
 #, elixir-autogen, elixir-format
 msgid "The algorithm was one of the first sorting methods to be formally studied in computer science, appearing in early computing literature in the 1950s."
 msgstr "O algoritmo foi um dos primeiros métodos de ordenação a ser formalmente estudado em ciência da computação, aparecendo na literatura de computação nos anos 1950."
 
-#: lib/algorithms_web/live/learn_live.ex:666
+#: lib/algorithms_web/live/learn_live.ex:693
 #, elixir-autogen, elixir-format
 msgid "The algorithm works by selecting a 'pivot' element and partitioning the array around it, placing smaller elements before and larger elements after."
 msgstr "O algoritmo funciona selecionando um elemento 'pivô' e particionando o array ao redor dele, colocando elementos menores antes e maiores depois."
 
-#: lib/algorithms_web/live/learn_live.ex:648
+#: lib/algorithms_web/live/learn_live.ex:675
 #, elixir-autogen, elixir-format
 msgid "The efficiency depends heavily on the gap sequence used. Shell's original sequence gives O(n²), but better sequences can achieve O(n log² n) or better."
 msgstr "A eficiência depende muito da sequência de gaps usada. A sequência original de Shell dá O(n²), mas sequências melhores podem alcançar O(n log² n) ou melhor."
 
-#: lib/algorithms_web/live/learn_live.ex:642
+#: lib/algorithms_web/live/learn_live.ex:669
 #, elixir-autogen, elixir-format
 msgid "The name comes from the way smaller elements 'bubble' to the top of the list. It was analyzed as early as 1956 by mathematician Edward Friend."
 msgstr "O nome vem da forma como elementos menores 'borbulham' para o topo da lista. Foi analisado já em 1956 pelo matemático Edward Friend."
 
-#: lib/algorithms_web/live/learn_live.ex:672
+#: lib/algorithms_web/live/learn_live.ex:699
 #, elixir-autogen, elixir-format
 msgid "This variant was later improved by Bentley and McIlroy (1993) and is now the default sorting algorithm in many standard libraries when duplicates are common."
 msgstr "Esta variante foi posteriormente melhorada por Bentley e McIlroy (1993) e agora é o algoritmo de ordenação padrão em muitas bibliotecas quando duplicatas são comuns."
@@ -970,32 +960,32 @@ msgstr "Entenda a história, complexidade e melhores casos de uso para cada algo
 msgid "Unstable"
 msgstr "Instável"
 
-#: lib/algorithms_web/live/learn_live.ex:844
+#: lib/algorithms_web/live/learn_live.ex:871
 #, elixir-autogen, elixir-format
 msgid "Used as the default sort in C, Java, and many other languages"
 msgstr "Usado como ordenação padrão em C, Java e muitas outras linguagens"
 
-#: lib/algorithms_web/live/learn_live.ex:776
+#: lib/algorithms_web/live/learn_live.ex:803
 #, elixir-autogen, elixir-format
 msgid "Used in hybrid algorithms like Timsort"
 msgstr "Usado em algoritmos híbridos como Timsort"
 
-#: lib/algorithms_web/live/learn_live.ex:623
+#: lib/algorithms_web/live/learn_live.ex:650
 #, elixir-autogen, elixir-format
 msgid "Uses binary heap data structure."
 msgstr "Usa estrutura de dados heap binário."
 
-#: lib/algorithms_web/live/learn_live.ex:797
+#: lib/algorithms_web/live/learn_live.ex:824
 #, elixir-autogen, elixir-format
 msgid "Very small datasets"
 msgstr "Conjuntos de dados muito pequenos"
 
-#: lib/algorithms_web/live/learn_live.ex:807
+#: lib/algorithms_web/live/learn_live.ex:834
 #, elixir-autogen, elixir-format
 msgid "When code size matters"
 msgstr "Quando tamanho do código importa"
 
-#: lib/algorithms_web/live/learn_live.ex:841
+#: lib/algorithms_web/live/learn_live.ex:868
 #, elixir-autogen, elixir-format
 msgid "When stability not needed"
 msgstr "Quando estabilidade não é necessária"
@@ -1005,22 +995,22 @@ msgstr "Quando estabilidade não é necessária"
 msgid "When to use"
 msgstr "Quando usar"
 
-#: lib/algorithms_web/live/learn_live.ex:797
+#: lib/algorithms_web/live/learn_live.ex:824
 #, elixir-autogen, elixir-format
 msgid "Where simplicity matters more than speed"
 msgstr "Onde simplicidade importa mais que velocidade"
 
-#: lib/algorithms_web/live/learn_live.ex:660
+#: lib/algorithms_web/live/learn_live.ex:687
 #, elixir-autogen, elixir-format
 msgid "While it has guaranteed O(n log n) complexity and uses O(1) extra space, it typically performs slower than Quick Sort in practice due to poor cache locality."
 msgstr "Embora tenha complexidade O(n log n) garantida e use espaço extra O(1), tipicamente executa mais devagar que Quick Sort na prática devido à baixa localidade de cache."
 
-#: lib/algorithms_web/live/learn_live.ex:636
+#: lib/algorithms_web/live/learn_live.ex:663
 #, elixir-autogen, elixir-format
 msgid "While not efficient for large datasets, it has the advantage of making the minimum number of swaps (O(n)), which can be useful when memory writes are expensive."
 msgstr "Embora não seja eficiente para grandes conjuntos de dados, tem a vantagem de fazer o número mínimo de trocas (O(n)), o que pode ser útil quando escritas em memória são caras."
 
-#: lib/algorithms_web/live/learn_live.ex:796
+#: lib/algorithms_web/live/learn_live.ex:823
 #, elixir-autogen, elixir-format
 msgid "With early termination optimization"
 msgstr "Com otimização de terminação antecipada"
@@ -1030,113 +1020,108 @@ msgstr "Com otimização de terminação antecipada"
 msgid "Worst"
 msgstr "Pior"
 
-#: lib/algorithms_web/live/learn_live.ex:200
-#, elixir-autogen, elixir-format
-msgid "Worst Case"
-msgstr "Pior Caso"
-
 #: lib/algorithms_web/live/learn_live.ex:211
 #: lib/algorithms_web/live/learn_live.ex:333
 #, elixir-autogen, elixir-format
 msgid "Yes"
 msgstr "Sim"
 
-#: lib/algorithms_web/live/learn_live.ex:636
+#: lib/algorithms_web/live/learn_live.ex:663
 #, elixir-autogen, elixir-format
 msgid "is an in-place comparison sorting algorithm. It divides the input into a sorted and unsorted region."
 msgstr "é um algoritmo de ordenação por comparação in-place. Divide a entrada em uma região ordenada e uma não ordenada."
 
-#: lib/algorithms_web/live/learn_live.ex:630
+#: lib/algorithms_web/live/learn_live.ex:657
 #, elixir-autogen, elixir-format
 msgid "is one of the simplest sorting algorithms. It was developed based on how people typically sort playing cards in their hands."
 msgstr "é um dos algoritmos de ordenação mais simples. Foi desenvolvido baseado em como pessoas tipicamente ordenam cartas de baralho em suas mãos."
 
-#: lib/algorithms_web/live/learn_live.ex:642
+#: lib/algorithms_web/live/learn_live.ex:669
 #, elixir-autogen, elixir-format
 msgid "is perhaps the most well-known sorting algorithm, often taught as an introduction to sorting concepts."
 msgstr "é talvez o algoritmo de ordenação mais conhecido, frequentemente ensinado como introdução a conceitos de ordenação."
 
-#: lib/algorithms_web/live/learn_live.ex:666
+#: lib/algorithms_web/live/learn_live.ex:693
 #, elixir-autogen, elixir-format
 msgid "was developed by Tony Hoare in 1959 and published in 1961. It's often the fastest sorting algorithm in practice."
 msgstr "foi desenvolvido por Tony Hoare em 1959 e publicado em 1961. É frequentemente o algoritmo de ordenação mais rápido na prática."
 
-#: lib/algorithms_web/live/learn_live.ex:648
+#: lib/algorithms_web/live/learn_live.ex:675
 #, elixir-autogen, elixir-format
 msgid "was invented by Donald Shell in 1959. It was one of the first algorithms to break the O(n²) barrier."
 msgstr "foi inventado por Donald Shell em 1959. Foi um dos primeiros algoritmos a quebrar a barreira O(n²)."
 
-#: lib/algorithms_web/live/learn_live.ex:660
+#: lib/algorithms_web/live/learn_live.ex:687
 #, elixir-autogen, elixir-format
 msgid "was invented by J. W. J. Williams in 1964. It uses a binary heap data structure to efficiently find and remove the maximum element."
 msgstr "foi inventado por J. W. J. Williams em 1964. Usa uma estrutura de dados heap binário para encontrar e remover eficientemente o elemento máximo."
 
-#: lib/algorithms_web/live/learn_live.ex:654
+#: lib/algorithms_web/live/learn_live.ex:681
 #, elixir-autogen, elixir-format
 msgid "was invented by John von Neumann in 1945. It's one of the most respected sorting algorithms due to its guaranteed O(n log n) performance."
 msgstr "foi inventado por John von Neumann em 1945. É um dos algoritmos de ordenação mais respeitados devido ao seu desempenho garantido O(n log n)."
 
-#: lib/algorithms_web/live/home_live.ex:294
+#: lib/algorithms_web/live/home_live.ex:301
 #, elixir-autogen, elixir-format
 msgid "Best, average, and worst case analysis"
 msgstr "Análise de melhor, médio e pior caso"
 
-#: lib/algorithms_web/live/home_live.ex:269
+#: lib/algorithms_web/live/home_live.ex:276
 #, elixir-autogen, elixir-format
 msgid "Discover the ideal scenarios for each algorithm based on data characteristics."
 msgstr "Descubra os cenários ideais para cada algoritmo baseado nas características dos dados."
 
-#: lib/algorithms_web/live/home_live.ex:240
+#: lib/algorithms_web/live/home_live.ex:247
 #, elixir-autogen, elixir-format
 msgid "Dive Deeper with Learn"
 msgstr "Aprofunde-se com o Aprender"
 
-#: lib/algorithms_web/live/home_live.ex:242
+#: lib/algorithms_web/live/home_live.ex:249
 #, elixir-autogen, elixir-format
 msgid "Go beyond visualization. Our Learn section provides comprehensive documentation for each algorithm, including historical context, step-by-step breakdowns, and practical use cases."
 msgstr "Vá além da visualização. Nossa seção Aprender fornece documentação completa para cada algoritmo, incluindo contexto histórico, explicações passo a passo e casos de uso práticos."
 
-#: lib/algorithms_web/live/home_live.ex:302
+#: lib/algorithms_web/live/home_live.ex:309
 #, elixir-autogen, elixir-format
 msgid "How it Works"
 msgstr "Como Funciona"
 
-#: lib/algorithms_web/live/home_live.ex:251
+#: lib/algorithms_web/live/home_live.ex:258
 #, elixir-autogen, elixir-format
 msgid "Learn who invented each algorithm and when, understanding the evolution of sorting techniques."
 msgstr "Saiba quem inventou cada algoritmo e quando, entendendo a evolução das técnicas de ordenação."
 
-#: lib/algorithms_web/live/home_live.ex:285
+#: lib/algorithms_web/live/home_live.ex:292
 #, elixir-autogen, elixir-format
 msgid "Origins and inventors of each algorithm"
 msgstr "Origens e inventores de cada algoritmo"
 
-#: lib/algorithms_web/live/home_live.ex:311
+#: lib/algorithms_web/live/home_live.ex:318
 #, elixir-autogen, elixir-format
 msgid "Ranking"
 msgstr "Ranking"
 
-#: lib/algorithms_web/live/home_live.ex:250
+#: lib/algorithms_web/live/home_live.ex:257
 #, elixir-autogen, elixir-format
 msgid "Rich History"
 msgstr "História Rica"
 
-#: lib/algorithms_web/live/home_live.ex:259
+#: lib/algorithms_web/live/home_live.ex:266
 #, elixir-autogen, elixir-format
 msgid "Step-by-Step Guide"
 msgstr "Guia Passo a Passo"
 
-#: lib/algorithms_web/live/home_live.ex:303
+#: lib/algorithms_web/live/home_live.ex:310
 #, elixir-autogen, elixir-format
 msgid "Step-by-step algorithm breakdown"
 msgstr "Explicação passo a passo do algoritmo"
 
-#: lib/algorithms_web/live/home_live.ex:260
+#: lib/algorithms_web/live/home_live.ex:267
 #, elixir-autogen, elixir-format
 msgid "Understand exactly how each algorithm works with clear, numbered instructions."
 msgstr "Entenda exatamente como cada algoritmo funciona com instruções claras e numeradas."
 
-#: lib/algorithms_web/live/home_live.ex:268
+#: lib/algorithms_web/live/home_live.ex:275
 #, elixir-autogen, elixir-format
 msgid "When to Use"
 msgstr "Quando Usar"
@@ -1146,7 +1131,7 @@ msgstr "Quando Usar"
 msgid "Comparative Chart"
 msgstr "Quadro Comparativo"
 
-#: lib/algorithms_web/live/home_live.ex:312
+#: lib/algorithms_web/live/home_live.ex:319
 #, elixir-autogen, elixir-format
 msgid "Comparative chart of sorting algorithms"
 msgstr "Quadro comparativo de algoritmos de ordenação"
@@ -1157,11 +1142,11 @@ msgid "Implementation"
 msgstr "Implementação"
 
 #: lib/algorithms_web/live/learn_live.ex:296
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Best"
 msgstr "Melhor"
 
-#: lib/algorithms_web/live/learn_live.ex:502
+#: lib/algorithms_web/live/learn_live.ex:511
 #, elixir-autogen, elixir-format
 msgid "A stable sorting algorithm maintains the relative order of elements with equal keys."
 msgstr "Um algoritmo de ordenação estável mantém a ordem relativa dos elementos com chaves iguais."
@@ -1171,38 +1156,28 @@ msgstr "Um algoritmo de ordenação estável mantém a ordem relativa dos elemen
 msgid "Before diving into algorithms, it's essential to understand the key metrics used to evaluate and compare them."
 msgstr "Antes de mergulhar nos algoritmos, é essencial entender as métricas-chave usadas para avaliá-los e compará-los."
 
-#: lib/algorithms_web/live/learn_live.ex:525
-#, elixir-autogen, elixir-format
-msgid "Big O Notation"
-msgstr "Notação Big O"
-
-#: lib/algorithms_web/live/learn_live.ex:528
-#, elixir-autogen, elixir-format
-msgid "Big O describes the upper bound of an algorithm's growth rate, focusing on the dominant term."
-msgstr "Big O descreve o limite superior da taxa de crescimento de um algoritmo, focando no termo dominante."
-
 #: lib/algorithms_web/live/learn_live.ex:353
 #, elixir-autogen, elixir-format
 msgid "Complexity Growth Visualization"
 msgstr "Visualização do Crescimento da Complexidade"
 
-#: lib/algorithms_web/live/learn_live.ex:410
-#: lib/algorithms_web/live/learn_live.ex:544
+#: lib/algorithms_web/live/learn_live.ex:418
+#: lib/algorithms_web/live/learn_live.ex:565
 #, elixir-autogen, elixir-format
 msgid "Constant"
 msgstr "Constante"
 
-#: lib/algorithms_web/live/learn_live.ex:478
+#: lib/algorithms_web/live/learn_live.ex:490
 #, elixir-autogen, elixir-format
 msgid "Constant space - uses fixed memory regardless of input"
 msgstr "Espaço constante - usa memória fixa independente da entrada"
 
-#: lib/algorithms_web/live/learn_live.ex:505
+#: lib/algorithms_web/live/learn_live.ex:514
 #, elixir-autogen, elixir-format
 msgid "Example:"
 msgstr "Exemplo:"
 
-#: lib/algorithms_web/live/learn_live.ex:453
+#: lib/algorithms_web/live/learn_live.ex:468
 #, elixir-autogen, elixir-format
 msgid "Expected time for random input"
 msgstr "Tempo esperado para entrada aleatória"
@@ -1212,131 +1187,126 @@ msgstr "Tempo esperado para entrada aleatória"
 msgid "Input Size (n)"
 msgstr "Tamanho da Entrada (n)"
 
-#: lib/algorithms_web/live/learn_live.ex:507
+#: lib/algorithms_web/live/learn_live.ex:516
 #, elixir-autogen, elixir-format
 msgid "Input: [(A,2), (B,1), (C,2), (D,1)]"
 msgstr "Entrada: [(A,2), (B,1), (C,2), (D,1)]"
 
-#: lib/algorithms_web/live/learn_live.ex:570
+#: lib/algorithms_web/live/learn_live.ex:598
 #, elixir-autogen, elixir-format
 msgid "Insertion Sort and Bubble Sort approach O(n) performance on nearly sorted arrays."
 msgstr "Insertion Sort e Bubble Sort aproximam-se de desempenho O(n) em arrays quase ordenados."
 
-#: lib/algorithms_web/live/learn_live.ex:573
+#: lib/algorithms_web/live/learn_live.ex:601
 #, elixir-autogen, elixir-format
 msgid "Large Data"
 msgstr "Dados Grandes"
 
-#: lib/algorithms_web/live/learn_live.ex:418
-#: lib/algorithms_web/live/learn_live.ex:546
+#: lib/algorithms_web/live/learn_live.ex:426
+#: lib/algorithms_web/live/learn_live.ex:567
 #, elixir-autogen, elixir-format
 msgid "Linear"
 msgstr "Linear"
 
-#: lib/algorithms_web/live/learn_live.ex:486
+#: lib/algorithms_web/live/learn_live.ex:498
 #, elixir-autogen, elixir-format
 msgid "Linear - memory grows with input size"
 msgstr "Linear - memória cresce com tamanho da entrada"
 
-#: lib/algorithms_web/live/learn_live.ex:422
-#: lib/algorithms_web/live/learn_live.ex:547
+#: lib/algorithms_web/live/learn_live.ex:430
+#: lib/algorithms_web/live/learn_live.ex:568
 #, elixir-autogen, elixir-format
 msgid "Linearithmic"
 msgstr "Linearítmico"
 
-#: lib/algorithms_web/live/learn_live.ex:414
-#: lib/algorithms_web/live/learn_live.ex:545
+#: lib/algorithms_web/live/learn_live.ex:422
+#: lib/algorithms_web/live/learn_live.ex:566
 #, elixir-autogen, elixir-format
 msgid "Logarithmic"
 msgstr "Logarítmico"
 
-#: lib/algorithms_web/live/learn_live.ex:482
+#: lib/algorithms_web/live/learn_live.ex:494
 #, elixir-autogen, elixir-format
 msgid "Logarithmic - typically from recursion stack"
 msgstr "Logarítmico - tipicamente da pilha de recursão"
 
-#: lib/algorithms_web/live/learn_live.ex:457
+#: lib/algorithms_web/live/learn_live.ex:472
 #, elixir-autogen, elixir-format
 msgid "Maximum time the algorithm can take"
 msgstr "Tempo máximo que o algoritmo pode levar"
 
-#: lib/algorithms_web/live/learn_live.ex:535
+#: lib/algorithms_web/live/learn_live.ex:556
 #, elixir-autogen, elixir-format
 msgid "Name"
 msgstr "Nome"
 
-#: lib/algorithms_web/live/learn_live.ex:569
+#: lib/algorithms_web/live/learn_live.ex:597
 #, elixir-autogen, elixir-format
 msgid "Nearly Sorted Data"
 msgstr "Dados Quase Ordenados"
 
-#: lib/algorithms_web/live/learn_live.ex:534
+#: lib/algorithms_web/live/learn_live.ex:555
 #, elixir-autogen, elixir-format
 msgid "Notation"
 msgstr "Notação"
 
-#: lib/algorithms_web/live/learn_live.ex:562
+#: lib/algorithms_web/live/learn_live.ex:590
 #, elixir-autogen, elixir-format
 msgid "Practical Tips for Choosing an Algorithm"
 msgstr "Dicas Práticas para Escolher um Algoritmo"
 
-#: lib/algorithms_web/live/learn_live.ex:426
-#: lib/algorithms_web/live/learn_live.ex:548
+#: lib/algorithms_web/live/learn_live.ex:434
+#: lib/algorithms_web/live/learn_live.ex:569
 #, elixir-autogen, elixir-format
 msgid "Quadratic"
 msgstr "Quadrático"
 
-#: lib/algorithms_web/live/learn_live.ex:566
+#: lib/algorithms_web/live/learn_live.ex:594
 #, elixir-autogen, elixir-format
 msgid "Simple algorithms like Insertion Sort often outperform complex ones due to low overhead."
 msgstr "Algoritmos simples como Insertion Sort frequentemente superam os complexos devido ao baixo overhead."
 
-#: lib/algorithms_web/live/learn_live.ex:565
+#: lib/algorithms_web/live/learn_live.ex:593
 #, elixir-autogen, elixir-format
 msgid "Small Data (n < 50)"
 msgstr "Dados Pequenos (n < 50)"
 
-#: lib/algorithms_web/live/learn_live.ex:470
+#: lib/algorithms_web/live/learn_live.ex:482
 #, elixir-autogen, elixir-format
 msgid "Space Complexity"
 msgstr "Complexidade de Espaço"
 
-#: lib/algorithms_web/live/learn_live.ex:473
+#: lib/algorithms_web/live/learn_live.ex:485
 #, elixir-autogen, elixir-format
 msgid "Space complexity measures the additional memory an algorithm needs relative to the input size."
 msgstr "Complexidade de espaço mede a memória adicional que um algoritmo precisa em relação ao tamanho da entrada."
 
-#: lib/algorithms_web/live/learn_live.ex:499
+#: lib/algorithms_web/live/learn_live.ex:508
 #, elixir-autogen, elixir-format
 msgid "Stability"
 msgstr "Estabilidade"
 
-#: lib/algorithms_web/live/learn_live.ex:513
+#: lib/algorithms_web/live/learn_live.ex:522
 #, elixir-autogen, elixir-format
 msgid "Stability matters when sorting by multiple criteria or preserving previous orderings."
 msgstr "Estabilidade importa ao ordenar por múltiplos critérios ou preservar ordenações anteriores."
 
-#: lib/algorithms_web/live/learn_live.ex:508
+#: lib/algorithms_web/live/learn_live.ex:517
 #, elixir-autogen, elixir-format
 msgid "Stable: [(B,1), (D,1), (A,2), (C,2)]"
 msgstr "Estável: [(B,1), (D,1), (A,2), (C,2)]"
 
-#: lib/algorithms_web/live/learn_live.ex:449
+#: lib/algorithms_web/live/learn_live.ex:464
 #, elixir-autogen, elixir-format
 msgid "The minimum time the algorithm takes (ideal input)"
 msgstr "O tempo mínimo que o algoritmo leva (entrada ideal)"
 
-#: lib/algorithms_web/live/learn_live.ex:355
-#, elixir-autogen, elixir-format
-msgid "This chart shows how different time complexities scale as the input size (n) increases. Notice how O(n²) grows much faster than O(n log n)."
-msgstr "Este gráfico mostra como diferentes complexidades de tempo escalam conforme o tamanho da entrada (n) aumenta. Note como O(n²) cresce muito mais rápido que O(n log n)."
-
-#: lib/algorithms_web/live/learn_live.ex:441
+#: lib/algorithms_web/live/learn_live.ex:456
 #, elixir-autogen, elixir-format
 msgid "Time Complexity"
 msgstr "Complexidade de Tempo"
 
-#: lib/algorithms_web/live/learn_live.ex:444
+#: lib/algorithms_web/live/learn_live.ex:459
 #, elixir-autogen, elixir-format
 msgid "Time complexity describes how the runtime of an algorithm grows as the input size increases. It's expressed using Big O notation."
 msgstr "Complexidade de tempo descreve como o tempo de execução de um algoritmo cresce conforme o tamanho da entrada aumenta. É expressa usando notação Big O."
@@ -1346,40 +1316,104 @@ msgstr "Complexidade de tempo descreve como o tempo de execução de um algoritm
 msgid "Understanding the Concepts"
 msgstr "Entendendo os Conceitos"
 
-#: lib/algorithms_web/live/learn_live.ex:509
+#: lib/algorithms_web/live/learn_live.ex:518
 #, elixir-autogen, elixir-format
 msgid "Unstable: [(D,1), (B,1), (C,2), (A,2)]"
 msgstr "Instável: [(D,1), (B,1), (C,2), (A,2)]"
 
-#: lib/algorithms_web/live/learn_live.ex:574
+#: lib/algorithms_web/live/learn_live.ex:602
 #, elixir-autogen, elixir-format
 msgid "Use O(n log n) algorithms like Merge Sort, Heap Sort, or Quick Sort for best performance."
 msgstr "Use algoritmos O(n log n) como Merge Sort, Heap Sort ou Quick Sort para melhor desempenho."
 
-#: lib/algorithms_web/live/learn_live.ex:537
+#: lib/algorithms_web/live/learn_live.ex:558
 #, elixir-autogen, elixir-format
 msgid "Operations needed to process 1,000 elements"
 msgstr "Operações necessárias para processar 1.000 elementos"
 
-#: lib/algorithms_web/live/learn_live.ex:538
+#: lib/algorithms_web/live/learn_live.ex:559
 #, elixir-autogen, elixir-format
 msgid "Ops for n=1000"
 msgstr "Ops p/ n=1000"
 
-#: lib/algorithms_web/live/learn_live.ex:553
+#: lib/algorithms_web/live/learn_live.ex:576
 #, elixir-autogen, elixir-format
 msgid "The table shows how many operations each complexity requires to process 1,000 items. Notice how O(n²) needs 1 million operations while O(n) only needs 1,000."
 msgstr "A tabela mostra quantas operações cada complexidade requer para processar 1.000 itens. Note como O(n²) precisa de 1 milhão de operações enquanto O(n) precisa apenas de 1.000."
 
-#: lib/algorithms_web/live/learn_live.ex:544
+#: lib/algorithms_web/live/learn_live.ex:565
 #, elixir-autogen, elixir-format
 msgid "op"
 msgstr "op"
 
-#: lib/algorithms_web/live/learn_live.ex:545
-#: lib/algorithms_web/live/learn_live.ex:546
-#: lib/algorithms_web/live/learn_live.ex:547
-#: lib/algorithms_web/live/learn_live.ex:548
+#: lib/algorithms_web/live/learn_live.ex:566
+#: lib/algorithms_web/live/learn_live.ex:567
+#: lib/algorithms_web/live/learn_live.ex:568
+#: lib/algorithms_web/live/learn_live.ex:569
+#: lib/algorithms_web/live/learn_live.ex:570
+#: lib/algorithms_web/live/learn_live.ex:571
 #, elixir-autogen, elixir-format
 msgid "ops"
 msgstr "ops"
+
+#: lib/algorithms_web/live/learn_live.ex:532
+#, elixir-autogen, elixir-format
+msgid "Asymptotic Notation"
+msgstr "Notação Assintótica"
+
+#: lib/algorithms_web/live/learn_live.ex:535
+#, elixir-autogen, elixir-format
+msgid "Asymptotic notation describes how an algorithm's performance scales with input size."
+msgstr "Notação assintótica descreve como o desempenho de um algoritmo escala com o tamanho da entrada."
+
+#: lib/algorithms_web/live/learn_live.ex:196
+#, elixir-autogen, elixir-format
+msgid "Average Case (Θ)"
+msgstr "Caso Médio (Θ)"
+
+#: lib/algorithms_web/live/learn_live.ex:192
+#, elixir-autogen, elixir-format
+msgid "Best Case (Ω)"
+msgstr "Melhor Caso (Ω)"
+
+#: lib/algorithms_web/live/learn_live.ex:548
+#, elixir-autogen, elixir-format
+msgid "Big O — upper bound (worst case)"
+msgstr "Big O — limite superior (pior caso)"
+
+#: lib/algorithms_web/live/learn_live.ex:438
+#: lib/algorithms_web/live/learn_live.ex:570
+#, elixir-autogen, elixir-format
+msgid "Exponential"
+msgstr "Exponencial"
+
+#: lib/algorithms_web/live/learn_live.ex:442
+#: lib/algorithms_web/live/learn_live.ex:571
+#, elixir-autogen, elixir-format
+msgid "Factorial"
+msgstr "Fatorial"
+
+#: lib/algorithms_web/live/learn_live.ex:540
+#, elixir-autogen, elixir-format
+msgid "Omega — lower bound (best case)"
+msgstr "Omega — limite inferior (melhor caso)"
+
+#: lib/algorithms_web/live/learn_live.ex:544
+#, elixir-autogen, elixir-format
+msgid "Theta — tight bound (average case)"
+msgstr "Theta — limite justo (caso médio)"
+
+#: lib/algorithms_web/live/learn_live.ex:355
+#, elixir-autogen, elixir-format
+msgid "This chart shows how different time complexities scale as the input size (n) increases. Notice how O(2ⁿ) and O(n!) grow absurdly fast compared to the others."
+msgstr "Este gráfico mostra como diferentes complexidades de tempo escalam conforme o tamanho da entrada (n) aumenta. Note como O(2ⁿ) e O(n!) crescem de forma absurdamente rápida comparadas às outras."
+
+#: lib/algorithms_web/live/learn_live.ex:200
+#, elixir-autogen, elixir-format
+msgid "Worst Case (O)"
+msgstr "Pior Caso (O)"
+
+#: lib/algorithms_web/live/learn_live.ex:580
+#, elixir-autogen, elixir-format
+msgid "To put it in perspective: 2¹⁰⁰⁰ is a number with 301 digits — far more than the estimated number of atoms in the observable universe (~10⁸⁰). And 1000! is so large it's effectively infinite. These complexities make problems practically unsolvable for even modest input sizes."
+msgstr "Para ter uma ideia: 2¹⁰⁰⁰ é um número com 301 dígitos — muito mais que o número estimado de átomos no universo observável (~10⁸⁰). E 1000! é tão grande que é efetivamente infinito. Essas complexidades tornam problemas praticamente insolúveis mesmo para entradas modestas."
